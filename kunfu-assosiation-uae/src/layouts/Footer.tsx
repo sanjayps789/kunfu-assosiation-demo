@@ -1,0 +1,142 @@
+import { memo, useState } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import BackToTop from "../layouts/BackToTop";
+
+const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!email) {
+      setMessage("Please enter a valid email address.");
+      return;
+    }
+    console.log("Subscribed Email:", email);
+    setMessage("✅ Thank you for subscribing!");
+    setEmail("");
+  };
+
+  const fadeUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: (custom) => ({
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, delay: custom * 0.2 },
+    }),
+  };
+
+  return (
+    <>
+      <motion.footer
+        className="mar_footer"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <div className="container">
+          <div className="row mb-4 g-4">
+            {/* About */}
+            <motion.div className="col-lg-3 col-md-4 col-12" custom={0} variants={fadeUp}>
+              <div className="footer_about mb-md-0 mb-5">
+                <Link to="/" className="foot_logo">
+                  <img src="assets/img/logo-white.svg" alt="logo" />
+                </Link>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  venenatis imperdiet titor sodales vulputate
+                </p>
+                <span>Connect with us</span>
+                <ul className="social_link">
+                  <li><a href="#"><i className="fa-brands fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i className="fa-brands fa-x-twitter"></i></a></li>
+                  <li><a href="#"><i className="fa-brands fa-instagram"></i></a></li>
+                  <li><a href="#"><i className="fa-brands fa-youtube"></i></a></li>
+                </ul>
+              </div>
+            </motion.div>
+
+            {/* About Links */}
+            <motion.div className="col-xl-3 col-lg-4 col-md-6 col-12" custom={1} variants={fadeUp}>
+              <div className="footer_widget">
+                <h3 className="footer-title">About Martivo</h3>
+                <ul>
+                  <li><Link to="/about">About Us</Link></li>
+                  <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+                  <li><Link to="/terms">Terms & Conditions</Link></li>
+                  <li><Link to="/support">Support</Link></li>
+                  <li><Link to="/contact">Contact</Link></li>
+                </ul>
+              </div>
+            </motion.div>
+
+            {/* Contact */}
+            <motion.div className="col-xl-3 col-lg-4 col-md-6 col-12" custom={2} variants={fadeUp}>
+              <div className="footer_widget">
+                <h3 className="footer-title">Quick Contact</h3>
+                <div className="footer_contact">
+                  <p>
+                    <i className="ph ph-map-pin-area"></i>
+                    <span>3600 Las Vegas Blvd S, Las <br />Vegas, NV</span>
+                  </p>
+                  <p>
+                    <i className="ph ph-phone-call"></i>
+                    <span><a href="tel:+9856554544">+9856 55 45 44</a></span>
+                  </p>
+                  <p>
+                    <i className="ph ph-envelope-simple"></i>
+                    <span><a href="mailto:support@example.com">support@example.com</a></span>
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Newsletter */}
+            <motion.div className="col-xl-3 col-lg-4 col-md-6 col-12" custom={3} variants={fadeUp}>
+              <div className="footer_widget">
+                <h3 className="footer-title">Subscribe To Newsletter</h3>
+                <div id="newsletter_form">
+                  <form className="newsletter_form" onSubmit={handleSubmit}>
+                    <input
+                      type="email"
+                      name="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Enter Email Address"
+                      required
+                    />
+                    <button type="submit">Subscribe Now</button>
+                  </form>
+                  {message && <div id="form-messages" className="mt-3">{message}</div>}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Copyright */}
+          <motion.div className="row" custom={4} variants={fadeUp}>
+            <div className="col-12">
+              <div className="divider dwhite mb-4"></div>
+              <div className="mar_copyright text-center">
+                <p>
+                  Copyright © 2025 <Link to="/">Martivo</Link> All Right Reserved.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Shapes */}
+        <img src="assets/img/shapes/stars.svg" alt="shape" className="footer_stars position-absolute" />
+        <img src="assets/img/shapes/fdots.svg" alt="shape" className="footer_fdots position-absolute" />
+        <img src="assets/img/shapes/fcircle.svg" alt="shape" className="footer_fcircle position-absolute" />
+        <img src="assets/img/shapes/arrowsup.svg" alt="shape" className="footer_arrowsup position-absolute" />
+      </motion.footer>
+
+      <BackToTop/>
+    </>
+  );
+};
+
+export default memo(Footer);
