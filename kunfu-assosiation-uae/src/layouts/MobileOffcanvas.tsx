@@ -44,7 +44,7 @@ const MobileOffcanvas = ({ isOpen, toggleOffcanvas }) => {
                   </li>
 
                   {/* Dropdown */}
-                  <li className="has-child-items">
+                  {/* <li className="has-child-items">
                     <button
                       type="button"
                       className="dropdown-toggle-btn"
@@ -84,7 +84,7 @@ const MobileOffcanvas = ({ isOpen, toggleOffcanvas }) => {
                         <Link to="/404">404</Link>
                       </li>
                     </ul>
-                  </li>
+                  </li> */}
 
                   <li>
                     <Link to="/blog">Blog</Link>
