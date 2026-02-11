@@ -4,51 +4,51 @@ import { motion } from "framer-motion";
 
 const events = [
   {
-    img: "assets/img/events/1.jpg",
+    img: "assets/img/events/1.png",
     title: "Spirit of the Dojo: Karate Championship",
     date: "Thu Jan, 2025",
     time: "12:00 PM",
   },
   {
-    img: "assets/img/events/2.jpg",
+    img: "assets/img/events/2.png",
     title: "Warriors’ Way: National Karate Tournament",
     date: "Thu Jan, 2025",
     time: "12:00 PM",
   },
   {
-    img: "assets/img/events/3.jpg",
+    img: "assets/img/events/3.png",
     title: "Kick for Glory: Karate Open Cup",
     date: "Thu Jan, 2025",
     time: "12:00 PM",
   },
   {
-    img: "assets/img/events/2.jpg",
+    img: "assets/img/events/2.png",
     title: "Samurai Spirit: International Karate Challenge",
     date: "Thu Jan, 2025",
     time: "12:00 PM",
   },
   {
-    img: "assets/img/events/1.jpg",
+    img: "assets/img/events/1.png",
     title: "Karate Warriors: Regional Open",
     date: "Thu Jan, 2025",
     time: "12:00 PM",
   },
   {
-    img: "assets/img/events/3.jpg",
+    img: "assets/img/events/3.png",
     title: "The Ultimate Dojo Clash",
     date: "Thu Jan, 2025",
     time: "12:00 PM",
 
   },
   {
-    img: "assets/img/events/1.jpg",
+    img: "assets/img/events/1.png",
     title: "Karate Power Cup: Fight for Honor",
     date: "Thu Jan, 2025",
     time: "12:00 PM",
 
   },
   {
-    img: "assets/img/events/1.jpg",
+    img: "assets/img/events/1.png",
     title: "Path of Strength: Karate Masters Event",
     date: "Thu Jan, 2025",
     time: "12:00 PM",

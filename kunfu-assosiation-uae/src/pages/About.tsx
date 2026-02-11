@@ -18,10 +18,10 @@ const AboutPage = () => {
     <About/>
     <Features/>
     {/* <Pricing sectionClass="pb100"/> */}
-    {/* <Team/> */}
-    {/* <Testimonials/>   */}
+    <Team/>
+    <Testimonials/>  
     <CounterUp/>
-    {/* <Clients showDivider={false} /> */}
+    <Clients showDivider={false} />
     <Footer/>
     </>
   );

@@ -11,12 +11,12 @@ const slides = [
   {
     title: "<span>Empowering Mind, Body</span><br> And Spirit Through<br> Martial Arts",
     text: "Join our expert instructors and transform your life with professional martial <br> arts training. Suitable for all ages and skill levels, our programs focus",
-    image: "assets/img/slider/image1.png",
+    image: "assets/img/slider/slider1.png",
   },
   {
     title: "<span>Unleash Your Strength</span><br> Master the Art of<br> Self-Discipline",
     text: "Join our expert instructors and transform your life with professional martial <br> arts  training.  Suitable for all ages and skill levels, our programs focus",
-    image: "assets/img/slider/image2.png",
+    image: "assets/img/slider/slider2.png",
   },
 ];
 

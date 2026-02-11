@@ -24,10 +24,10 @@ const Home = () => {
       {/* <Pricing sectionClass="section-padding"/> */}
       <Events/>
       <Team/>
-      {/* <Testimonials/> */}
+      <Testimonials/>
       <CounterUp/>
       <Blog/>
-      {/* <Clients showDivider={true} sliderClass="pt50" /> */}
+      <Clients showDivider={true} sliderClass="pt50" />
       <Footer/>
     </>
   );

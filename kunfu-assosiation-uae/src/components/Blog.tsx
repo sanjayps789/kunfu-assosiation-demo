@@ -2,10 +2,10 @@ import { memo } from "react";
 import { motion } from "framer-motion";
 
 const blogs = [
-  { img: "assets/img/blog/1.jpg", date: "18 August, 2025", author: "Admin", title: "Martial Arts: A Journey of Discipline and Self-Discovery", text: "Lorem ipsum..." },
-  { img: "assets/img/blog/2.jpg", date: "18 August, 2025", author: "Admin", title: "Keeping heart at home while training", text: "Lorem ipsum..." },
-  { img: "assets/img/blog/3.jpg", date: "18 August, 2025", author: "Admin", title: "Martial Arts: A Journey of Discipline and Self-Discovery", text: "Lorem ipsum..." },
-  { img: "assets/img/blog/4.jpg", date: "18 August, 2025", author: "Admin", title: "Martial Arts: A Journey of Discipline and Self-Discovery", text: "Lorem ipsum..." },
+  { img: "assets/img/blog/blog1.png", date: "18 August, 2025", author: "Admin", title: "Martial Arts: A Journey of Discipline and Self-Discovery", text: "Lorem ipsum..." },
+  { img: "assets/img/blog/blog2.png", date: "18 August, 2025", author: "Admin", title: "Keeping heart at home while training", text: "Lorem ipsum..." },
+  { img: "assets/img/blog/blog3.png", date: "18 August, 2025", author: "Admin", title: "Martial Arts: A Journey of Discipline and Self-Discovery", text: "Lorem ipsum..." },
+  { img: "assets/img/blog/blog4.png", date: "18 August, 2025", author: "Admin", title: "Martial Arts: A Journey of Discipline and Self-Discovery", text: "Lorem ipsum..." },
 ];
 
 const BlogItem = memo(({ blog, index }: any) => (

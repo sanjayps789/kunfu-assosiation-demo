@@ -14,7 +14,7 @@ const AboutSection = () => {
   return (
     <section
       className="about-us section-padding"
-      style={{ backgroundImage: "url(assets/img/bg/about.jpg)" }}
+      style={{ backgroundImage: "url(assets/img/bg/about.png)" }}
     >
       <div className="container">
         <div className="row g-5">

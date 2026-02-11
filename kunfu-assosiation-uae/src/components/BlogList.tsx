@@ -56,7 +56,7 @@ const BlogList = () => {
   const blogs = [
     {
       id: 1,
-      img: "assets/img/blog/1.jpg",
+      img: "assets/img/blog/blog1.png",
       date: "18 August, 2025",
       author: "Admin",
       title: "Martial Arts: A Journey of Discipline and Self-Discovery",
@@ -64,7 +64,7 @@ const BlogList = () => {
     },
     {
       id: 2,
-      img: "assets/img/blog/2.jpg",
+      img: "assets/img/blog/blog2.png",
       date: "18 August, 2025",
       author: "Admin",
       title: "Keeping heart at home while training",
@@ -72,7 +72,7 @@ const BlogList = () => {
     },
     {
       id: 3,
-      img: "assets/img/blog/3.jpg",
+      img: "assets/img/blog/blog3.png",
       date: "18 August, 2025",
       author: "Admin",
       title: "Martial Arts: A Journey of Discipline and Self-Discovery",
@@ -80,7 +80,7 @@ const BlogList = () => {
     },
     {
       id: 4,
-      img: "assets/img/blog/4.jpg",
+      img: "assets/img/blog/blog4.png",
       date: "18 August, 2025",
       author: "Admin",
       title: "Martial Arts: A Journey of Discipline and Self-Discovery",
