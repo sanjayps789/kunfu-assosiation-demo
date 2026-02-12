@@ -5,10 +5,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 const events = [
-  { title: "Karate Grand Prix Ostrava", date: "Thu Jan, 2025", time: "12:00 PM", image: "/assets/img/events/1.png" },
-  { title: "Martial Arts Championship", date: "Thu Jan, 2025", time: "12:00 PM", image: "/assets/img/events/2.png" },
-  { title: "Karate Masters Event", date: "Thu Jan, 2025", time: "12:00 PM", image: "/assets/img/events/3.png" },
-  { title: "The Ultimate Dojo Clash", date: "Thu Jan, 2025", time: "12:00 PM", image: "/assets/img/events/2.png" },
+  { title: "Chinese New Year", date: "February 14 2026", time: "12:00 PM", image: "/assets/img/events/1.png" },
+  { title: "Tai Chi World Day", date: "April 25 2026", time: "12:00 PM", image: "/assets/img/events/2.png" },
+  { title: "International Wushu Championships", date: "July 24 - 27 2026", time: "12:00 PM", image: "/assets/img/events/3.png" },
+  { title: "National Wushu Competition", date: "September 26th & 27th 2026", time: "12:00 PM", image: "/assets/img/events/2.png" },
+    { title: "DAKAR Youth Olympic Games", date: "31 October to 13 November 2026", time: "12:00 PM", image: "/assets/img/events/2.png" },
+
 ];
 
 const Events = () => {

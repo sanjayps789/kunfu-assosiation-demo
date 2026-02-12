@@ -121,17 +121,15 @@ const BlogDetails = () => {
             >
               <div className="blog_image">
                 <figure>
-                  <img
-                    src="assets/img/blog/blog-details.jpg"
-                    alt="Blog"
-                  />
+                  <img src="assets/img/blog/blog-details.jpg" alt="Blog" />
                 </figure>
               </div>
 
               <div className="blog_content">
                 <div className="blog_meta">
                   <span>
-                    <i className="fa-regular fa-user"></i> By <a href="#">Admin</a>
+                    <i className="fa-regular fa-user"></i> By{" "}
+                    <a href="#">Admin</a>
                   </span>
                   <span>
                     <i className="fa-regular fa-bookmark"></i>{" "}
@@ -142,19 +140,54 @@ const BlogDetails = () => {
                 <div className="entry-content">
                   <h2>Strength-Building Exercises for Taekwondo</h2>
                   <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut eros a arcu aliquam rhoncus. Curabitur ac mi ipsum. Ut et risus tortor. Proin sagittis facilisis dictum. Donec convallis egestas quam at vulputate. Sed sodales arcu sit amet velit aliquet bibendum. Cras eu efficitur lorem. Proin quis ligula pulvinar, sagittis enim a, laoreet magna. Etiam vitae dapibus tortor. Curabitur porttitor massa eget sem sollicitudin aliquam. Etiam efficitur lorem in libero tristique, sit amet lacinia lorem bibendum. Nulla magna nulla, porta vel mauris id, pulvinar tempor mi. Sed feugiat bibendum diam sit amet sagittis. 								
-                  </p>						
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Fusce ut eros a arcu aliquam rhoncus. Curabitur ac mi ipsum.
+                    Ut et risus tortor. Proin sagittis facilisis dictum. Donec
+                    convallis egestas quam at vulputate. Sed sodales arcu sit
+                    amet velit aliquet bibendum. Cras eu efficitur lorem. Proin
+                    quis ligula pulvinar, sagittis enim a, laoreet magna. Etiam
+                    vitae dapibus tortor. Curabitur porttitor massa eget sem
+                    sollicitudin aliquam. Etiam efficitur lorem in libero
+                    tristique, sit amet lacinia lorem bibendum. Nulla magna
+                    nulla, porta vel mauris id, pulvinar tempor mi. Sed feugiat
+                    bibendum diam sit amet sagittis.
+                  </p>
 
                   <p>
-                  Pellentesque iaculis eros id maximus tincidunt. Vivamus commodo porta ipsum, aliquam suscipit nisi malesuada vitae. Maecenas ullamcorper lorem a nulla finibus imperdiet. Sed lobortis augue id odio bibendum, id commodo purus placerat. Etiam scelerisque eros leo, at bibendum elit vestibulum nec. Mauris ac ipsum fermentum, condimentum dui et, semper ipsum. Praesent suscipit urna vitae nisi rutrum, nec ornare risus consequat. Cras feugiat, mi in ultrices mollis, urna massa facilisis est, et blandit justo lacus in neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut sit amet orci augue. Mauris iaculis nisl ut quam rutrum, quis tempus est accumsan. Nulla facilisi. 
-                  </p>							
+                    Pellentesque iaculis eros id maximus tincidunt. Vivamus
+                    commodo porta ipsum, aliquam suscipit nisi malesuada vitae.
+                    Maecenas ullamcorper lorem a nulla finibus imperdiet. Sed
+                    lobortis augue id odio bibendum, id commodo purus placerat.
+                    Etiam scelerisque eros leo, at bibendum elit vestibulum nec.
+                    Mauris ac ipsum fermentum, condimentum dui et, semper ipsum.
+                    Praesent suscipit urna vitae nisi rutrum, nec ornare risus
+                    consequat. Cras feugiat, mi in ultrices mollis, urna massa
+                    facilisis est, et blandit justo lacus in neque. Interdum et
+                    malesuada fames ac ante ipsum primis in faucibus. Ut sit
+                    amet orci augue. Mauris iaculis nisl ut quam rutrum, quis
+                    tempus est accumsan. Nulla facilisi.
+                  </p>
 
                   <blockquote>
-                  Sed lobortis augue id odio bibendum, id commodo purus placerat. Etiam scelerisque eros leo, at bibendum elit vestibulum nec. Mauris ac ipsum fermentum, condimentum dui et, semper ipsum. Praesent suscipit urna vitae nisi rutrum, nec ornare risus consequat. Cras feugiat, mi in ultrices mollis, urna massa facilisis est, et blandit justo lacus in neque. 
+                    Sed lobortis augue id odio bibendum, id commodo purus
+                    placerat. Etiam scelerisque eros leo, at bibendum elit
+                    vestibulum nec. Mauris ac ipsum fermentum, condimentum dui
+                    et, semper ipsum. Praesent suscipit urna vitae nisi rutrum,
+                    nec ornare risus consequat. Cras feugiat, mi in ultrices
+                    mollis, urna massa facilisis est, et blandit justo lacus in
+                    neque.
                   </blockquote>
 
                   <p>
-                  Ut sit amet mollis magna, a dictum orci. Mauris consectetur, justo et convallis mattis, mauris justo venenatis lorem, vel lobortis est massa id ligula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam id dignissim nisl, id varius metus. Etiam sollicitudin eleifend nisl, sit amet auctor urna eleifend a. Pellentesque maximus auctor varius. Sed euismod pretium magna nec ornare. Ut mauris odio, dignissim euismod metus sit amet, rutrum consequat arcu. Nulla in elit dolor.
+                    Ut sit amet mollis magna, a dictum orci. Mauris consectetur,
+                    justo et convallis mattis, mauris justo venenatis lorem, vel
+                    lobortis est massa id ligula. Pellentesque habitant morbi
+                    tristique senectus et netus et malesuada fames ac turpis
+                    egestas. Nam id dignissim nisl, id varius metus. Etiam
+                    sollicitudin eleifend nisl, sit amet auctor urna eleifend a.
+                    Pellentesque maximus auctor varius. Sed euismod pretium
+                    magna nec ornare. Ut mauris odio, dignissim euismod metus
+                    sit amet, rutrum consequat arcu. Nulla in elit dolor.
                   </p>
                 </div>
               </div>
@@ -211,7 +244,12 @@ const BlogDetails = () => {
                   rows={5}
                 ></textarea>
 
-                <input type="submit" id="submit" value="Comment" className="main_btn" />
+                <input
+                  type="submit"
+                  id="submit"
+                  value="Comment"
+                  className="main_btn"
+                />
               </form>
             </motion.div>
           </div>
@@ -228,8 +266,14 @@ const BlogDetails = () => {
             >
               <h3 className="widget-title">Search</h3>
               <form>
-                <input type="text" className="form-control" placeholder="Search here" />
-                <button type="submit"><i className="ph ph-magnifying-glass"></i></button>
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Search here"
+                />
+                <button type="submit">
+                  <i className="ph ph-magnifying-glass"></i>
+                </button>
               </form>
             </motion.div>
 

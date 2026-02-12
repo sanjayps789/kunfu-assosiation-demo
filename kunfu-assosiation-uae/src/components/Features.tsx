@@ -7,14 +7,14 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 const features = [
-  { icon: "assets/img/features/icon1.svg", title: "Kickboxing", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nam venenatis imperdiet." },
-  { icon: "assets/img/features/icon2.svg", title: "Self Defense", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nam venenatis imperdiet." },
-  { icon: "assets/img/features/icon3.svg", title: "Increase Strength", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nam venenatis imperdiet." },
-  { icon: "assets/img/features/icon4.svg", title: "Legacy of Karate", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nam venenatis imperdiet." },
-  { icon: "assets/img/features/icon1.svg", title: "Kickboxing", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nam venenatis imperdiet." },
-  { icon: "assets/img/features/icon2.svg", title: "Self Defense", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nam venenatis imperdiet." },
-  { icon: "assets/img/features/icon4.svg", title: "Legacy of Karate", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nam venenatis imperdiet." },
-  { icon: "assets/img/features/icon1.svg", title: "Kickboxing", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nam venenatis imperdiet." },
+  { icon: "assets/img/features/icon1.svg", title: "Kung Fu", text: "Traditional Chinese martial arts training that develops strength, agility, coordination, and disciplined self-control through structured practice." },
+  { icon: "assets/img/features/icon2.svg", title: "Tai Chi", text: " A mindful martial art that improves balance, flexibility, breathing, and inner calm, suitable for all age groups and abilities." },
+  { icon: "assets/img/features/icon3.svg", title: " Qigong", text: " A holistic practice of movement and breathing that supports energy balance, stress relief, and overall physical and mental well-being." },
+  // { icon: "assets/img/features/icon4.svg", title: "Legacy of Karate", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nam venenatis imperdiet." },
+  // { icon: "assets/img/features/icon1.svg", title: "Kickboxing", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nam venenatis imperdiet." },
+  // { icon: "assets/img/features/icon2.svg", title: "Self Defense", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nam venenatis imperdiet." },
+  // { icon: "assets/img/features/icon4.svg", title: "Legacy of Karate", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nam venenatis imperdiet." },
+  // { icon: "assets/img/features/icon1.svg", title: "Kickboxing", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nam venenatis imperdiet." },
 ];
 
 const Features = () => {

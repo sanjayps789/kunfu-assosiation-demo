@@ -2,10 +2,10 @@ import { memo } from "react";
 import { motion } from "framer-motion";
 
 const blogs = [
-  { img: "assets/img/blog/blog1.png", date: "18 August, 2025", author: "Admin", title: "Martial Arts: A Journey of Discipline and Self-Discovery", text: "Lorem ipsum..." },
-  { img: "assets/img/blog/blog2.png", date: "18 August, 2025", author: "Admin", title: "Keeping heart at home while training", text: "Lorem ipsum..." },
-  { img: "assets/img/blog/blog3.png", date: "18 August, 2025", author: "Admin", title: "Martial Arts: A Journey of Discipline and Self-Discovery", text: "Lorem ipsum..." },
-  { img: "assets/img/blog/blog4.png", date: "18 August, 2025", author: "Admin", title: "Martial Arts: A Journey of Discipline and Self-Discovery", text: "Lorem ipsum..." },
+  { img: "assets/img/blog/blog1.png", date: "18 August, 2025", author: "Admin", title: "How Martial Arts Support Youth Development in Schools", text: "Introducing martial arts in schools plays an important role in supporting the physical, mental, and social development of young people. " },
+  { img: "assets/img/blog/blog2.png", date: "18 August, 2025", author: "Admin", title: " Community Wellness Through Tai Chi and Qigong in the UAE", text: "Community wellness initiatives play an important role in promoting healthier and more active lifestyles." },
+  { img: "assets/img/blog/blog3.png", date: "18 August, 2025", author: "Admin", title: " Women in Martial Arts: Empowerment Through Training", text: " Martial arts training offers powerful opportunities for women to build confidence, strength, and resilience." },
+  { img: "assets/img/blog/blog4.png", date: "18 August, 2025", author: "Admin", title: " Building Discipline & Mental Strength Through Martial Arts", text: "Discipline and mental strength are essential qualities for personal development and long-term success." },
 ];
 
 const BlogItem = memo(({ blog, index }: any) => (

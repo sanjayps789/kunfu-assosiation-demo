@@ -4,29 +4,29 @@ import { motion } from "framer-motion";
 const programs = [
   {
     number: "01",
-    title: "Dojo Training",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam venenatis imperdiet tortor sodales vulputate.",
+    title: "Youth Development Program",
+    text: " Structured martial arts programs delivered in schools to support youth development, confidence building, self-discipline, emotional development, and participation through inter-school activities.",
     image: "assets/img/programs/1.png",
     reverse: false,
   },
   {
     number: "02",
-    title: "Kata & Techniques",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam venenatis imperdiet tortor sodales vulputate.",
+    title: "Community Wellness Program",
+    text: " Community-based Tai Chi and Qigong sessions supporting adult fitness, mobility, stress management, family participation, and senior wellness.",
     image: "assets/img/programs/2.png",
     reverse: false,
   },
   {
     number: "03",
-    title: "Bushido Spirit",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam venenatis imperdiet tortor sodales vulputate.",
+    title: " Safety, Discipline & Mental Resilience Program",
+    text: " Programs focused on self-defence awareness, personal safety education, focus, emotional regulation, and disciplined martial arts practice.",
     image: "assets/img/programs/3.png",
     reverse: true,
   },
   {
     number: "04",
-    title: "Kumite Sessions",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam venenatis imperdiet tortor sodales vulputate.",
+    title: "National Coaches Development Pathway",
+    text: " National certification framework and advanced training pathways to strengthen coaching standards, ethics, and safety practices in the UAE.",
     image: "assets/img/programs/4.png",
     reverse: true,
   },
@@ -56,9 +56,9 @@ const Programs = ({ showTitle = true}) => {
             className="section-heading text-center"
             variants={fadeUp}
           >
-            <span className="sub_title">Our Programs</span>
+            <span className="sub_title">Our initiatives</span>
             <h2>
-              Elevate your mind, body, and <br /> spirit here
+              Official Development Programs of the UAE  <br /> Kung Fu, Tai Chi & Qigong Association
             </h2>
             <img src="assets/img/shapes/title.svg" alt="img" />
           </motion.div>

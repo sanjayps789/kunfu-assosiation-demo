@@ -8,7 +8,7 @@ const contactInfo = [
     title: "Our Location",
     content: (
       <>
-        3600 Las Vegas Blvd S, Las <br /> Vegas, NV
+        KML Business Center, Office 126, Dubai, <br /> United Arab Emirates | Registration #: 1575985 
       </>
     ),
   },
@@ -17,9 +17,8 @@ const contactInfo = [
     title: "Email Us",
     content: (
       <>
-        <a href="mailto:support@example.com">support@example.com</a>
+        <a href="mailto:info@UAEKungFuAssociation.ae"> info@UAEKungFuAssociation.ae</a>
         <br />
-        <a href="mailto:sales@example.com">sales@example.com</a>
       </>
     ),
   },
@@ -28,9 +27,8 @@ const contactInfo = [
     title: "Phone Number",
     content: (
       <>
-        <a href="tel:+9901254789658">+9901254789658</a>
+        <a href="tel:+971525759907"> +971 52 575 9907 </a>
         <br />
-        <a href="tel:+9901254769688">+9901254769688</a>
       </>
     ),
   },
