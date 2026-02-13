@@ -60,7 +60,8 @@ const AboutSection = () => {
                   About Us
                 </motion.span>
                 <motion.h2 variants={textVariant} custom={0.4}>
-                  Bodies Strengthening &amp; Balancing <br /> Minds
+                 Accreditation & Development of Traditional  <br />Chinese Martial Arts in the UAE
+
                 </motion.h2>
                 <motion.img
                   src="assets/img/shapes/title.svg"
@@ -71,17 +72,12 @@ const AboutSection = () => {
               </motion.div>
 
               <motion.p variants={textVariant} custom={0.8}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                venenatis imperdiet tortor sodales vulputate. Phasellus in enim
-                euismod, efficitur felis a, facilisis ligula. Suspendisse
-                potenti. Sed at libero nec nisi tincidunt facilisis.
+                The Emirates Kung Fu, Tai Chi and Qigong Association serves as the official body dedicated to the development and regulation of traditional Chinese martial arts across the United Arab Emirates. We are committed to preserving the authenticity of Kung Fu, Tai Chi, and Qigong while supporting structured training and cultural exchange
               </motion.p>
 
               <motion.p variants={textVariant} custom={1}>
-                Quisque euismod, nisi vel consectetur interdum, nisl nisi
-                aliquet nunc, quis facilisis enim erat in est. Sed at libero nec
-                nisi tincidunt facilisis. Suspendisse potenti. Phasellus in enim
-                euismod, efficitur felis a, facilisis ligula.
+               Through organized programs, community initiatives, and professional standards, the Association promotes physical well-being, discipline, and respect for cultural heritage. Our mission is to create a strong foundation for martial arts practice that benefits individuals and communities alike.
+
               </motion.p>
 
               <motion.a

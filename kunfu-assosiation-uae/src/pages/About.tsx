@@ -9,6 +9,7 @@ import Testimonials from "../components/Testimonials";
 import CounterUp from "../components/CounterUp";
 import Clients from "../components/Clients";
 import Footer from "../layouts/Footer";
+import MissionVision from "../components/MissionVision";
 
 const AboutPage = () => {
   return (
@@ -17,6 +18,7 @@ const AboutPage = () => {
     <Breadcrumb title="About Us" background="assets/img/bg/banner_bg.jpg" />
     <About/>
     <Features/>
+    <MissionVision/>
     {/* <Pricing sectionClass="pb100"/> */}
     <Team/>
     <Testimonials/>  

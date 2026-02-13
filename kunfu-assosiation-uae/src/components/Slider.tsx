@@ -9,13 +9,13 @@ import DOMPurify from "dompurify";
 
 const slides = [
   {
-    title: "<span>Empowering Mind, Body</span><br> And Spirit Through<br> Martial Arts",
-    text: "Join our expert instructors and transform your life with professional martial <br> arts training. Suitable for all ages and skill levels, our programs focus",
+    title: "<span>Accreditation of the Emirates</span><br>Kung Fu, Tai Chi and<br> Qigong Association",
+    text: "The Emirates Kung Fu, Tai Chi and Qigong Association is the official body dedicated to promoting authentic Chinese <br>  martial arts across the UAE through structured training, cultural heritage, and professional standards.",
     image: "assets/img/slider/slider1.png",
   },
   {
-    title: "<span>Unleash Your Strength</span><br> Master the Art of<br> Self-Discipline",
-    text: "Join our expert instructors and transform your life with professional martial <br> arts  training.  Suitable for all ages and skill levels, our programs focus",
+    title: "<span>Promoting Authentic </span><br>Kung Fu, Tai Chi and Qigong<br>  Across the UAE",
+    text: "We work to preserve traditional Chinese martial arts while supporting structured programs for  <br> individuals, communities, and institutions across the United Arab Emirates.  ",
     image: "assets/img/slider/slider2.png",
   },
 ];
@@ -66,7 +66,7 @@ const Slider = () => {
                     ></p>
                     <a href="/about" className="main_btn active_animation">
                       <span>
-                        Explore More <i className="ph ph-arrow-right"></i>
+                       Explore Our Programs<i className="ph ph-arrow-right"></i>
                       </span>
                     </a>
                     <ul className="slider_social active_animation">

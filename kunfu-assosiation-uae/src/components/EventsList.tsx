@@ -3,56 +3,12 @@ import { memo } from "react";
 import { motion } from "framer-motion";
 
 const events = [
-  {
-    img: "assets/img/events/1.png",
-    title: "Spirit of the Dojo: Karate Championship",
-    date: "Thu Jan, 2025",
-    time: "12:00 PM",
-  },
-  {
-    img: "assets/img/events/2.png",
-    title: "Warriors’ Way: National Karate Tournament",
-    date: "Thu Jan, 2025",
-    time: "12:00 PM",
-  },
-  {
-    img: "assets/img/events/3.png",
-    title: "Kick for Glory: Karate Open Cup",
-    date: "Thu Jan, 2025",
-    time: "12:00 PM",
-  },
-  {
-    img: "assets/img/events/2.png",
-    title: "Samurai Spirit: International Karate Challenge",
-    date: "Thu Jan, 2025",
-    time: "12:00 PM",
-  },
-  {
-    img: "assets/img/events/1.png",
-    title: "Karate Warriors: Regional Open",
-    date: "Thu Jan, 2025",
-    time: "12:00 PM",
-  },
-  {
-    img: "assets/img/events/3.png",
-    title: "The Ultimate Dojo Clash",
-    date: "Thu Jan, 2025",
-    time: "12:00 PM",
+   { title: "Chinese New Year", date: "February 14 2026", time: "12:00 PM", image: "/assets/img/events/1.png" },
+  { title: "Tai Chi World Day", date: "April 25 2026", time: "12:00 PM", image: "/assets/img/events/2.png" },
+  { title: "International Wushu Championships", date: "July 24 - 27 2026", time: "12:00 PM", image: "/assets/img/events/3.png" },
+  { title: "National Wushu Competition", date: "September 26th & 27th 2026", time: "12:00 PM", image: "/assets/img/events/2.png" },
+    { title: "DAKAR Youth Olympic Games", date: "31 October to 13 November 2026", time: "12:00 PM", image: "/assets/img/events/2.png" },
 
-  },
-  {
-    img: "assets/img/events/1.png",
-    title: "Karate Power Cup: Fight for Honor",
-    date: "Thu Jan, 2025",
-    time: "12:00 PM",
-
-  },
-  {
-    img: "assets/img/events/1.png",
-    title: "Path of Strength: Karate Masters Event",
-    date: "Thu Jan, 2025",
-    time: "12:00 PM",
-  },
 ];
 
 const EventsList = () => {
@@ -72,7 +28,7 @@ const EventsList = () => {
               <div className="event_item">
                 <div
                   className="event_img"
-                  style={{ backgroundImage: `url(${event.img})` }}
+                  style={{ backgroundImage: `url(${event.image})` }}
                 >
                   <a href="/event-details" className="evn_btn">
                     Join Now

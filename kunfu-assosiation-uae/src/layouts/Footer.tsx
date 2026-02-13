@@ -44,8 +44,8 @@ const Footer = () => {
                   <img src="assets/img/logo-white.svg" alt="logo" />
                 </Link>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                  venenatis imperdiet titor sodales vulputate
+                 The Emirates Kung Fu, Tai Chi & Qigong Association is the official body promoting and developing Chinese martial arts across the UAE.
+
                 </p>
                 <span>Connect with us</span>
                 <ul className="social_link">
@@ -78,15 +78,15 @@ const Footer = () => {
                 <div className="footer_contact">
                   <p>
                     <i className="ph ph-map-pin-area"></i>
-                    <span>3600 Las Vegas Blvd S, Las <br />Vegas, NV</span>
+                    <span>  KML Business Center, Office 126, Dubai, <br /> United Arab Emirates | Registration #: 1575985 </span>
                   </p>
                   <p>
                     <i className="ph ph-phone-call"></i>
-                    <span><a href="tel:+9856554544">+9856 55 45 44</a></span>
+                    <span>  <a href="tel:+971525759907"> +971 52 575 9907 </a></span>
                   </p>
                   <p>
                     <i className="ph ph-envelope-simple"></i>
-                    <span><a href="mailto:support@example.com">support@example.com</a></span>
+                    <span> <a href="mailto:info@UAEKungFuAssociation.ae"> info@UAEKungFuAssociation.ae</a></span>
                   </p>
                 </div>
               </div>
