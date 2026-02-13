@@ -56,7 +56,7 @@ const BlogList = () => {
   const blogs = [
     {
       id: 1,
-      img: "assets/img/blog/blog1.png",
+      img: "assets/img/blog/martial-arts.webp",
       date: "18 August, 2025",
       author: "Admin",
       title: "How Martial Arts Support Youth Development in Schools",
@@ -64,7 +64,7 @@ const BlogList = () => {
     },
     {
       id: 2,
-      img: "assets/img/blog/blog2.png",
+      img: "assets/img/blog/community.webp",
       date: "18 August, 2025",
       author: "Admin",
       title: "Community Wellness Through Tai Chi and Qigong in the UAE",
@@ -72,7 +72,7 @@ const BlogList = () => {
     },
     {
       id: 3,
-      img: "assets/img/blog/blog3.png",
+      img: "assets/img/blog/women-emp.webp",
       date: "18 August, 2025",
       author: "Admin",
       title: " Women in Martial Arts: Empowerment Through Training",
@@ -80,7 +80,7 @@ const BlogList = () => {
     },
     {
       id: 4,
-      img: "assets/img/blog/blog4.png",
+      img: "assets/img/blog/discipline.webp",
       date: "18 August, 2025",
       author: "Admin",
       title: "Building Discipline & Mental Strength Through Martial Arts",

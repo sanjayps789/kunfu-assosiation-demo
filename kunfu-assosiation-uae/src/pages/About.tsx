@@ -15,7 +15,7 @@ const AboutPage = () => {
   return (
     <>
     <Header/>
-    <Breadcrumb title="About Us" background="assets/img/bg/banner_bg.jpg" />
+    <Breadcrumb title="About Us" background="assets/img/about/about-banner.webp" />
     <About/>
     <Features/>
     <MissionVision/>
