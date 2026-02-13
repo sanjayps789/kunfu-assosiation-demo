@@ -19,7 +19,7 @@ const Home = () => {
       <Header/>
       <Slider/>
       <About/>
-      <Features/>
+      <Features/> 
       <Programs/>
       {/* <Pricing sectionClass="section-padding"/> */}
       <Events/>

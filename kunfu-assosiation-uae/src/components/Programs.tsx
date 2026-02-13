@@ -87,7 +87,7 @@ const fadeUp = {
 const Programs = ({ showTitle = true}) => {
   return (
     <motion.section
-      className="programs section-padding"
+      className="programs section-padding overflow-hidden"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}

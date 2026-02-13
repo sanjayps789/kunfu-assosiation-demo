@@ -41,7 +41,7 @@ const Header = () => {
               <li><Link to="/events">Events</Link></li>
 
               {/* Dropdown */}
-              <li
+              {/* <li
                 className={`has-child-items ${dropdownOpen ? "open" : ""}`}
                 onClick={() => setDropdownOpen(!dropdownOpen)}
               >
@@ -58,7 +58,7 @@ const Header = () => {
                   <li><Link to="/blog-details">Blog Details</Link></li>
                   <li><Link to="/404">404</Link></li>
                 </ul>
-              </li>
+              </li> */}
 
               <li><Link to="/blog">Blog</Link></li>
               <li><Link to="/contact">Contact</Link></li>
