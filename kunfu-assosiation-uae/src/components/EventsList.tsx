@@ -3,11 +3,11 @@ import { memo } from "react";
 import { motion } from "framer-motion";
 
 const events = [
-   { title: "Chinese New Year", date: "February 14 2026", time: "12:00 PM", image: "/assets/img/events/1.png" },
-  { title: "Tai Chi World Day", date: "April 25 2026", time: "12:00 PM", image: "/assets/img/events/2.png" },
-  { title: "International Wushu Championships", date: "July 24 - 27 2026", time: "12:00 PM", image: "/assets/img/events/3.png" },
-  { title: "National Wushu Competition", date: "September 26th & 27th 2026", time: "12:00 PM", image: "/assets/img/events/2.png" },
-    { title: "DAKAR Youth Olympic Games", date: "31 October to 13 November 2026", time: "12:00 PM", image: "/assets/img/events/2.png" },
+   { title: "Chinese New Year", date: "February 14 2026", time: "12:00 PM", image: "/assets/img/events/chinese-new-year.webp" },
+  { title: "Tai Chi World Day", date: "April 25 2026", time: "12:00 PM", image: "/assets/img/events/tai-chi-world-day.webp" },
+  { title: "International Wushu Championships", date: "July 24 - 27 2026", time: "12:00 PM", image: "/assets/img/events/international-wushu-championships.webp" },
+  { title: "National Wushu Competition", date: "September 26th & 27th 2026", time: "12:00 PM", image: "/assets/img/events/national-wushu-competition.webp" },
+    { title: "DAKAR Youth Olympic Games", date: "31 October to 13 November 2026", time: "12:00 PM", image: "/assets/img/events/darker-youth-olympic-games.webp" },
 
 ];
 

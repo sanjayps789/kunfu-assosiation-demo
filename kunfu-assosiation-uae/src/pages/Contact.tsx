@@ -9,7 +9,7 @@ const AboutPage = () => {
   return (
     <>
     <Header/>
-    <Breadcrumb title="Contact Us" background="assets/img/bg/banner_bg.jpg" />
+    <Breadcrumb title="Contact Us" background="assets/img/bg/contact-banner.webp" />
     <Contact/>
     <Clients showDivider={true} sliderClass = "pt50" />
     <Footer/>

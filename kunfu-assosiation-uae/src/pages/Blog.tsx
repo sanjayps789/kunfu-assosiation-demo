@@ -8,7 +8,7 @@ const EventsPage = () => {
   return (
     <>
     <Header/>
-    <Breadcrumb title="Latest Posts" background="assets/img/bg/banner_bg.jpg" />
+    <Breadcrumb title="Latest Posts" background="assets/img/blog/blog-banner.webp" />
     <BlogList/>
     <Footer/>
     </>
