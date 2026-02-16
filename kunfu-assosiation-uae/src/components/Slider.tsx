@@ -1,7 +1,9 @@
 // src/components/Slider.jsx
-import { memo, useRef, useState } from "react";
+"use client";
+
+import { memo, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import VideoPopup from "./VideoPopup";
@@ -9,13 +11,25 @@ import DOMPurify from "dompurify";
 
 const slides = [
   {
-    title: "<span>Accreditation of the Emirates</span><br>Kung Fu, Tai Chi and<br> Qigong Association",
-    text: "The Emirates Kung Fu, Tai Chi and Qigong Association is the official body dedicated to promoting authentic Chinese <br>  martial arts across the UAE through structured training, cultural heritage, and professional standards.",
+    type: "image",
+    title:
+      "<span>Accreditation of the Emirates</span> Kung Fu, Tai Chi and Qigong Association",
+    text: "The Emirates Kung Fu, Tai Chi and Qigong Association is the official body dedicated to promoting authentic Chinese <br> martial arts across the UAE through structured training, cultural heritage, and professional standards.",
+    background: "assets/img/slider/slider1.png",
     image: "assets/img/slider/slider1.png",
   },
+
   {
-    title: "<span>Promoting Authentic </span><br>Kung Fu, Tai Chi and Qigong<br>  Across the UAE",
-    text: "We work to preserve traditional Chinese martial arts while supporting structured programs for  <br> individuals, communities, and institutions across the United Arab Emirates.  ",
+    type: "bg-video",
+    video: "assets/videos/hero-video.mp4",
+  },
+
+  {
+    type: "image",
+    title:
+      "<span>Promoting Authentic</span> Kung Fu, Tai Chi and Qigong Across the UAE",
+    text: "We work to preserve traditional Chinese martial arts while supporting structured programs for <br> individuals, communities, and institutions across the United Arab Emirates.",
+    background: "assets/img/slider/slider2.png",
     image: "assets/img/slider/slider2.png",
   },
 ];
@@ -23,14 +37,50 @@ const slides = [
 const Slider = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const videoRef = useRef(null);
 
-  // Video modal state
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const handleSlideChange = (swiper) => {
+    const currentSlide = slides[swiper.realIndex];
+
+    // 🔥 If Video Slide
+    if (currentSlide.type === "bg-video") {
+      swiper.autoplay.stop();
+
+      const video = videoRef.current;
+
+      if (video) {
+        video.currentTime = 0;
+        video.play();
+
+        video.onended = () => {
+          swiper.slideNext();
+        };
+      }
+    } else {
+      // 🔥 Normal Slide
+      swiper.params.autoplay = {
+        delay: 5000,
+        disableOnInteraction: false,
+      };
+      swiper.autoplay.start();
+
+      if (videoRef.current) {
+        videoRef.current.pause();
+      }
+    }
+  };
 
   return (
     <section className="mar_slider_wrap text-left">
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]}
+        loop={true}
+        speed={1000}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
+        onSlideChange={handleSlideChange}
         navigation={{
           prevEl: prevRef.current,
           nextEl: nextRef.current,
@@ -39,78 +89,112 @@ const Slider = () => {
           swiper.params.navigation.prevEl = prevRef.current;
           swiper.params.navigation.nextEl = nextRef.current;
         }}
-        loop={true}
         className="mar_slider position-relative"
-        style={{ backgroundImage: "url(assets/img/slider/bg.jpg)" }}
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="slider_item">
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-8">
-                    <h1
-                      className="heading active_animation"
-                      dangerouslySetInnerHTML={{
-                        __html: DOMPurify.sanitize(slide.title),
-                      }}
-                    >
-                      
-                    </h1>
-                    <p
-                      className="active_animation"
-                      dangerouslySetInnerHTML={{
-                        __html: DOMPurify.sanitize(slide.text),
-                      }}
-                     
-                    ></p>
-                    <a href="/about" className="main_btn active_animation">
-                      <span>
-                       Explore Our Programs<i className="ph ph-arrow-right"></i>
-                      </span>
-                    </a>
-                    <ul className="slider_social active_animation">
-                      <li>
-                        <a href="#"><i className="fa-brands fa-facebook-f"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i className="fa-brands fa-x-twitter"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i className="fa-brands fa-instagram"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i className="fa-brands fa-youtube"></i></a>
-                      </li>
-                    </ul>
+            {slide.type === "bg-video" ? (
+              // 🔥 VIDEO SLIDE
+              <div
+                className="slider_item position-relative overflow-hidden"
+                style={{ height: "100vh" }}
+              >
+                <video
+                  ref={videoRef}
+                  playsInline
+                  muted
+                  className="position-absolute top-0 start-0 w-100 h-100"
+                  style={{ objectFit: "cover" }}
+                >
+                  <source src={slide.video} type="video/mp4" />
+                </video>
+              </div>
+            ) : (
+              // 🔥 NORMAL IMAGE SLIDE
+              <div
+                className="slider_item"
+                style={{
+                  backgroundImage: `url(${slide.background})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  height: "100vh",
+                }}
+              >
+                <div className="container h-100 d-flex align-items-center">
+                  <div className="row w-100">
+                    <div className="col-lg-8">
+                      <h1
+                        className="heading"
+                        dangerouslySetInnerHTML={{
+                          __html: DOMPurify.sanitize(slide.title),
+                        }}
+                      />
+
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html: DOMPurify.sanitize(slide.text),
+                        }}
+                      />
+
+                      <a href="/about" className="main_btn">
+                        <span>
+                          Explore Our Programs
+                          <i className="ph ph-arrow-right"></i>
+                        </span>
+                      </a>
+
+                      <ul className="slider_social">
+                        <li>
+                          <a href="#">
+                            <i className="fa-brands fa-facebook-f"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i className="fa-brands fa-x-twitter"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i className="fa-brands fa-instagram"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i className="fa-brands fa-youtube"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="slider_image active_animation position-absolute end-0 bottom-0 text-end">
-                <img src={slide.image} alt="img" />
-                <img
-                  src="assets/img/slider/shape1.png"
-                  alt="img"
-                  className="sshape_1 position-absolute"
-                />
-                <img
-                  src="assets/img/slider/shape2.png"
-                  alt="img"
-                  className="sshape_2 position-absolute"
-                />
+                <div className="slider_image">
+                  <img src={slide.image} alt="main" className="main_img" />
 
-                {/* Video Button */}
-                <VideoPopup
-                  videoId="c4PQfgq2NsQ"
-                  triggerImage="assets/img/slider/vbtn.png"
-                />
+                  <img
+                    src="assets/img/slider/shape1.png"
+                    alt="shape"
+                    className="sshape_1"
+                  />
+
+                  <img
+                    src="assets/img/slider/shape2.png"
+                    alt="shape"
+                    className="sshape_2"
+                  />
+
+                  <VideoPopup
+                    videoId="c4PQfgq2NsQ"
+                    triggerImage="assets/img/slider/vbtn.png"
+                  />
+                </div>
               </div>
-            </div>
+            )}
           </SwiperSlide>
         ))}
 
-        {/* Custom navigation buttons */}
+        {/* Navigation Arrows */}
         <div className="harrows">
           <div ref={prevRef} className="hs_prev_arrow">
             <img src="assets/img/shapes/left-arrow.svg" alt="prev" />

@@ -18,7 +18,7 @@ const Header = () => {
 
       <header
         id="mar_header"
-        className="navbar position-absolute top-0 start-0 w-100 z-3"
+        className="navbar position-absolute top-0 start-0 w-100 z-3 " 
       >
         <div className="container d-flex align-items-center justify-content-between">
           {/* Logo */}
@@ -30,7 +30,7 @@ const Header = () => {
 
           {/* Desktop Menu */}
           <nav
-            className={`main-menu align-self-center ${
+            className={`main-menu align-self-center  ${
               isMenuOpen ? "active" : ""
             }`}
           >

@@ -28,7 +28,7 @@ Main Style
   --orange: #FF7300;
   --red2: #ff3333;
   --blue: #2E80EC;
-  --overlay: #0A2640;
+  /* --overlay: #7f8285; */
   --footer: #042023;
   --fd: #FDEAFF;
   --db: #DB3BEB;
@@ -198,7 +198,7 @@ a:focus{
 	background-color: var(--white);
 	border-radius: 50%;
 	color: var(--orange);
-	padding-left: ;
+	padding-left: 0pxx;
 	margin-left: 10px;
 }
 .white_btn{
@@ -303,7 +303,7 @@ a:focus{
 	font-weight: 600;
 	transition: .5s;
 	font-size: 14px;
-	color: var(--white);
+	color: black;
 	transition: .5s;
 	position: relative;
 }
@@ -648,9 +648,40 @@ a:focus{
 .slider_social li a:focus {
 	color: var(--orange);
 }
+.slider_item {
+  position: relative;
+  min-height: 100vh;
+}
 
-.slider_image{
-	width: 55%;
+.slider_image {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25%;
+  text-align: right;
+}
+.slider_image .main_img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* Shape 1 */
+.sshape_1 {
+  position: absolute;
+  top: -40px;
+  right: -30px;
+  width: 120px;
+  z-index: 2;
+}
+
+/* Shape 2 */
+.sshape_2 {
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  width: 100px;
+  z-index: 2;
 }
 .vbtn {
 	display: block;
@@ -671,16 +702,7 @@ a:focus{
 	width: 80px;
 }
  
-.sshape_1 {
-	left: 50px;
-	bottom: 30px;
-	width: 180px;
-}
-.sshape_2 {
-	right: 70px;
-	top: 66px;
-	width: 170px;
-}
+
 .harrows{
 	position: absolute;
 	top: 50%;
