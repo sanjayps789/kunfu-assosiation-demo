@@ -71,7 +71,7 @@ const Slider = () => {
   };
 
   return (
-    <section className="mar_slider_wrap text-left">
+    <section className="mar_slider_wrap text-left ">
       <Swiper
         modules={[Navigation, Autoplay]}
         loop={true}
@@ -96,7 +96,7 @@ const Slider = () => {
             {slide.type === "bg-video" ? (
               // 🔥 VIDEO SLIDE
               <div
-                className="slider_item position-relative overflow-hidden"
+                className="slider_item position-relative overflow-hidden border-0"
                 style={{ height: "100vh" }}
               >
                 <video
@@ -110,9 +110,9 @@ const Slider = () => {
                 </video>
               </div>
             ) : (
-              // 🔥 NORMAL IMAGE SLIDE
+              //  NORMAL IMAGE SLIDE
               <div
-                className="slider_item"
+                className="slider_item relative"
                 style={{
                   backgroundImage: `url(${slide.background})`,
                   backgroundSize: "cover",
@@ -120,6 +120,18 @@ const Slider = () => {
                   height: "100vh",
                 }}
               >
+                <div
+                  style={{
+                    backgroundColor: "black",
+                    opacity: "50%",
+                    right: "0",
+                    left: "0",
+                    top: "0",
+                    bottom: "0",
+                    position: "absolute",
+                  }}
+                  className="w-100 h-100"
+                ></div>
                 <div className="container h-100 d-flex align-items-center">
                   <div className="row w-100">
                     <div className="col-lg-8">
@@ -169,7 +181,7 @@ const Slider = () => {
                   </div>
                 </div>
 
-                <div className="slider_image">
+                {/* <div className="slider_image ">
                   <img src={slide.image} alt="main" className="main_img" />
 
                   <img
@@ -188,7 +200,7 @@ const Slider = () => {
                     videoId="c4PQfgq2NsQ"
                     triggerImage="assets/img/slider/vbtn.png"
                   />
-                </div>
+                </div> */}
               </div>
             )}
           </SwiperSlide>

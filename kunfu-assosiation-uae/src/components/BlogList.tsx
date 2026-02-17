@@ -97,7 +97,7 @@ const BlogList = () => {
           ))}
 
           {/* Pagination */}
-          <div className="col-12 text-center">
+          {/* <div className="col-12 text-center">
             <div className="mart-pagination">
               <a href="#">
                 <i className="fa-solid fa-arrow-left"></i>
@@ -115,7 +115,7 @@ const BlogList = () => {
                 <i className="fa-solid fa-arrow-right"></i>
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -8,7 +8,7 @@ const BlogDetailsPage = () => {
   return (
     <>
     <Header/>
-    <Breadcrumb title="Blog Details" background="assets/img/bg/banner_bg.jpg" />
+    <Breadcrumb title="Blog Details" background="/public/assets/img/blog/blog-banner.webp" />
     <BlogDetails/>
     <Footer/>
     </>

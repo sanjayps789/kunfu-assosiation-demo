@@ -20,8 +20,8 @@ const router = createBrowserRouter([
   { path: "/events", element: <Events /> },
   { path: "/blog", element: <Blog /> },
   { path: "/contact", element: <Contact /> },
-  { path: "/program-details", element: <ProgramDetails /> },
-  { path: "/blog-details", element: <BlogDetails /> },
+  { path: "/programs/:slug", element: <ProgramDetails /> },
+  { path: "/blog/:slug", element: <BlogDetails /> },
   { path: "/event-details", element: <EventDetails /> },
   { path: "*", element: <NotFound /> }, // 404 page
 ]);

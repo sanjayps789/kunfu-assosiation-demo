@@ -18,13 +18,13 @@ const Header = () => {
 
       <header
         id="mar_header"
-        className="navbar position-absolute top-0 start-0 w-100 z-3 " 
+        className="navbar position-absolute top-0 start-0 w-100 z-3" 
       >
         <div className="container d-flex align-items-center justify-content-between">
           {/* Logo */}
           <div className="site_logo d-inline-block my-auto">
             <Link to="/">
-              <img src="assets/img/logo-white.svg" alt="Martivo" />
+              <img src="assets/img/logo-white.svg" alt="Kungfu Association UAE" />
             </Link>
           </div>
 

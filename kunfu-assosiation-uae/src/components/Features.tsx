@@ -1,5 +1,84 @@
+// // src/components/Features.jsx
+// import { memo , useRef } from "react";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Pagination } from "swiper/modules";
+// import { motion } from "framer-motion";
+// import "swiper/css";
+// import "swiper/css/pagination";
+
+// const features = [
+//   { icon: "assets/img/features/icon1.svg", title: "Kung Fu", text: "Traditional Chinese martial arts training that develops strength, agility, coordination, and disciplined self-control through structured practice." },
+//   { icon: "assets/img/features/icon2.svg", title: "Tai Chi", text: " A mindful martial art that improves balance, flexibility, breathing, and inner calm, suitable for all age groups and abilities." },
+//   { icon: "assets/img/features/icon3.svg", title: " Qigong", text: " A holistic practice of movement and breathing that supports energy balance, stress relief, and overall physical and mental well-being." },
+//   // { icon: "assets/img/features/icon4.svg", title: "Legacy of Karate", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nam venenatis imperdiet." },
+//   // { icon: "assets/img/features/icon1.svg", title: "Kickboxing", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nam venenatis imperdiet." },
+//   // { icon: "assets/img/features/icon2.svg", title: "Self Defense", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nam venenatis imperdiet." },
+//   // { icon: "assets/img/features/icon4.svg", title: "Legacy of Karate", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nam venenatis imperdiet." },
+//   // { icon: "assets/img/features/icon1.svg", title: "Kickboxing", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nam venenatis imperdiet." },
+// ];
+
+// const Features = () => {
+//   const paginationRef = useRef(null);
+
+//   return (
+//     <motion.section
+//       className="features pb100"
+//       initial={{ opacity: 0, y: 50 }}
+//       whileInView={{ opacity: 1, y: 0 }}
+//       transition={{ duration: 0.8 }}
+//       viewport={{ once: true }}
+//     >
+//       <div className="container">
+//         <Swiper
+//           modules={[Pagination]}
+//           slidesPerView={4}
+//           spaceBetween={30}
+//           loop={true}
+//           centeredSlides={true}
+//           pagination={{
+//             el: paginationRef.current,
+//             clickable: true,
+//           }}
+//           onBeforeInit={(swiper) => {
+//             swiper.params.pagination.el = paginationRef.current;
+//           }}
+//           breakpoints={{
+//             0: { slidesPerView: 1 },
+//             768: { slidesPerView: 2 },
+//             992: { slidesPerView: 4 },
+//           }}
+//           className="feature_slider"
+//         >
+//           {features.map((feature, index) => (
+//             <SwiperSlide key={index} className="feature_item">
+//               <motion.div
+//                 className="feature_inner"
+//                 initial={{ opacity: 0, scale: 0.9 }}
+//                 whileInView={{ opacity: 1, scale: 1 }}
+//                 transition={{ duration: 0.6, delay: index * 0.1 }}
+//                 viewport={{ once: true }}
+//               >
+//                 <div className="feature_icon">
+//                   <img src={feature.icon} alt="img" />
+//                 </div>
+//                 <h3>{feature.title}</h3>
+//                 <p>{feature.text}</p>
+//               </motion.div>
+//             </SwiperSlide>
+//           ))}
+
+//           <div ref={paginationRef} className="feature-pagination"></div>
+//         </Swiper>
+//       </div>
+//     </motion.section>
+//   );
+// };
+
+// export default memo(Features);
+
+
 // src/components/Features.jsx
-import { memo , useRef } from "react";
+import { memo, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
@@ -7,18 +86,29 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 const features = [
-  { icon: "assets/img/features/icon1.svg", title: "Kung Fu", text: "Traditional Chinese martial arts training that develops strength, agility, coordination, and disciplined self-control through structured practice." },
-  { icon: "assets/img/features/icon2.svg", title: "Tai Chi", text: " A mindful martial art that improves balance, flexibility, breathing, and inner calm, suitable for all age groups and abilities." },
-  { icon: "assets/img/features/icon3.svg", title: " Qigong", text: " A holistic practice of movement and breathing that supports energy balance, stress relief, and overall physical and mental well-being." },
-  // { icon: "assets/img/features/icon4.svg", title: "Legacy of Karate", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nam venenatis imperdiet." },
-  // { icon: "assets/img/features/icon1.svg", title: "Kickboxing", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nam venenatis imperdiet." },
-  // { icon: "assets/img/features/icon2.svg", title: "Self Defense", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nam venenatis imperdiet." },
-  // { icon: "assets/img/features/icon4.svg", title: "Legacy of Karate", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nam venenatis imperdiet." },
-  // { icon: "assets/img/features/icon1.svg", title: "Kickboxing", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nam venenatis imperdiet." },
+  {
+    icon: "assets/img/features/icon1.svg",
+    title: "Kung Fu",
+    text: "Traditional Chinese martial arts training that develops strength, agility, coordination, and disciplined self-control through structured practice.",
+  },
+  {
+    icon: "assets/img/features/icon2.svg",
+    title: "Tai Chi",
+    text: "A mindful martial art that improves balance, flexibility, breathing, and inner calm, suitable for all age groups and abilities.",
+  },
+  {
+    icon: "assets/img/features/icon3.svg",
+    title: "Qigong",
+    text: "A holistic practice of movement and breathing that supports energy balance, stress relief, and overall physical and mental well-being.",
+  },
 ];
 
 const Features = () => {
   const paginationRef = useRef(null);
+
+  const getSlidesPerView = (max) => {
+    return features.length < max ? features.length : max;
+  };
 
   return (
     <motion.section
@@ -31,10 +121,9 @@ const Features = () => {
       <div className="container">
         <Swiper
           modules={[Pagination]}
-          slidesPerView={4}
+          slidesPerView={getSlidesPerView(4)}
           spaceBetween={30}
-          loop={true}
-          centeredSlides={true}
+          loop={features.length > 4}
           pagination={{
             el: paginationRef.current,
             clickable: true,
@@ -44,8 +133,8 @@ const Features = () => {
           }}
           breakpoints={{
             0: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            992: { slidesPerView: 4 },
+            768: { slidesPerView: getSlidesPerView(2) },
+            992: { slidesPerView: getSlidesPerView(4) },
           }}
           className="feature_slider"
         >
@@ -59,7 +148,7 @@ const Features = () => {
                 viewport={{ once: true }}
               >
                 <div className="feature_icon">
-                  <img src={feature.icon} alt="img" />
+                  <img src={feature.icon} alt={feature.title} />
                 </div>
                 <h3>{feature.title}</h3>
                 <p>{feature.text}</p>
@@ -75,3 +164,4 @@ const Features = () => {
 };
 
 export default memo(Features);
+
