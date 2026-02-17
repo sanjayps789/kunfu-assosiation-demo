@@ -1,7 +1,7 @@
 import { memo } from "react";
 import Header from "../layouts/Header";
 import Slider from "../components/Slider";
-import About from '../components/About';
+import About from "../components/About";
 import Features from "../components/Features";
 import Programs from "../components/Programs";
 import Pricing from "../components/Pricing";
@@ -16,19 +16,21 @@ import Footer from "../layouts/Footer";
 const Home = () => {
   return (
     <>
-      <Header/>
-      <Slider/>
-      <About/>
-      <Features/> 
-      <Programs/>
+     
+
+      <Header />
+      <Slider />
+      <About />
+      <Features />
+      <Programs />
       {/* <Pricing sectionClass="section-padding"/> */}
-      <Events/>
-      <Team/>
-      <Testimonials/>
-      <CounterUp/>
-      <Blog/>
+      <Events />
+      <Team />
+      <Testimonials />
+      <CounterUp />
+      <Blog />
       <Clients showDivider={true} sliderClass="pt50" />
-      <Footer/>
+      <Footer />
     </>
   );
 };

@@ -42,6 +42,36 @@ const teamMembers = [
       { icon: "fa-youtube", link: "#" },
     ],
   },
+  {
+    name: "Sara Lee",
+    role: "Sr. Martial Arts",
+    image: "assets/img/team/person-5.webp",
+    social: [
+      { icon: "fa-facebook-f", link: "#" },
+      { icon: "fa-x-twitter", link: "#" },
+      { icon: "fa-youtube", link: "#" },
+    ],
+  },
+  {
+    name: "Savanna Hahn",
+    role: "Strength Trainers",
+    image: "assets/img/team/person-6.webp",
+    social: [
+      { icon: "fa-facebook-f", link: "#" },
+      { icon: "fa-x-twitter", link: "#" },
+      { icon: "fa-youtube", link: "#" },
+    ],
+  },
+  {
+    name: "Mike Johnson",
+    role: "Self Defense Expert",
+    image: "assets/img/team/person-7.webp",
+    social: [
+      { icon: "fa-facebook-f", link: "#" },
+      { icon: "fa-x-twitter", link: "#" },
+      { icon: "fa-youtube", link: "#" },
+    ],
+  },
 ];
 
 const Team = () => {

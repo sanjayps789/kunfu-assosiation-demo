@@ -665,12 +665,15 @@ a:focus {
   color: var(--white);
 }
 
+
 .slider_item h1.heading {
   color: var(--white);
   font-size: 52px;
   margin-bottom: 25px;
   line-height: 72px;
 }
+
+
 .slider_item h1.heading span {
   color: var(--orange);
 }
@@ -684,7 +687,7 @@ a:focus {
   gap: 18px;
   padding-left: 0;
   margin-bottom: 0;
-  margin-top: 15px;
+  margin-top: 6px;
 }
 .slider_social li a {
   color: var(--white);
