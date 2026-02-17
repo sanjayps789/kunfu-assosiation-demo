@@ -10,7 +10,6 @@ import CounterUp from "../components/CounterUp";
 import Clients from "../components/Clients";
 import Footer from "../layouts/Footer";
 import MissionVision from "../components/MissionVision";
-import { Helmet } from "react-helmet-async";
 
 const AboutPage = () => {
   return (
