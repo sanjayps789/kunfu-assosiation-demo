@@ -90,7 +90,9 @@ const Team = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <span className="sub_title">Our Team</span>
-          <h2>Learn from expert martial <br /> arts masters</h2>
+          <h2>
+            Learn from expert martial <br /> arts masters
+          </h2>
           <img src="assets/img/shapes/title.svg" alt="img" />
         </motion.div>
 
@@ -102,14 +104,22 @@ const Team = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
             >
-              <div className="team_item text-center">
+              <div className="team_card_ref">
+                {/* IMAGE */}
                 <div
-                  className="team_img"
+                  className="team_card_img"
                   style={{ backgroundImage: `url(${member.image})` }}
-                >
-                  <ul>
+                />
+
+                {/* OVERLAY */}
+                <div className="team_card_overlay">
+                  <h4>{member.name}</h4>
+                  <p>{member.role}</p>
+
+                  {/* SOCIAL */}
+                  <ul className="team_social">
                     {member.social.map((s, i) => (
                       <li key={i}>
                         <a href={s.link}>
@@ -119,8 +129,6 @@ const Team = () => {
                     ))}
                   </ul>
                 </div>
-                <h3>{member.name}</h3>
-                <p>{member.role}</p>
               </div>
             </motion.div>
           ))}
