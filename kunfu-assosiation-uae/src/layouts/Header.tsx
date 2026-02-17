@@ -1,79 +1,121 @@
-import { memo, useState } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import MobileOffcanvas from "../layouts/MobileOffcanvas";
-
+import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false); // shared state
-  const toggleOffcanvas = () => setIsOpen(!isOpen);
+  const [showNav, setShowNav] = useState(true);
+  const [isAtTop, setIsAtTop] = useState(true);
+  const lastScrollY = useRef(0);
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+
+      // Detect if at top
+      setIsAtTop(currentY === 0);
+
+      // Hide nav when scrolling down
+      if (currentY > lastScrollY.current && currentY > 80) {
+        setShowNav(false);
+      } else {
+        setShowNav(true);
+      }
+
+      lastScrollY.current = currentY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <>
-      
-      {/* Pass state + toggle to MobileOffcanvas */}
-      <MobileOffcanvas isOpen={isOpen} toggleOffcanvas={toggleOffcanvas} />
-
-      <header
-        id="mar_header"
-        className="navbar position-absolute top-0 start-0 w-100 z-3" 
-      >
-        <div className="container d-flex align-items-center justify-content-between">
-          {/* Logo */}
-          <div className="site_logo d-inline-block my-auto">
-            <Link to="/">
-              <img src="assets/img/logo-white.svg" alt="Kungfu Association UAE" />
-            </Link>
-          </div>
-
-          {/* Desktop Menu */}
-          <nav
-            className={`main-menu align-self-center  ${
-              isMenuOpen ? "active" : ""
-            }`}
-          >
-            <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/programs">Programs</Link></li>
-              <li><Link to="/events">Events</Link></li>
-
-              {/* Dropdown */}
-              {/* <li
-                className={`has-child-items ${dropdownOpen ? "open" : ""}`}
-                onClick={() => setDropdownOpen(!dropdownOpen)}
-              >
-                <Link to="#">
-                  Pages <i className="fa-solid fa-chevron-down"></i>
-                </Link>
-                <ul className="sub-menu">
-                  <li><Link to="/about">About</Link></li>
-                  <li><Link to="/programs">Programs</Link></li>
-                  <li><Link to="/program-details">Program Details</Link></li>
-                  <li><Link to="/events">Events</Link></li>
-                  <li><Link to="/event-details">Event Details</Link></li>
-                  <li><Link to="/blog">Blog</Link></li>
-                  <li><Link to="/blog-details">Blog Details</Link></li>
-                  <li><Link to="/404">404</Link></li>
-                </ul>
-              </li> */}
-
-              <li><Link to="/blog">Blog</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
-            </ul>
-          </nav>
-
-            {/* Toggle Button (for small screens) */}
-            <div className="header__hamburger d-xl-none my-auto">
-              <button className="sidebar__toggle" onClick={toggleOffcanvas}>
-                <i className="ph ph-list"></i>
-              </button>
-            </div>
+    <header
+      className={`custom-header fixed-top w-100 pb- ${
+        isAtTop
+          ? "header-top"
+          : showNav
+            ? "header-scrolled"
+            : "header-transparent"
+      }`}
+    >
+      {/* TOP LOGO BAR */}
+      <div className="top-bar container d-flex justify-content-between align-items-center">
+        <div className="logo-left">
+          <Link to="/">
+            <img
+              src="/assets/img/main_logo.webp"
+              className="main_logo"
+              alt="Government Logo"
+            />
+          </Link>
         </div>
-      </header>
-    </>
+
+        <div className="logo-right">
+          <img src="/assets/img/community_logo.webp" alt="Community Logo" />
+        </div>
+      </div>
+
+      {/* NAV BAR */}
+      <AnimatePresence>
+        {showNav && (
+          <motion.div
+            className="nav-bar"
+            initial={{ y: -40, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -40, opacity: 0 }}
+            transition={{ duration: 0.35, ease: "easeInOut" }}
+          >
+            <div className="container d-flex align-items-center justify-content-between">
+              <nav className="main-menu">
+                <ul className="d-flex gap-4 mb-0">
+                  <li>
+                    <Link to="/">Home</Link>
+                  </li>
+                  <li>
+                    <Link to="/about">About Us</Link>
+                  </li>
+                  <li>
+                    <Link to="/programs">Programs</Link>
+                  </li>
+                  <li>
+                    <Link to="/events">Events</Link>
+                  </li>
+                  <li>
+                    <Link to="/blog">Blog</Link>
+                  </li>
+                  <li>
+                    <Link to="/contact">Contact Us</Link>
+                  </li>
+                </ul>
+              </nav>
+
+              <div className="social_link">
+                <li>
+                  <a href="#">
+                    <i className="fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="fa-brands fa-x-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="fa-brands fa-youtube"></i>
+                  </a>
+                </li>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
   );
 };
 

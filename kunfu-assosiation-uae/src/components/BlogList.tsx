@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 // Blog item component
 const BlogItem = memo(({ blog, index }: any) => (
@@ -34,7 +35,7 @@ const BlogItem = memo(({ blog, index }: any) => (
               </span>
             </div>
             <h3>
-              <a href="/blog-details">{blog.title}</a>
+              <Link to={`/blog/${blog.slug}`}>{blog.title}</Link>
             </h3>
             <p>{blog.desc}</p>
             <motion.a
@@ -56,6 +57,7 @@ const BlogList = () => {
   const blogs = [
     {
       id: 1,
+      slug: "martial-arts-support-youth-development-schools",
       img: "assets/img/blog/martial-arts.webp",
       date: "18 August, 2025",
       author: "Admin",
@@ -64,6 +66,7 @@ const BlogList = () => {
     },
     {
       id: 2,
+      slug: "community-wellness-tai-chi-qigong-uae",
       img: "assets/img/blog/community.webp",
       date: "18 August, 2025",
       author: "Admin",
@@ -72,6 +75,7 @@ const BlogList = () => {
     },
     {
       id: 3,
+      slug: "women-empowerment-martial-arts-training",
       img: "assets/img/blog/women-emp.webp",
       date: "18 August, 2025",
       author: "Admin",
@@ -80,6 +84,7 @@ const BlogList = () => {
     },
     {
       id: 4,
+      slug: "discipline-mental-strength-martial-arts",
       img: "assets/img/blog/discipline.webp",
       date: "18 August, 2025",
       author: "Admin",

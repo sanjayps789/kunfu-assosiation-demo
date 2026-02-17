@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "framer-motion"; // <-- Import motion
 import "swiper/css";
 import "swiper/css/navigation";
+import { Link } from "react-router-dom";
 
 const events = [
    { title: "Chinese New Year", date: "February 14 2026", time: "12:00 PM", image: "/assets/img/events/chinese-new-year.webp" },
@@ -27,11 +28,11 @@ const Events = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <div className="section-heading text-start mb-0">
-              <span className="sub_title">Events</span>
+              <span className="sub_title">Upcoming Events</span>
               <h2>Learn from the best martial arts instructors around</h2>
-              <a href="/events" className="main_btn mt-4">
-                Choose Plan <i className="ph ph-arrow-right"></i>
-              </a>
+              <Link to="/events" className="main_btn mt-4">
+               View All <i className="ph ph-arrow-right"></i>
+              </Link>
             </div>
           </motion.div>
 
@@ -44,7 +45,6 @@ const Events = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <Swiper
-              
               navigation
               loop={true}
               slidesPerView={3}

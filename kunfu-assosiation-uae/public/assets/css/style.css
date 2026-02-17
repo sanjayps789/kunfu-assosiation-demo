@@ -5,8 +5,8 @@ Main Style
 /*** Global CSS ***/
 
 :root {
-  --fontLato: "Lato", sans-serif;
-
+  --fontInter: "Inter", sans-serif;
+  --fontOutfit:"Outfit", sans-serif;
   /* Core Colors */
   --white: #ffffff;
   --title: #1a1a1a; /* Dark official black */
@@ -16,7 +16,7 @@ Main Style
   --rating: #a1a468; /* Gold accent */
   --blue: #1a1a1a; /* Replace blue with official dark tone */
   --yellow: #a1a468; /* Gold instead of bright yellow */
-  --ff5: #ef3e42; /* UAE Red accent */
+  --ff5: #B4975A; /* UAE Red accent */
   --2c2b: #1a1a1a; /* Deep dark */
   --gray: #f5f5f5; /* Soft background gray */
 
@@ -27,13 +27,14 @@ Main Style
   --f7: #f8f8f8;
   --f9: #fafafa;
   --e5: #e5e5e5;
-  --26: #1a1a1a;
+  --26: #32599a;
 
   --rating: #a1a468; /* Gold */
-  --red: #ef3e42; /* UAE Red */
-  --orange: #ef3e42; /* UAE Red */
+  --red: #B4975A; /* UAE Red */
+  --orange: #B4975A; /* UAE Red */
   --red2: #c6282c; /* Dark Red */
-
+  /* --btn: #32599a; */
+  --btn:#B4975A;
   --blue: #1a1a1a; /* Official Dark */
 
   /* Footer */
@@ -57,7 +58,7 @@ Main Style
 
 /* older: root */
 /* :root {
-  --fontLato: "Lato", sans-serif;
+  --fontInter: "Lato", sans-serif;
   --white: #fff;
   --title: #222;
   --body: #444;
@@ -96,7 +97,7 @@ body {
   color: var(--body);
   overflow-x: hidden;
   font-size: 16px;
-  font-family: var(--fontLato);
+  font-family: var(--fontOutfit);
   font-weight: 400;
   line-height: 1.8;
   position: relative;
@@ -109,7 +110,7 @@ h4,
 h5,
 h6 {
   color: var(--title);
-  font-family: var(--fontLato);
+  font-family: var(--fontInter);
   font-weight: 700;
   line-height: auto;
 }
@@ -121,6 +122,7 @@ a {
   text-decoration: none;
   color: var(--body);
   transition: 0.5s;
+  font-family: var(--fontOutfit);
 }
 a:hover,
 a:focus {
@@ -188,12 +190,12 @@ a:focus {
 }
 
 .main_btn {
-  background: var(--orange);
+  background: var(--btn);
   padding: 13px 16px 13px 18px;
   border-radius: 30px;
   color: var(--white);
   display: inline-block;
-  border: 1px solid var(--orange);
+  border: 1px solid var(--btn);
   text-align: center;
   overflow: hidden;
   position: relative;
@@ -291,6 +293,7 @@ a:focus {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  max-width: 60px;
 }
 .preloader::after {
   content: "";
@@ -315,121 +318,83 @@ a:focus {
   }
 }
 
-/** Start Header **/
-
-#mar_header {
-  padding: 25px 0;
-  /* background-color: rgba(255, 255, 255, 0);
-	backdrop-filter: blur(5px); */
-}
-.site_logo {
-  width: 165px;
-}
-.site_logo a {
-  display: block;
-}
-.main-menu {
-  display: inline-block;
+/** HEADER BASE **/
+.custom-header {
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+  z-index: 999;
 }
 
+/* Logos */
+.main_logo {
+  width: 70px;
+}
+
+.logo-right img {
+  width: 200px;
+}
+
+/* NAV BAR */
+.nav-bar {
+  padding:0 0 10px 0;
+}
+
+/* Menu */
 .main-menu ul {
-  padding-left: 0;
-  margin-bottom: 0;
-}
-.main-menu li {
-  display: inline-block;
-  margin-left: 38px;
-  position: relative;
-  line-height: 35px;
-}
-.main-menu li a {
-  text-transform: uppercase;
-  font-weight: 600;
-  transition: 0.5s;
-  font-size: 14px;
-  color: white;
-  transition: 0.5s;
-  position: relative;
-}
-.main-menu .sub-menu a:after,
-.main-menu .has-child-items a:after {
-  display: none;
-}
-.main-menu li a:after {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 8px;
-  background-image: url(../img/shapes/menuhover.svg);
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -10px;
-  transition: 0.5s;
-  background-repeat: no-repeat;
-  opacity: 0;
-}
-.main-menu li a:hover:after {
-  width: 50px;
-  opacity: 1;
-}
-.main-menu li a i {
-  font-size: 14px;
-  padding-left: 12px;
-}
-.main-menu li a:hover,
-.main-menu li a:focus {
-  color: var(--orange);
-}
-.main-menu li ul.sub-menu {
-  position: absolute;
-  min-width: 220px;
-  padding: 0 20px;
-  background: #fff;
-  box-shadow: 0 3px 11px #0000001a;
-  max-height: 0;
-  -webkit-transform-origin: 0 0 0;
-  transform-origin: 0 0 0;
-  left: 0;
-  right: auto;
-  visibility: hidden;
-  overflow: hidden;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  z-index: 99;
-  top: 101%;
-  text-align: left;
-  display: block;
-  border-radius: 4px;
+  list-style: none;
 }
 
-.main-menu ul ul.sub-menu li {
-  display: block;
-  margin-left: 0;
-}
-.main-menu ul ul.sub-menu li a {
-  font-size: 15px;
-  display: block;
-  line-height: 36px;
-  text-transform: capitalize;
-  color: var(--body);
-}
-.main-menu ul ul.sub-menu li a:hover {
-  color: var(--orange);
-}
-.main-menu ul > li:hover ul.sub-menu {
-  visibility: visible;
-  max-height: 360px;
-  padding: 15px 20px;
+.main-menu ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  font-size: 16px;
+  text-align: start;
 }
 
-.sidebar__toggle {
-  font-size: 32px;
-  color: var(--white);
-  cursor: pointer;
-  display: flex;
-  border: 1px solid transparent;
+/* =========================
+   STATE 1 — TOP (INITIAL)
+   Transparent + white text
+========================= */
+.header-top {
   background: transparent;
 }
+
+.header-top .main-menu ul li a {
+  color: white;
+}
+
+/* =========================
+   STATE 2 — SCROLL DOWN
+   Nav hidden, only logos visible
+   Keep transparent
+========================= */
+.header-transparent {
+  background: transparent;
+}
+
+/* =========================
+   STATE 3 — SCROLL UP
+   White bg + black text
+========================= */
+.header-scrolled {
+  background: white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.header-scrolled .main-menu ul li a {
+  color: #222;
+}
+
+/* Hover */
+.main-menu ul li a:hover {
+  color: var(--orange);
+  text-decoration: underline;
+  transition: all;
+  transition-duration: 0.3s;
+}
+
 /** End Header **/
 
 /* Mobile Menu */
@@ -713,6 +678,8 @@ a:focus {
   height: auto;
   display: block;
 }
+
+
 /* Shape 1 */
 .sshape_1 {
   position: absolute;
@@ -909,7 +876,7 @@ a:focus {
 }
 .feature_item.swiper-slide-active {
   box-shadow: 0 14px 27px rgba(0, 0, 0, 0.03);
-  border-color: var(--orange);
+  /* border-color: var(--orange); */
 }
 .feature_item img {
   width: 60px;

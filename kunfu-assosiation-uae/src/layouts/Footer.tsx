@@ -38,62 +38,122 @@ const Footer = () => {
         <div className="container">
           <div className="row mb-4 g-4">
             {/* About */}
-            <motion.div className="col-lg-3 col-md-4 col-12" custom={0} variants={fadeUp}>
+            <motion.div
+              className="col-lg-3 col-md-4 col-12"
+              custom={0}
+              variants={fadeUp}
+            >
               <div className="footer_about mb-md-0 mb-5">
                 <Link to="/" className="foot_logo">
-                  <img src="assets/img/logo-white.svg" alt="logo" />
+                  <img
+                    style={{ maxWidth: "70px" }}
+                    src="assets/img/main_logo.webp"
+                    alt="logo"
+                  />
                 </Link>
                 <p>
-                 The Emirates Kung Fu, Tai Chi & Qigong Association is the official body promoting and developing Chinese martial arts across the UAE.
-
+                  UAE Kung Fu Tai Chi Qigong Association Registered with the
+                  Community Development Authority (CDA), UAE Registration No.:
+                  1575985
                 </p>
                 <span>Connect with us</span>
                 <ul className="social_link">
-                  <li><a href="#"><i className="fa-brands fa-facebook-f"></i></a></li>
-                  <li><a href="#"><i className="fa-brands fa-x-twitter"></i></a></li>
-                  <li><a href="#"><i className="fa-brands fa-instagram"></i></a></li>
-                  <li><a href="#"><i className="fa-brands fa-youtube"></i></a></li>
+                  <li>
+                    <a href="#">
+                      <i className="fa-brands fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i className="fa-brands fa-x-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i className="fa-brands fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i className="fa-brands fa-youtube"></i>
+                    </a>
+                  </li>
                 </ul>
               </div>
             </motion.div>
 
             {/* About Links */}
-            <motion.div className="col-xl-3 col-lg-4 col-md-6 col-12" custom={1} variants={fadeUp}>
+            <motion.div
+              className="col-xl-3 col-lg-4 col-md-6 col-12"
+              custom={1}
+              variants={fadeUp}
+            >
               <div className="footer_widget">
                 <h3 className="footer-title">About Martivo</h3>
                 <ul>
-                  <li><Link to="/about">About Us</Link></li>
-                  <li><Link to="/privacy-policy">Privacy Policy</Link></li>
-                  <li><Link to="/terms">Terms & Conditions</Link></li>
-                  <li><Link to="/support">Support</Link></li>
-                  <li><Link to="/contact">Contact</Link></li>
+                  <li>
+                    <Link to="/about">About Us</Link>
+                  </li>
+                  <li>
+                    <Link to="/privacy-policy">Privacy Policy</Link>
+                  </li>
+                  <li>
+                    <Link to="/terms">Terms & Conditions</Link>
+                  </li>
+                  <li>
+                    <Link to="/support">Support</Link>
+                  </li>
+                  <li>
+                    <Link to="/contact">Contact</Link>
+                  </li>
                 </ul>
               </div>
             </motion.div>
 
             {/* Contact */}
-            <motion.div className="col-xl-3 col-lg-4 col-md-6 col-12" custom={2} variants={fadeUp}>
+            <motion.div
+              className="col-xl-3 col-lg-4 col-md-6 col-12"
+              custom={2}
+              variants={fadeUp}
+            >
               <div className="footer_widget">
                 <h3 className="footer-title">Quick Contact</h3>
                 <div className="footer_contact">
                   <p>
                     <i className="ph ph-map-pin-area"></i>
-                    <span>  KML Business Center, Office 126, Dubai, <br /> United Arab Emirates | Registration #: 1575985 </span>
+                    <span>
+                      {" "}
+                      KML Business Center, Office 126, Dubai, <br /> United Arab
+                      Emirates | Registration #: 1575985{" "}
+                    </span>
                   </p>
                   <p>
                     <i className="ph ph-phone-call"></i>
-                    <span>  <a href="tel:+971525759907"> +971 52 575 9907 </a></span>
+                    <span>
+                      {" "}
+                      <a href="tel:+971525759907"> +971 52 575 9907 </a>
+                    </span>
                   </p>
                   <p>
                     <i className="ph ph-envelope-simple"></i>
-                    <span> <a href="mailto:info@UAEKungFuAssociation.ae"> info@UAEKungFuAssociation.ae</a></span>
+                    <span>
+                      {" "}
+                      <a href="mailto:info@UAEKungFuAssociation.ae">
+                        {" "}
+                        info@UAEKungFuAssociation.ae
+                      </a>
+                    </span>
                   </p>
                 </div>
               </div>
             </motion.div>
 
             {/* Newsletter */}
-            <motion.div className="col-xl-3 col-lg-4 col-md-6 col-12" custom={3} variants={fadeUp}>
+            <motion.div
+              className="col-xl-3 col-lg-4 col-md-6 col-12"
+              custom={3}
+              variants={fadeUp}
+            >
               <div className="footer_widget">
                 <h3 className="footer-title">Subscribe To Newsletter</h3>
                 <div id="newsletter_form">
@@ -108,7 +168,11 @@ const Footer = () => {
                     />
                     <button type="submit">Subscribe Now</button>
                   </form>
-                  {message && <div id="form-messages" className="mt-3">{message}</div>}
+                  {message && (
+                    <div id="form-messages" className="mt-3">
+                      {message}
+                    </div>
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -120,7 +184,8 @@ const Footer = () => {
               <div className="divider dwhite mb-4"></div>
               <div className="mar_copyright text-center">
                 <p>
-                  Copyright © 2025 <Link to="/">Martivo</Link> All Right Reserved.
+                  Copyright © 2025 <Link to="/">Martivo</Link> All Right
+                  Reserved.
                 </p>
               </div>
             </div>
@@ -128,13 +193,29 @@ const Footer = () => {
         </div>
 
         {/* Shapes */}
-        <img src="assets/img/shapes/stars.svg" alt="shape" className="footer_stars position-absolute" />
-        <img src="assets/img/shapes/fdots.svg" alt="shape" className="footer_fdots position-absolute" />
-        <img src="assets/img/shapes/fcircle.svg" alt="shape" className="footer_fcircle position-absolute" />
-        <img src="assets/img/shapes/arrowsup.svg" alt="shape" className="footer_arrowsup position-absolute" />
+        <img
+          src="assets/img/shapes/stars.svg"
+          alt="shape"
+          className="footer_stars position-absolute"
+        />
+        <img
+          src="assets/img/shapes/fdots.svg"
+          alt="shape"
+          className="footer_fdots position-absolute"
+        />
+        <img
+          src="assets/img/shapes/fcircle.svg"
+          alt="shape"
+          className="footer_fcircle position-absolute"
+        />
+        <img
+          src="assets/img/shapes/arrowsup.svg"
+          alt="shape"
+          className="footer_arrowsup position-absolute"
+        />
       </motion.footer>
 
-      <BackToTop/>
+      <BackToTop />
     </>
   );
 };

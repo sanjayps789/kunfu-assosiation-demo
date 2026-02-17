@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import VideoPopup from "./VideoPopup";
 import DOMPurify from "dompurify";
+import { Link } from "react-router-dom";
 
 const slides = [
   {
@@ -129,6 +130,7 @@ const Slider = () => {
                     top: "0",
                     bottom: "0",
                     position: "absolute",
+                    zIndex: "-1",
                   }}
                   className="w-100 h-100"
                 ></div>
@@ -148,12 +150,12 @@ const Slider = () => {
                         }}
                       />
 
-                      <a href="/about" className="main_btn">
+                      <Link to="/about" className="main_btn">
                         <span>
                           Explore Our Programs
                           <i className="ph ph-arrow-right"></i>
                         </span>
-                      </a>
+                      </Link>
 
                       <ul className="slider_social">
                         <li>
