@@ -17,7 +17,7 @@ const MobileOffcanvas = ({ isOpen, toggleOffcanvas }) => {
               <div className="offcanvas__top d-flex justify-content-between align-items-center">
                 <div className="offcanvas__logo">
                   <Link to="/">
-                    <img src="assets/img/logo.svg" alt="edutec" />
+                    <img style={{maxWidth:'150px'}} src="assets/img/community_logo.webp" alt="edutec" />
                   </Link>
                 </div>
                 <div className="offcanvas__close">

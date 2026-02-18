@@ -4,15 +4,14 @@ import { motion } from "framer-motion";
 import { memo } from "react";
 
 const counters = [
-  { value: 1500, label: "Happy Students" },
-  { value: 250, label: "Expert Trainers" },
-  { value: 50, label: "Martial Arts Programs" },
-  { value: 100, label: "Awards Won" },
+  { value: 10, label: "Initiatives" },
+  { value: 7, label: "Emirates Reached" },
+  { value: 2026, label: "Vision Year", isYear: true },
 ];
 
 const CounterItem = memo(({ counter, index, inView }: any) => (
   <motion.div
-    className={`col-lg-3 col-md-6 col-12`}
+    className={`col-lg-4 col-md-6 col-12`}
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
@@ -23,7 +22,7 @@ const CounterItem = memo(({ counter, index, inView }: any) => (
         index === counters.length - 1 ? "border-0" : ""
       }`}
     >
-      <h3>{inView ? <CountUp end={counter.value} duration={2} /> : 0}+</h3>
+      <h3>{inView ? <CountUp end={counter.value} duration={2} separator= {counter.isYear ? "" : ","} /> : 0}</h3>
       <p>{counter.label}</p>
     </div>
   </motion.div>
