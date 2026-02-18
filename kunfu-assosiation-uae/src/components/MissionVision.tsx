@@ -3,11 +3,9 @@ import React from "react";
 export default function MissionVision() {
   return (
     <section className="py-5 bg-white">
-      <div className="container">
+      <div className="container pb-lg-5">
         {/* Section Title */}
-        <h2 className="text-center fw-semibold mb-5">
-          Our Mission & Vision
-        </h2>
+        <h2 className="text-center fw-semibold mb-5">Our Mission & Vision</h2>
 
         {/* ================= MISSION ================= */}
         {/* Image LEFT | Content RIGHT */}
@@ -31,18 +29,17 @@ export default function MissionVision() {
               className="text-muted"
               style={{ fontSize: "17px", lineHeight: "1.8" }}
             >
-             The Mission of the UAE Kung Fu Tai Chi Qigong Association is to
-oversee, regulate, and implement structured Chinese martial arts
-programs across schools, communities, and public institutions,
-promoting physical fitness, mental well-being, emotional balance,
-and character development, while embedding values of respect,
-discipline, responsibility, and national belonging, supporting the
-UAE’s position as a global benchmark for excellence in martial arts
-education. Through collaboration with educational bodies and
-international partners, the Association ensures high standards of
-training, instructor development, and long-term sustainability of
-martial arts practice across the nation.
-
+              The Mission of the UAE Kung Fu Tai Chi Qigong Association is to
+              oversee, regulate, and implement structured Chinese martial arts
+              programs across schools, communities, and public institutions,
+              promoting physical fitness, mental well-being, emotional balance,
+              and character development, while embedding values of respect,
+              discipline, responsibility, and national belonging, supporting the
+              UAE’s position as a global benchmark for excellence in martial
+              arts education. Through collaboration with educational bodies and
+              international partners, the Association ensures high standards of
+              training, instructor development, and long-term sustainability of
+              martial arts practice across the nation.
             </p>
           </div>
         </div>
@@ -59,24 +56,23 @@ martial arts practice across the nation.
               className="text-muted"
               style={{ fontSize: "17px", lineHeight: "1.8" }}
             >
-              The Vision of the UAE Kung Fu Tai Chi Qigong Association is to build
-a stronger, safer, and more resilient generation through Chinese
-martial arts to cultivate discipline, confidence, physical
-strength, character development, mental well-being, and emotional
-control, while positioning the UAE as a world-leading hub and
-benchmark for excellence in martial arts education and
-development. By fostering innovation, cultural exchange, and
-international collaboration, the Association aspires to inspire
-lifelong learning and elevate the global recognition of traditional
-Chinese martial arts from the UAE to the world.
-
+              The Vision of the UAE Kung Fu Tai Chi Qigong Association is to
+              build a stronger, safer, and more resilient generation through
+              Chinese martial arts to cultivate discipline, confidence, physical
+              strength, character development, mental well-being, and emotional
+              control, while positioning the UAE as a world-leading hub and
+              benchmark for excellence in martial arts education and
+              development. By fostering innovation, cultural exchange, and
+              international collaboration, the Association aspires to inspire
+              lifelong learning and elevate the global recognition of
+              traditional Chinese martial arts from the UAE to the world.
             </p>
           </div>
 
           {/* Image */}
           <div className="col-lg-6 order-1 order-lg-2">
             <img
-              src="/assets/img/about/about.png"
+              src="/assets/img/slider/1.webp"
               alt="Our Vision"
               className="img-fluid rounded-4 w-100 object-fit-cover"
               style={{ height: "420px" }}
