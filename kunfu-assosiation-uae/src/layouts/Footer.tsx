@@ -89,7 +89,7 @@ const Footer = () => {
               variants={fadeUp}
             >
               <div className="footer_widget">
-                <h3 className="footer-title">About Martivo</h3>
+                <h3 className="footer-title">Quick Links</h3>
                 <ul>
                   <li>
                     <Link to="/about">About Us</Link>

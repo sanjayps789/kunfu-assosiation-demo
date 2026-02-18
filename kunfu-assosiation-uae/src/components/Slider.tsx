@@ -24,7 +24,6 @@ const slides = [
       "<span>Promoting Authentic</span><br> Kung Fu, Tai Chi and Qigong Across the UAE",
     text:
       "We work to preserve traditional Chinese martial arts while supporting structured programs for <br> individuals, communities, and institutions across the United Arab Emirates.",
-    background: "assets/img/slider/slider2.png",
     image: "assets/img/slider/image2.png",
   },
 ];
@@ -51,18 +50,13 @@ const Slider = () => {
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div
-              className="slider_item"
+              className="slider_item position-relative"
               style={{
                 backgroundImage:
-                  slide.type === "image"
-                    ? `url(${slide.background})`
-                    : `url(${slide.background})`,
+                  slide.type === "image" ? `url(${slide.background})` : "none",
               }}
             >
-              {/* Overlay */}
-              <div className="slider_overlay"></div>
-
-              {/* Background Video */}
+              {/* Background Video ONLY for second slide */}
               {slide.type === "bg-video" && (
                 <video
                   className="slider_bg_video"
@@ -70,10 +64,14 @@ const Slider = () => {
                   loop
                   muted
                   playsInline
+                  preload="metadata"
                 >
                   <source src={slide.video} type="video/mp4" />
                 </video>
               )}
+
+              {/* Overlay (kept same for both slides) */}
+              <div className="slider_overlay"></div>
 
               <div className="container position-relative">
                 <div className="row">
@@ -99,17 +97,33 @@ const Slider = () => {
                     </Link>
 
                     <ul className="slider_social active_animation">
-                      <li><a href="#"><i className="fa-brands fa-facebook-f"></i></a></li>
-                      <li><a href="#"><i className="fa-brands fa-x-twitter"></i></a></li>
-                      <li><a href="#"><i className="fa-brands fa-instagram"></i></a></li>
-                      <li><a href="#"><i className="fa-brands fa-youtube"></i></a></li>
+                      <li>
+                        <a href="#">
+                          <i className="fa-brands fa-facebook-f"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i className="fa-brands fa-x-twitter"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i className="fa-brands fa-instagram"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i className="fa-brands fa-youtube"></i>
+                        </a>
+                      </li>
                     </ul>
                   </div>
                 </div>
               </div>
 
-              {/* Right image only for image slide */}
-              {slide.type === "image" && (
+              {/* Right image should show for BOTH slides (image1 + image2) */}
+              {slide.image && (
                 <div className="slider_image active_animation position-absolute end-0 bottom-0 text-end">
                   <img src={slide.image} alt="img" />
                   <img

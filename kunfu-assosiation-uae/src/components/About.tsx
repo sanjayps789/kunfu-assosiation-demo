@@ -66,8 +66,7 @@ const AboutSection = () => {
                   About Us
                 </motion.span>
                 <motion.h2 variants={textVariant} custom={0.4}>
-                  Accreditation & Development of Traditional <br />
-                  Chinese Martial Arts in the UAE
+                  Accreditation & Development <br /> of Traditional Chinese <br />Martial Arts in the UAE
                 </motion.h2>
                 <motion.img
                   src="assets/img/shapes/title.svg"

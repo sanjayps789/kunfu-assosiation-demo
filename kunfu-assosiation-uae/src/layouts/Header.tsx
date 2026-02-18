@@ -76,7 +76,7 @@ const Header = () => {
               <Link to="/">
                 <img
                   style={{ maxWidth: "200px" }}
-                  src="assets/img/community_logo.webp"
+                  src="assets/img/community_logo.svg"
                   alt="Community Logo"
                 />
               </Link>
