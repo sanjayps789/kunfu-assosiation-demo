@@ -29,7 +29,7 @@ const Home = () => {
       <Testimonials />
       <CounterUp />
       <Blog />
-      <Clients showDivider={true} sliderClass="pt50" />
+      {/* <Clients showDivider={true} sliderClass="pt50" /> */}
       <Footer />
     </>
   );

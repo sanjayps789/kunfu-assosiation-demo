@@ -1,121 +1,97 @@
-import { memo, useEffect, useRef, useState } from "react";
+import { memo, useState } from "react";
 import { Link } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import MobileOffcanvas from "../layouts/MobileOffcanvas";
 
 const Header = () => {
-  const [showNav, setShowNav] = useState(true);
-  const [isAtTop, setIsAtTop] = useState(true);
-  const lastScrollY = useRef(0);
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleOffcanvas = () => setIsOpen(!isOpen);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentY = window.scrollY;
-
-      // Detect if at top
-      setIsAtTop(currentY === 0);
-
-      // Hide nav when scrolling down
-      if (currentY > lastScrollY.current && currentY > 80) {
-        setShowNav(false);
-      } else {
-        setShowNav(true);
-      }
-
-      lastScrollY.current = currentY;
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <header
-      className={`custom-header fixed-top w-100 pb- ${
-        isAtTop
-          ? "header-top"
-          : showNav
-            ? "header-scrolled"
-            : "header-transparent"
-      }`}
-    >
-      {/* TOP LOGO BAR */}
-      <div className="top-bar container d-flex justify-content-between align-items-center">
-        <div className="logo-left">
-          <Link to="/">
-            <img
-              src="/assets/img/main_logo.webp"
-              className="main_logo"
-              alt="Government Logo"
-            />
-          </Link>
-        </div>
+    <>
+      <MobileOffcanvas isOpen={isOpen} toggleOffcanvas={toggleOffcanvas} />
 
-        <div className="logo-right">
-          <img src="/assets/img/community_logo.webp" alt="Community Logo" />
-        </div>
-      </div>
+      <header
+        id="mar_header"
+        className="navbar position-absolute top-0 start-0 w-100 z-3"
+      >
+        <div className="container d-flex align-items-center justify-content-between">
+          {/* LEFT LOGO (All screens) */}
+          <div>
+            <Link to="/">
+              <img
+                style={{ maxWidth: "50px" }}
+                src="assets/img/main_logo.webp"
+                alt="Logo"
+              />
+            </Link>
+          </div>
 
-      {/* NAV BAR */}
-      <AnimatePresence>
-        {showNav && (
-          <motion.div
-            className="nav-bar"
-            initial={{ y: -40, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -40, opacity: 0 }}
-            transition={{ duration: 0.35, ease: "easeInOut" }}
-          >
-            <div className="container d-flex align-items-center justify-content-between">
-              <nav className="main-menu">
-                <ul className="d-flex gap-4 mb-0">
-                  <li>
-                    <Link to="/">Home</Link>
-                  </li>
-                  <li>
-                    <Link to="/about">About Us</Link>
-                  </li>
-                  <li>
-                    <Link to="/programs">Programs</Link>
-                  </li>
-                  <li>
-                    <Link to="/events">Events</Link>
-                  </li>
+          {/* DESKTOP MENU (Only xl and above) */}
+          <nav className="main-menu d-none d-xl-block">
+            <ul className="d-flex align-items-center gap-4 mb-0">
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+              <li>
+                <Link to="/programs">Programs</Link>
+              </li>
+              <li>
+                <Link to="/events">Events</Link>
+              </li>
+              <li>
+                <Link to="/blog">Blog</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact Us</Link>
+              </li>
+
+              {/* <li
+                className={`has-child-items ${dropdownOpen ? "open" : ""}`}
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+              >
+                <Link to="#">
+                  Pages <i className="fa-solid fa-chevron-down"></i>
+                </Link>
+                <ul className="sub-menu">
                   <li>
                     <Link to="/blog">Blog</Link>
                   </li>
                   <li>
-                    <Link to="/contact">Contact Us</Link>
+                    <Link to="/contact">Contact</Link>
                   </li>
                 </ul>
-              </nav>
+              </li> */}
+            </ul>
+          </nav>
 
-              <div className="social_link">
-                <li>
-                  <a href="#">
-                    <i className="fa-brands fa-facebook-f"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="fa-brands fa-x-twitter"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="fa-brands fa-instagram"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="fa-brands fa-youtube"></i>
-                  </a>
-                </li>
-              </div>
+          {/* RIGHT SECTION */}
+          <div className="d-flex align-items-center">
+            {/* Desktop Right Logo */}
+            <div className="d-none d-xl-block me-3">
+              <Link to="/">
+                <img
+                  style={{ maxWidth: "200px" }}
+                  src="assets/img/community_logo.webp"
+                  alt="Community Logo"
+                />
+              </Link>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </header>
+
+            {/* Hamburger (Mobile + MD only) */}
+            <div className="d-xl-none">
+              <button className="sidebar__toggle" onClick={toggleOffcanvas}>
+                <i className="ph ph-list"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+    </>
   );
 };
 

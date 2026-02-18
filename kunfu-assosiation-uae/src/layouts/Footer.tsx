@@ -46,12 +46,12 @@ const Footer = () => {
               <div className="footer_about mb-md-0 mb-5">
                 <Link to="/" className="foot_logo">
                   <img
-                    style={{ maxWidth: "70px" }}
-                    src="assets/img/main_logo.webp"
+                    style={{ maxWidth: "200px" }}
+                    src="assets/img/logo-white.svg"
                     alt="logo"
                   />
                 </Link>
-                <p>
+              <p>
                   UAE Kung Fu Tai Chi Qigong Association Registered with the
                   Community Development Authority (CDA), UAE Registration No.:
                   1575985
@@ -184,35 +184,13 @@ const Footer = () => {
               <div className="divider dwhite mb-4"></div>
               <div className="mar_copyright text-center">
                 <p>
-                  Copyright © 2025 <Link to="/">Martivo</Link> All Right
+                  Copyright © {new Date().getFullYear()} <Link to="/">Kungfu Assosiation UAE.</Link> All Rights
                   Reserved.
                 </p>
               </div>
             </div>
           </motion.div>
         </div>
-
-        {/* Shapes */}
-        <img
-          src="assets/img/shapes/stars.svg"
-          alt="shape"
-          className="footer_stars position-absolute"
-        />
-        <img
-          src="assets/img/shapes/fdots.svg"
-          alt="shape"
-          className="footer_fdots position-absolute"
-        />
-        <img
-          src="assets/img/shapes/fcircle.svg"
-          alt="shape"
-          className="footer_fcircle position-absolute"
-        />
-        <img
-          src="assets/img/shapes/arrowsup.svg"
-          alt="shape"
-          className="footer_arrowsup position-absolute"
-        />
       </motion.footer>
 
       <BackToTop />
