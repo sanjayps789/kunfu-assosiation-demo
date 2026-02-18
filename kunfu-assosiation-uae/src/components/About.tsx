@@ -94,7 +94,7 @@ const AboutSection = () => {
               </motion.p>
 
               <motion.a
-                href="about.html"
+                href="/about"
                 className="main_btn"
                 variants={textVariant}
                 custom={1.2}

@@ -18,37 +18,37 @@ const testimonialImages = [
 const testimonials = [
   {
     name: "Sarah Taylor",
-    role: "Student",
+    role: "Team Member",
     text: "Sed rutrum leo ante, vel lobortis odio pellentesque...",
   },
   {
     name: "Akira Nakamura",
-    role: "Web Designer",
+    role: "Team Member",
     text: "Sed rutrum leo ante, vel lobortis odio pellentesque...",
   },
   {
     name: "Rina Sato",
-    role: "Fitness Coach",
+    role: "Team Member",
     text: "Sed rutrum leo ante, vel lobortis odio pellentesque...",
   },
   {
     name: "David Mitchel",
-    role: "Student",
+    role: "Team Member",
     text: "Sed rutrum leo ante, vel lobortis odio pellentesque...",
   },
   {
-    name: "Kenji Yamamoto",
-    role: "Restaurant Owner",
+    name: "Thanveer Rayyan",
+    role: "Team Member",
     text: "Sed rutrum leo ante, vel lobortis odio pellentesque...",
   },
   {
     name: "David Mitchel",
-    role: "Interior Designer",
+    role: "Team Member",
     text: "Sed rutrum leo ante, vel lobortis odio pellentesque...",
   },
   {
-    name: "Maria Lopez",
-    role: "Interior Designer",
+    name: "Mohamed Nashat",
+    role: "Team Member",
     text: "Sed rutrum leo ante, vel lobortis odio pellentesque...",
   },
 ];
