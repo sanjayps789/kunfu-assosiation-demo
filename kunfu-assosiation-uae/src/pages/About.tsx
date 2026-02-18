@@ -3,11 +3,8 @@ import Header from "../layouts/Header";
 import Breadcrumb from "../components/Breadcrumb";
 import About from "../components/About";
 import Features from "../components/Features";
-import Pricing from "../components/Pricing";
 import Team from "../components/Team";
-import Testimonials from "../components/Testimonials";
 import CounterUp from "../components/CounterUp";
-import Clients from "../components/Clients";
 import Footer from "../layouts/Footer";
 import MissionVision from "../components/MissionVision";
 
@@ -24,9 +21,9 @@ const AboutPage = () => {
       <MissionVision />
       {/* <Pricing sectionClass="pb100"/> */}
       <Team />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <CounterUp />
-      <Clients showDivider={false} />
+      {/* <Clients showDivider={false} /> */}
       <Footer />
     </>
   );

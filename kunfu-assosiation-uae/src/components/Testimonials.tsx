@@ -50,7 +50,7 @@ const testimonials = [
     name: "Maria Lopez",
     role: "Interior Designer",
     text: "Sed rutrum leo ante, vel lobortis odio pellentesque...",
-  }
+  },
 ];
 
 const Testimonials = () => {
@@ -67,7 +67,7 @@ const Testimonials = () => {
   return (
     <section
       className="testimonial section-padding"
-      // style={{ backgroundImage: "url(assets/img/bg/testimonials.jpg)" }}
+      style={{ backgroundImage: "url(assets/img/home/our_team-bg.png)" }}
     >
       <div className="container">
         {/* Section Heading */}
@@ -78,10 +78,8 @@ const Testimonials = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <span className="sub_title">Testimonials</span>
-          <h2 className="text-black">
-            Start your martial arts journey <br /> with us!
-          </h2>
+          <span className="sub_title">Our Team</span>
+          <h2 className="text-white">Driven by expert leadership team</h2>
           <img src="assets/img/shapes/title.svg" alt="img" />
         </motion.div>
 
@@ -136,8 +134,8 @@ const Testimonials = () => {
               <SwiperSlide key={index} className="testimonial_item text-center">
                 <p>{item.text}</p>
                 <div className="client_info">
-                  <h4 className="text-black">{item.name}</h4>
-                  <span className="text-black">{item.role}</span>
+                  <h4 className="text-white">{item.name}</h4>
+                  <span className="text-white">{item.role}</span>
                 </div>
               </SwiperSlide>
             ))}

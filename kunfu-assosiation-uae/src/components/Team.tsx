@@ -90,9 +90,7 @@ const Team = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <span className="sub_title">Our Team</span>
-          <h2>
-            Learn from expert martial <br /> arts masters
-          </h2>
+          <h2>Driven by expert leadership team</h2>
           <img src="assets/img/shapes/title.svg" alt="img" />
         </motion.div>
 

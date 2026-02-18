@@ -16,8 +16,6 @@ import Footer from "../layouts/Footer";
 const Home = () => {
   return (
     <>
-     
-
       <Header />
       <Slider />
       <About />
@@ -25,7 +23,7 @@ const Home = () => {
       <Programs />
       {/* <Pricing sectionClass="section-padding"/> */}
       <Events />
-      <Team />
+      {/* <Team /> */}
       <Testimonials />
       <CounterUp />
       <Blog />
