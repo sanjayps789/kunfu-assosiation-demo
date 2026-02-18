@@ -6,27 +6,51 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 const testimonialImages = [
-  "assets/img/testimonials/1.jpg",
-  "assets/img/testimonials/2.jpg",
-  "assets/img/testimonials/3.jpg",
-  "assets/img/testimonials/4.jpg",
-  "assets/img/testimonials/5.jpg",
-  "assets/img/testimonials/1.jpg",
-  "assets/img/testimonials/2.jpg",
-  "assets/img/testimonials/3.jpg",
-  "assets/img/testimonials/4.jpg",
+  "assets/img/team/person-1.webp",
+  "assets/img/team/person-2.webp",
+  "assets/img/team/person-3.webp",
+  "assets/img/team/person-4.webp",
+  "assets/img/team/person-5.webp",
+  "assets/img/team/person-6.webp",
+  "assets/img/team/person-7.webp",
 ];
 
 const testimonials = [
-  { name: "Sarah Taylor", role: "Student", text: "Sed rutrum leo ante, vel lobortis odio pellentesque..." },
-  { name: "Akira Nakamura", role: "Web Designer", text: "Sed rutrum leo ante, vel lobortis odio pellentesque..." },
-  { name: "Rina Sato", role: "Fitness Coach", text: "Sed rutrum leo ante, vel lobortis odio pellentesque..." },
-  { name: "David Mitchel", role: "Student", text: "Sed rutrum leo ante, vel lobortis odio pellentesque..." },
-  { name: "Kenji Yamamoto", role: "Restaurant Owner", text: "Sed rutrum leo ante, vel lobortis odio pellentesque..." },
-  { name: "David Mitchel", role: "Interior Designer", text: "Sed rutrum leo ante, vel lobortis odio pellentesque..." },
-  { name: "Maria Lopez", role: "Interior Designer", text: "Sed rutrum leo ante, vel lobortis odio pellentesque..." },
-  { name: "Sarah Taylor", role: "Interior Designer", text: "Sed rutrum leo ante, vel lobortis odio pellentesque..." },
-  { name: "Rina Sato", role: "Interior Designer", text: "Sed rutrum leo ante, vel lobortis odio pellentesque..." },
+  {
+    name: "Sarah Taylor",
+    role: "Student",
+    text: "Sed rutrum leo ante, vel lobortis odio pellentesque...",
+  },
+  {
+    name: "Akira Nakamura",
+    role: "Web Designer",
+    text: "Sed rutrum leo ante, vel lobortis odio pellentesque...",
+  },
+  {
+    name: "Rina Sato",
+    role: "Fitness Coach",
+    text: "Sed rutrum leo ante, vel lobortis odio pellentesque...",
+  },
+  {
+    name: "David Mitchel",
+    role: "Student",
+    text: "Sed rutrum leo ante, vel lobortis odio pellentesque...",
+  },
+  {
+    name: "Kenji Yamamoto",
+    role: "Restaurant Owner",
+    text: "Sed rutrum leo ante, vel lobortis odio pellentesque...",
+  },
+  {
+    name: "David Mitchel",
+    role: "Interior Designer",
+    text: "Sed rutrum leo ante, vel lobortis odio pellentesque...",
+  },
+  {
+    name: "Maria Lopez",
+    role: "Interior Designer",
+    text: "Sed rutrum leo ante, vel lobortis odio pellentesque...",
+  }
 ];
 
 const Testimonials = () => {
@@ -43,7 +67,7 @@ const Testimonials = () => {
   return (
     <section
       className="testimonial section-padding"
-      style={{ backgroundImage: "url(assets/img/bg/testimonials.jpg)" }}
+      // style={{ backgroundImage: "url(assets/img/bg/testimonials.jpg)" }}
     >
       <div className="container">
         {/* Section Heading */}
@@ -55,7 +79,7 @@ const Testimonials = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <span className="sub_title">Testimonials</span>
-          <h2 className="text-white">
+          <h2 className="text-black">
             Start your martial arts journey <br /> with us!
           </h2>
           <img src="assets/img/shapes/title.svg" alt="img" />
@@ -112,8 +136,8 @@ const Testimonials = () => {
               <SwiperSlide key={index} className="testimonial_item text-center">
                 <p>{item.text}</p>
                 <div className="client_info">
-                  <h4>{item.name}</h4>
-                  <span>{item.role}</span>
+                  <h4 className="text-black">{item.name}</h4>
+                  <span className="text-black">{item.role}</span>
                 </div>
               </SwiperSlide>
             ))}

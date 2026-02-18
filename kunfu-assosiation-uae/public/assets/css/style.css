@@ -1448,8 +1448,10 @@ a:focus {
 }
 .testimonial_images img {
   display: inline-block;
-  border-radius: 300px;
-  width: 100%;
+ width: 220px;        /* Fixed width */
+  height: 300px;       /* Height koodi (oval feel) */
+  object-fit: cover;   /* Image stretch aavathirikkan */
+  border-radius: 100px / 90px; /* Perfect oval shape */
 }
 .testimonial_images .swiper-slide {
   position: relative;
@@ -1508,7 +1510,7 @@ a:focus {
   margin-top: 9px;
 }
 .testimonial-pagination .swiper-pagination-bullet {
-  background-color: var(--white);
+  background-color: var(--orange);
 }
 .testimonial-pagination .swiper-pagination-bullet-active {
   background-color: var(--orange);

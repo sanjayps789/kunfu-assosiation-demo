@@ -33,7 +33,7 @@ const teamMembers = [
     ],
   },
   {
-    name: "Leilani Smitham",
+    name: "Thanveer Rayyan",
     role: "Punching Experts",
     image: "assets/img/team/person-4.webp",
     social: [
@@ -53,7 +53,7 @@ const teamMembers = [
     ],
   },
   {
-    name: "Savanna Hahn",
+    name: "Mohamed Nashat",
     role: "Strength Trainers",
     image: "assets/img/team/person-6.webp",
     social: [
