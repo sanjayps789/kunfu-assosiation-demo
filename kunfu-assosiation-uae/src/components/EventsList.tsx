@@ -31,7 +31,7 @@ const EventsList = () => {
                   style={{ backgroundImage: `url(${event.image})` }}
                 >
                   <a href="/event-details" className="evn_btn">
-                    Join Now
+                    Join 
                   </a>
                 </div>
                 <div className="event_content">
@@ -46,7 +46,7 @@ const EventsList = () => {
           ))}
 
           {/* Pagination */}
-          <div className="col-12 text-center">
+          {/* <div className="col-12 text-center">
             <div className="mart-pagination">
               <a href="#"><i className="fa-solid fa-arrow-left"></i></a>
               <a href="#">1</a>
@@ -56,7 +56,7 @@ const EventsList = () => {
               <a href="#">5</a>
               <a href="#"><i className="fa-solid fa-arrow-right"></i></a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

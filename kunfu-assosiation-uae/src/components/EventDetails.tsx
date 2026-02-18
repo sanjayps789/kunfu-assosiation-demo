@@ -3,11 +3,12 @@ import { motion } from "framer-motion";
 
 const EventDetails: React.FC = () => {
   return (
-    <section className="our_event section-padding">
-      <div className="container">
-        <div className="row">
+    <section style={{minHeight:'60vh'}} className="our_event section-padding  d-flex align-items-center justify-content-center">
+      <div style={{height:"100%"}} className="container w-100">
+        <div style={{height:"100%"}} className="row w-100 d-flex align-items-center justify-content-center">
+          <h1 style={{width:"auto"}}>Coming Soon....</h1>
           {/* Main Event Details */}
-          <div className="col-md-8 col-sm-12 col-xs-12">
+          {/* <div className="col-md-8 col-sm-12 col-xs-12">
             <motion.div
               className="event_details"
               initial={{ opacity: 0, y: 50 }}
@@ -33,10 +34,10 @@ const EventDetails: React.FC = () => {
                 <li>How do these programs prepare you for Coders and other top coding programs?</li>
               </ul>
             </motion.div>
-          </div>
+          </div> */}
 
           {/* Sidebar */}
-          <div className="col-md-4 col-sm-12 col-xs-12">
+          {/* <div className="col-md-4 col-sm-12 col-xs-12">
             <motion.div
               className="event_sidebar"
               initial={{ opacity: 0, y: 50 }}
@@ -45,7 +46,7 @@ const EventDetails: React.FC = () => {
               viewport={{ once: true }}
             >
               {/* Event Info */}
-              <div className="event_info">
+          {/* <div className="event_info">
                 <h3>Event Information</h3>
                 <ul>
                   <li className="evd d-flex align-items-center justify-content-between">
@@ -85,10 +86,10 @@ const EventDetails: React.FC = () => {
                   </a>
                 </div>
               </div>
-            </motion.div>
+            </motion.div> */}
 
-               {/* Speaker Info */}
-              <div className="event_speaker mt-4">
+          {/* Speaker Info */}
+          {/* <div className="event_speaker mt-4">
                 <h3>Speakers</h3>
                 <motion.div
                   className="single_speaker text-center"
@@ -112,7 +113,7 @@ const EventDetails: React.FC = () => {
                   <span>Self Defense Expert</span>
                 </motion.div>
               </div>
-          </div>
+          </div>  */}
         </div>
       </div>
     </section>

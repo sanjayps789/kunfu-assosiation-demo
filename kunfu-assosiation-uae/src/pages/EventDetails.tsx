@@ -8,7 +8,7 @@ const EventDetailsPage = () => {
   return (
     <>
     <Header/>
-    <Breadcrumb title="Event Details" background="assets/img/bg/banner_bg.jpg" />
+    <Breadcrumb title="Event Details" background="assets/img/events/events-banner.webp" />
     <EventDetails/>
     <Footer/>
     </>

@@ -39,7 +39,7 @@ const BlogItem = memo(({ blog, index }: any) => (
             </h3>
             <p>{blog.desc}</p>
             <motion.a
-              href="/blog-details"
+              href={`/blog/${blog.slug}`}
               className="blog_btn"
               whileHover={{ x: 5 }}
               transition={{ type: "spring", stiffness: 200 }}

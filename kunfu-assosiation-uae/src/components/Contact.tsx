@@ -45,7 +45,7 @@ const ContactItem = memo(
       transition={{ duration: 0.6, delay: index * 0.2 }}
       viewport={{ once: true }}
     >
-      <div className="cinfo-item">
+      <div className="cinfo-item h-100 d-flex align-items-center justify-content-md-center justify-content-start">
         <i className={item.icon}></i>
         <div className="cinfo_content">
           <h3>{item.title}</h3>
