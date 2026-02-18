@@ -112,7 +112,7 @@ const Features = () => {
 
   return (
     <motion.section
-      className="features pb100"
+      className="features"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}

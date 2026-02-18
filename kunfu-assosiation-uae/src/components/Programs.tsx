@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const programs = [
   {
@@ -84,103 +85,100 @@ const programs = [
   },
 ];
 
-
-// animation variants
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
   visible: (i = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, delay: i * 0.2 },
+    transition: { duration: 0.6, delay: i * 0.15 },
   }),
 };
 
-const Programs = ({ showTitle = true}) => {
+/**
+ * Props:
+ * showTitle → show section title
+ * limit → number of items to show
+ * showViewMore → show "View More" button
+ */
+const Programs = ({ limit = programs.length, showViewMore = false }) => {
+  const displayedPrograms = programs.slice(0, limit);
+
   return (
     <motion.section
       className="programs section-padding overflow-hidden"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.09 }}
     >
       <div className="container">
-        {showTitle && 
-          <motion.div
-            className="section-heading text-center"
-            variants={fadeUp}
-          >
-            <span className="sub_title">Our initiatives</span>
-            <h2>
-              Official Development Programs of the UAE  <br /> Kung Fu, Tai Chi & Qigong Association
-            </h2>
-            <img src="assets/img/shapes/title.svg" alt="img" />
-          </motion.div>
-        }
+        <motion.div className="section-heading text-center" variants={fadeUp}>
+          <span className="sub_title">Our Initiatives</span>
+          <h2>
+            Official Development Programs of the UAE <br />
+            Kung Fu, Tai Chi & Qigong Association
+          </h2>
+          <img src="assets/img/shapes/title.svg" alt="title-shape" />
+        </motion.div>
 
         <div className="row g-5">
-          {programs.map((program, index) => (
+          {displayedPrograms.map((program, index) => (
             <motion.div
               className="col-lg-6 col-12"
-              key={index}
+              key={program.slug}
               variants={fadeUp}
               custom={index}
             >
               <div className="program_item text-start">
-                <div className="row g-4">
-                  {!program.reverse ? (
-                    <>
-                      <motion.div
-                        className="col-lg-6 col-md-6 col-12 align-self-center"
-                        variants={fadeUp}
-                        custom={index + 0.1}
-                      >
-                        <div className="program-image">
-                          <div className="pnumber">{program.number}</div>
-                          <img src={program.image} alt="img" />
-                        </div>
-                      </motion.div>
-                      <motion.div
-                        className="col-lg-6 col-md-6 col-12 align-self-center"
-                        variants={fadeUp}
-                        custom={index + 0.2}
-                      >
-                        <div className="program_content">
-                          <h3>{program.title}</h3>
-                          <p>{program.text}</p>
-                          <a href={`/programs/${program.slug}`}>Learn More</a>
-                        </div>
-                      </motion.div>
-                    </>
-                  ) : (
-                    <>
-                      <motion.div
-                        className="col-lg-6 col-md-6 col-12 align-self-center"
-                        variants={fadeUp}
-                        custom={index + 0.1}
-                      >
-                        <div className="program_content">
-                          <h3>{program.title}</h3>
-                          <p>{program.text}</p>
-                          <a href={`/programs/${program.slug}`}>Learn More</a>
-                        </div>
-                      </motion.div>
-                      <motion.div
-                        className="col-lg-6 col-md-6 col-12 align-self-center"
-                        variants={fadeUp}
-                        custom={index + 0.2}
-                      >
-                        <div className="program-image">
-                          <div className="pnumber">{program.number}</div>
-                          <img src={program.image} alt="img" />
-                        </div>
-                      </motion.div>
-                    </>
-                  )}
+                <div className="row g-4 align-items-center">
+                  {/* IMAGE */}
+                  <div
+                    className={`
+                      col-lg-6 col-md-6 col-12 
+                      ${program.reverse ? "order-lg-2" : "order-lg-1"} 
+                      order-1
+                    `}
+                  >
+                    <div className="program-image">
+                      <div className="pnumber">{program.number}</div>
+                      <img
+                        src={program.image}
+                        alt={program.title}
+                        className="img-fluid"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+
+                  {/* CONTENT */}
+                  <div
+                    className={`
+                      col-lg-6 col-md-6 col-12 
+                      ${program.reverse ? "order-lg-1" : "order-lg-2"} 
+                      order-2
+                    `}
+                  >
+                    <div className="program_content">
+                      <h3>{program.title}</h3>
+                      <p>{program.text}</p>
+                      <Link to={`/programs/${program.slug}`}>Learn More</Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
+
+        {/* 🔥 View More Button */}
+        {showViewMore && (
+          <div className="text-center mt-5">
+            <Link to="/programs" className="main_btn active_animation">
+              <span>
+                View All Programs <i className="ph ph-arrow-right"></i>
+              </span>
+            </Link>
+          </div>
+        )}
       </div>
     </motion.section>
   );

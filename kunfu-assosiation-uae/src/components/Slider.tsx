@@ -5,6 +5,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import DOMPurify from "dompurify";
+import { Link } from "react-router-dom";
 
 const slides = [
   {
@@ -91,11 +92,11 @@ const Slider = () => {
                       }}
                     ></p>
 
-                    <a href="/about" className="main_btn active_animation">
+                    <Link to="/about" className="main_btn active_animation">
                       <span>
                         Explore More <i className="ph ph-arrow-right"></i>
                       </span>
-                    </a>
+                    </Link>
 
                     <ul className="slider_social active_animation">
                       <li><a href="#"><i className="fa-brands fa-facebook-f"></i></a></li>

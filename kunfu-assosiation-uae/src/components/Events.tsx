@@ -54,10 +54,10 @@ const Events = () => {
                 768: { slidesPerView: 2 },
                 992: { slidesPerView: 3 },
               }}
-              className="event_slider"
+              className="event_slider d-flex align-items-center"
             >
               {events.map((event, index) => (
-                <SwiperSlide key={index} className="event_item">
+                <SwiperSlide key={index} className="event_item d-flex align-items-center justify-content-center">
                   <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}

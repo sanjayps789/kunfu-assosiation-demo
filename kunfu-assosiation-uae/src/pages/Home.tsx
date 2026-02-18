@@ -20,7 +20,7 @@ const Home = () => {
       <Slider />
       <About />
       <Features />
-      <Programs />
+      <Programs limit={4} showViewMore={true}/>
       {/* <Pricing sectionClass="section-padding"/> */}
       <Events />
       {/* <Team /> */}
