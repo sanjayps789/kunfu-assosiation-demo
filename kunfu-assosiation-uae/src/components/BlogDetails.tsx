@@ -1,7 +1,7 @@
 import { memo } from "react";
 import { motion } from "framer-motion";
 import { useParams } from "react-router-dom";
-import { blogs } from "../data/blogs"; // adjust path if needed
+import { blogs } from "../data/blogs.js"; 
 
 const BlogDetails = () => {
   const { slug } = useParams();
