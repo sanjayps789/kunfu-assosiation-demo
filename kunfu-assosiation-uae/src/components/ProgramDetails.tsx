@@ -1,7 +1,7 @@
 import { memo, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link, useParams } from "react-router-dom";
-import { programs } from "../../public/assets/data/programs.js";
+import { programs } from "../data/programs.js";
 
 const EventDetails = () => {
   const { slug } = useParams();
@@ -35,7 +35,7 @@ const EventDetails = () => {
             transition={{ duration: 0.6 }}
           >
             <img
-            style={{maxWidth:"700px",width:"100%"}}
+              style={{ maxWidth: "700px", width: "100%" }}
               className="mb-4 evd_img img-fluid rounded"
               src={program.image}
               alt={program.title}

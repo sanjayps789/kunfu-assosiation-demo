@@ -3,7 +3,7 @@ export const blogs = [
     id: 1,
     slug: "martial-arts-support-youth-development-schools",
     title: "How Martial Arts Support Youth Development in Schools",
-    image:"/public/assets/img/blog/martial-arts-details.webp",
+    image:"/assets/img/blog/martial-arts-details.webp",
     intro:
       "Introducing martial arts in schools plays an important role in supporting the physical, mental, and social development of young people. Practices such as Kung Fu, Tai Chi, and Qigong help students build discipline, confidence, and respect while encouraging healthy habits from an early age.",
     body: [
@@ -19,7 +19,7 @@ export const blogs = [
     id: 2,
     slug: "community-wellness-tai-chi-qigong-uae",
     title: "Community Wellness Through Tai Chi and Qigong in the UAE",
-    image:"/public/assets/img/blog/community-details.webp",
+    image:"/assets/img/blog/community-details.webp",
     intro:
       "Community wellness initiatives play an important role in promoting healthier and more active lifestyles. Tai Chi and Qigong offer accessible forms of movement that support physical health, mental well-being, and social connection for people of all ages.",
     body: [
@@ -35,7 +35,7 @@ export const blogs = [
     id: 3,
     slug: "women-empowerment-martial-arts-training",
     title: "Women in Martial Arts: Empowerment Through Training",
-    image:"/public/assets/img/blog/women-details.webp",
+    image:"/assets/img/blog/women-details.webp",
     intro:
       "Martial arts training offers powerful opportunities for women to build confidence, strength, and resilience. Practices such as Kung Fu, Tai Chi, and Qigong support physical fitness and mental well-being while encouraging discipline and self-belief. In the UAE, increasing participation of women in martial arts reflects a growing focus on empowerment, inclusion, and healthy lifestyles.",
     body: [
@@ -51,7 +51,7 @@ export const blogs = [
     id: 4,
     slug: "discipline-mental-strength-martial-arts",
     title: "Building Discipline & Mental Strength Through Martial Arts",
-    image:"/public/assets/img/blog/discipline-details.webp",
+    image:"/assets/img/blog/discipline-details.webp",
     intro:
       "Discipline and mental strength are essential qualities for personal development and long-term success. Martial arts training provides structured methods for developing focus, resilience, and self-control through regular practice and guided instruction. Kung Fu, Tai Chi, and Qigong offer practical approaches to strengthening both the body and the mind.",
     body: [
