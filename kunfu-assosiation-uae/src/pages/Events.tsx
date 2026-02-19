@@ -7,10 +7,13 @@ import Footer from "../layouts/Footer";
 const EventsPage = () => {
   return (
     <>
-    <Header/>
-    <Breadcrumb title="Events" background="assets/img/events/events-banner.webp" />
-    <EventsList/>
-    <Footer/>
+      <Header />
+      <Breadcrumb
+        title="Events"
+        background="/assets/img/events/events-banner.webp"
+      />
+      <EventsList />
+      <Footer />
     </>
   );
 };

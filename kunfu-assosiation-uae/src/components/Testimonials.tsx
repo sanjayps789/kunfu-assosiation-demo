@@ -6,13 +6,13 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 const testimonialImages = [
-  "assets/img/team/person-1.webp",
-  "assets/img/team/person-2.webp",
-  "assets/img/team/person-3.webp",
-  "assets/img/team/person-4.webp",
-  "assets/img/team/person-5.webp",
-  "assets/img/team/person-6.webp",
-  "assets/img/team/person-7.webp",
+  "/assets/img/team/person-1.webp",
+  "/assets/img/team/person-2.webp",
+  "/assets/img/team/person-3.webp",
+  "/assets/img/team/person-4.webp",
+  "/assets/img/team/person-5.webp",
+  "/assets/img/team/person-6.webp",
+  "/assets/img/team/person-7.webp",
 ];
 
 const testimonials = [
@@ -80,7 +80,7 @@ const Testimonials = () => {
         >
           <span className="sub_title">Our Team</span>
           <h2 className="text-white">Driven by expert leadership team</h2>
-          <img src="assets/img/shapes/title.svg" alt="img" />
+          <img src="/assets/img/shapes/title.svg" alt="img" />
         </motion.div>
 
         {/* Thumbnails Slider */}

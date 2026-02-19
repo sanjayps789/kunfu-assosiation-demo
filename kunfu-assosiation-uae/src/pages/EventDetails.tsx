@@ -8,11 +8,11 @@ import ComingSoon from "../components/ComingSoon";
 const EventDetailsPage = () => {
   return (
     <>
-    {/* <Header/> */}
-    {/* <Breadcrumb title="Event Details" background="assets/img/events/events-banner.webp" /> */}
-    {/* <EventDetails/> */}
-    <ComingSoon/>
-    {/* <Footer/> */}
+      {/* <Header/> */}
+      {/* <Breadcrumb title="Event Details" background="/assets/img/events/events-banner.webp" /> */}
+      {/* <EventDetails/> */}
+      <ComingSoon />
+      {/* <Footer/> */}
     </>
   );
 };

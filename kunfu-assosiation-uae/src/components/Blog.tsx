@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const blogs = [
   {
     slug: "martial-arts-support-youth-development-schools",
-    img: "assets/img/blog/martial-arts.webp",
+    img: "/assets/img/blog/martial-arts.webp",
     date: "18 August, 2025",
     author: "Admin",
     title: "How Martial Arts Support Youth Development in Schools",
@@ -12,7 +12,7 @@ const blogs = [
   },
   {
     slug: "community-wellness-tai-chi-qigong-uae",
-    img: "assets/img/blog/community.webp",
+    img: "/assets/img/blog/community.webp",
     date: "18 August, 2025",
     author: "Admin",
     title: "Community Wellness Through Tai Chi and Qigong in the UAE",
@@ -20,7 +20,7 @@ const blogs = [
   },
   {
     slug: "women-empowerment-martial-arts-training",
-    img: "assets/img/blog/women-emp.webp",
+    img: "/assets/img/blog/women-emp.webp",
     date: "18 August, 2025",
     author: "Admin",
     title: "Women in Martial Arts: Empowerment Through Training",
@@ -28,7 +28,7 @@ const blogs = [
   },
   {
     slug: "building-discipline-mental-strength-martial-arts",
-    img: "assets/img/blog/discipline.webp",
+    img: "/assets/img/blog/discipline.webp",
     date: "18 August, 2025",
     author: "Admin",
     title: "Building Discipline & Mental Strength Through Martial Arts",
@@ -90,7 +90,7 @@ const Blog = () => {
           <h2>
             Read our latest news & articles <br /> about martial arts
           </h2>
-          <img src="assets/img/shapes/title.svg" alt="img" />
+          <img src="/assets/img/shapes/title.svg" alt="img" />
         </motion.div>
 
         <div className="row g-4">

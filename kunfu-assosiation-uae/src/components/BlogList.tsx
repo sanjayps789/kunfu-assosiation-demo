@@ -58,7 +58,7 @@ const BlogList = () => {
     {
       id: 1,
       slug: "martial-arts-support-youth-development-schools",
-      img: "assets/img/blog/martial-arts.webp",
+      img: "/assets/img/blog/martial-arts.webp",
       date: "18 August, 2025",
       author: "Admin",
       title: "How Martial Arts Support Youth Development in Schools",
@@ -67,7 +67,7 @@ const BlogList = () => {
     {
       id: 2,
       slug: "community-wellness-tai-chi-qigong-uae",
-      img: "assets/img/blog/community.webp",
+      img: "/assets/img/blog/community.webp",
       date: "18 August, 2025",
       author: "Admin",
       title: "Community Wellness Through Tai Chi and Qigong in the UAE",
@@ -76,7 +76,7 @@ const BlogList = () => {
     {
       id: 3,
       slug: "women-empowerment-martial-arts-training",
-      img: "assets/img/blog/women-emp.webp",
+      img: "/assets/img/blog/women-emp.webp",
       date: "18 August, 2025",
       author: "Admin",
       title: " Women in Martial Arts: Empowerment Through Training",
@@ -85,7 +85,7 @@ const BlogList = () => {
     {
       id: 4,
       slug: "discipline-mental-strength-martial-arts",
-      img: "assets/img/blog/discipline.webp",
+      img: "/assets/img/blog/discipline.webp",
       date: "18 August, 2025",
       author: "Admin",
       title: "Building Discipline & Mental Strength Through Martial Arts",

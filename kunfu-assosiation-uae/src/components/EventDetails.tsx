@@ -3,10 +3,16 @@ import { motion } from "framer-motion";
 
 const EventDetails: React.FC = () => {
   return (
-    <section style={{minHeight:'60vh'}} className="our_event section-padding  d-flex align-items-center justify-content-center">
-      <div style={{height:"100%"}} className="container w-100">
-        <div style={{height:"100%"}} className="row w-100 d-flex align-items-center justify-content-center">
-          <h1 style={{width:"auto"}}>Coming Soon....</h1>
+    <section
+      style={{ minHeight: "60vh" }}
+      className="our_event section-padding  d-flex align-items-center justify-content-center"
+    >
+      <div style={{ height: "100%" }} className="container w-100">
+        <div
+          style={{ height: "100%" }}
+          className="row w-100 d-flex align-items-center justify-content-center"
+        >
+          <h1 style={{ width: "auto" }}>Coming Soon....</h1>
           {/* Main Event Details */}
           {/* <div className="col-md-8 col-sm-12 col-xs-12">
             <motion.div
@@ -18,7 +24,7 @@ const EventDetails: React.FC = () => {
             >
               <img
                 className="mb-4 evd_img"
-                src="assets/img/events/event-details.jpg"
+                src="/assets/img/events/event-details.jpg"
                 alt="Event"
               />
               <h3>About the event</h3>

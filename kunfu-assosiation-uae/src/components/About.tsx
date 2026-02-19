@@ -15,9 +15,7 @@ const AboutSection = () => {
   );
 
   return (
-    <section
-      className="about-us section-padding overflow-hidden"
-    >
+    <section className="about-us section-padding overflow-hidden">
       <div className="container">
         <div className="row g-5">
           {/* Left Image */}
@@ -29,14 +27,14 @@ const AboutSection = () => {
             viewport={{ once: true }}
           >
             <div className="about_image position-relative">
-              <img src="assets/img/about/about.png" alt="img" />
+              <img src="/assets/img/about/about.png" alt="img" />
               <img
-                src="assets/img/about/shape1.svg"
+                src="/assets/img/about/shape1.svg"
                 alt="shape1"
                 className="abshape_1 position-absolute"
               />
               <img
-                src="assets/img/about/shape2.svg"
+                src="/assets/img/about/shape2.svg"
                 alt="shape2"
                 className="abshape_2 position-absolute"
               />
@@ -66,10 +64,12 @@ const AboutSection = () => {
                   About Us
                 </motion.span>
                 <motion.h2 variants={textVariant} custom={0.4}>
-                  Accreditation & Development <br /> of Traditional Chinese <br />Martial Arts in the UAE
+                  Accreditation & Development <br /> of Traditional Chinese{" "}
+                  <br />
+                  Martial Arts in the UAE
                 </motion.h2>
                 <motion.img
-                  src="assets/img/shapes/title.svg"
+                  src="/assets/img/shapes/title.svg"
                   alt="title-shape"
                   variants={textVariant}
                   custom={0.6}

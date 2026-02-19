@@ -8,7 +8,7 @@ const programs = [
     slug: "youth-development-program",
     title: "Youth Development Program",
     text: "Structured martial arts programs delivered in schools to support youth development, confidence building, self-discipline, emotional development, and participation through inter-school activities.",
-    image: "assets/img/programs/youth-development-program.webp",
+    image: "/assets/img/programs/youth-development-program.webp",
     reverse: false,
   },
   {
@@ -16,7 +16,7 @@ const programs = [
     slug: "community-wellness-program",
     title: "Community Wellness Program",
     text: "Tai Chi and Qigong sessions promote fitness, mobility, stress management, and healthy lifestyles for all ages.",
-    image: "assets/img/programs/community-wellness.webp",
+    image: "/assets/img/programs/community-wellness.webp",
     reverse: false,
   },
   {
@@ -24,7 +24,7 @@ const programs = [
     slug: "safety-discipline-mental-resilience-program",
     title: "Safety, Discipline & Mental Resilience Program",
     text: "Personal safety education with focus, discipline, emotional regulation, and behavioural development.",
-    image: "assets/img/programs/saftey-discipline.webp",
+    image: "/assets/img/programs/saftey-discipline.webp",
     reverse: true,
   },
   {
@@ -32,7 +32,7 @@ const programs = [
     slug: "national-coaches-development-pathway",
     title: "National Coaches Development Pathway",
     text: "National certification and advanced training for UAE-based martial arts instructors with standardised methods.",
-    image: "assets/img/programs/national-coaches.webp",
+    image: "/assets/img/programs/national-coaches.webp",
     reverse: true,
   },
   {
@@ -40,7 +40,7 @@ const programs = [
     slug: "strategic-partnerships-cross-sector-collaboration-initiative",
     title: "Strategic Partnerships & Cross-Sector Collaboration",
     text: "Joint initiatives with government and private sector partners to maximise community impact and national outcomes.",
-    image: "assets/img/programs/partnership-and-cross-sector.webp",
+    image: "/assets/img/programs/partnership-and-cross-sector.webp",
     reverse: false,
   },
   {
@@ -48,7 +48,7 @@ const programs = [
     slug: "female-empowerment-initiative",
     title: "Female Empowerment Initiative",
     text: "Female-only Kung Fu and self-defence programs supporting confidence, personal safety, and leadership development.",
-    image: "assets/img/programs/female-empowerment.webp",
+    image: "/assets/img/programs/female-empowerment.webp",
     reverse: false,
   },
   {
@@ -56,7 +56,7 @@ const programs = [
     slug: "uae-china-cultural-sports-exchange-program",
     title: "UAE-China Cultural & Sports Exchange Program",
     text: "Youth exchange camps, international festivals, and cultural initiatives highlighting Chinese heritage through sport.",
-    image: "assets/img/programs/cultural-and-sports.webp",
+    image: "/assets/img/programs/cultural-and-sports.webp",
     reverse: true,
   },
   {
@@ -64,7 +64,7 @@ const programs = [
     slug: "annual-national-international-martial-arts-championship",
     title: "Annual National & International Martial Arts Championship",
     text: "Inclusive competitions for youth and adults with a recognised national competitive pathway.",
-    image: "assets/img/programs/annual-national-and-international.webp",
+    image: "/assets/img/programs/annual-national-and-international.webp",
     reverse: true,
   },
   {
@@ -72,7 +72,7 @@ const programs = [
     slug: "community-impact-research-development-program",
     title: "Community Development Program (Research & Impact)",
     text: "Measurement of focus, behaviour, academic performance, and health outcomes linked to regular training.",
-    image: "assets/img/programs/community-development.webp",
+    image: "/assets/img/programs/community-development.webp",
     reverse: false,
   },
   {
@@ -80,7 +80,7 @@ const programs = [
     slug: "public-awareness-outreach-initiative",
     title: "Public Awareness & Outreach Initiative",
     text: "National campaigns, public demonstrations, open days, and community engagement activities.",
-    image: "assets/img/programs/public-awareness.webp",
+    image: "/assets/img/programs/public-awareness.webp",
     reverse: false,
   },
 ];
@@ -117,7 +117,7 @@ const Programs = ({ limit = programs.length, showViewMore = false }) => {
             Official Development Programs of the UAE <br />
             Kung Fu, Tai Chi & Qigong Association
           </h2>
-          <img src="assets/img/shapes/title.svg" alt="title-shape" />
+          <img src="/assets/img/shapes/title.svg" alt="title-shape" />
         </motion.div>
 
         <div className="row g-5">

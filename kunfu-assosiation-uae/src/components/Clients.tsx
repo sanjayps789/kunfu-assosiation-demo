@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import "swiper/css";
 
 const clients = [
-  { img: "assets/img/clients/1.png", link: "#" },
-  { img: "assets/img/clients/2.png", link: "#" },
-  { img: "assets/img/clients/3.png", link: "#" },
-  { img: "assets/img/clients/4.png", link: "#" },
-  { img: "assets/img/clients/5.png", link: "#" },
-  { img: "assets/img/clients/3.png", link: "#" },
+  { img: "/assets/img/clients/1.png", link: "#" },
+  { img: "/assets/img/clients/2.png", link: "#" },
+  { img: "/assets/img/clients/3.png", link: "#" },
+  { img: "/assets/img/clients/4.png", link: "#" },
+  { img: "/assets/img/clients/5.png", link: "#" },
+  { img: "/assets/img/clients/3.png", link: "#" },
 ];
 
 interface ClientsProps {
@@ -17,7 +17,10 @@ interface ClientsProps {
   sliderClass?: string;
 }
 
-const Clients: React.FC<ClientsProps> = ({ showDivider = true, sliderClass = "" }) => {
+const Clients: React.FC<ClientsProps> = ({
+  showDivider = true,
+  sliderClass = "",
+}) => {
   return (
     <motion.div
       className="clients"

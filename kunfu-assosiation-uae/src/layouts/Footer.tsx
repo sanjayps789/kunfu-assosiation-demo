@@ -47,11 +47,11 @@ const Footer = () => {
                 <Link to="/" className="foot_logo">
                   <img
                     style={{ maxWidth: "200px" }}
-                    src="assets/img/logo-white.svg"
+                    src="/assets/img/logo-white.svg"
                     alt="logo"
                   />
                 </Link>
-              <p>
+                <p>
                   UAE Kung Fu Tai Chi Qigong Association Registered with the
                   Community Development Authority (CDA), UAE Registration No.:
                   1575985
@@ -184,7 +184,8 @@ const Footer = () => {
               <div className="divider dwhite mb-4"></div>
               <div className="mar_copyright text-center">
                 <p>
-                  Copyright © {new Date().getFullYear()} <Link to="/">Kungfu Assosiation UAE.</Link> All Rights
+                  Copyright © {new Date().getFullYear()}{" "}
+                  <Link to="/">Kungfu Assosiation UAE.</Link> All Rights
                   Reserved.
                 </p>
               </div>

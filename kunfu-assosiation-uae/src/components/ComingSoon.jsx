@@ -8,7 +8,10 @@ const ComingSoon = () => {
   return (
     <>
       <Header />
-      <Breadcrumb title="Coming Soon"  background="assets/img/events/events-banner.webp" />
+      <Breadcrumb
+        title="Coming Soon"
+        background="/assets/img/events/events-banner.webp"
+      />
 
       <section className="page_not_found section-padding">
         <div className="container">
@@ -17,8 +20,8 @@ const ComingSoon = () => {
               <div className="pnf_content">
                 <h2>We’re Launching Soon</h2>
                 <p>
-                  Something new is on the way. We’re working behind the scenes to
-                  bring you a better experience. Please check back shortly.
+                  Something new is on the way. We’re working behind the scenes
+                  to bring you a better experience. Please check back shortly.
                 </p>
 
                 <div className="d-flex flex-wrap justify-content-center gap-3 mt-4">
@@ -34,8 +37,6 @@ const ComingSoon = () => {
                     </span>
                   </Link>
                 </div>
-
-              
               </div>
             </div>
           </div>

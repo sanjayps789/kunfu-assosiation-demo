@@ -12,19 +12,17 @@ const slides = [
     type: "image",
     title:
       "<span>Accreditation of the Emirates</span><br> Kung Fu, Tai Chi and Qigong Association",
-    text:
-      "The Emirates Kung Fu, Tai Chi and Qigong Association is the official body dedicated to promoting authentic Chinese <br> martial arts across the UAE through structured training, cultural heritage, and professional standards.",
-    background: "assets/img/slider/slider1.png",
-    image: "assets/img/slider/image1.png",
+    text: "The Emirates Kung Fu, Tai Chi and Qigong Association is the official body dedicated to promoting authentic Chinese <br> martial arts across the UAE through structured training, cultural heritage, and professional standards.",
+    background: "/assets/img/slider/slider1.png",
+    image: "/assets/img/slider/image1.png",
   },
   {
     type: "bg-video",
-    video: "assets/videos/hero-video.mp4",
+    video: "/assets/videos/hero-video.mp4",
     title:
       "<span>Promoting Authentic</span><br> Kung Fu, Tai Chi and Qigong Across the UAE",
-    text:
-      "We work to preserve traditional Chinese martial arts while supporting structured programs for <br> individuals, communities, and institutions across the United Arab Emirates.",
-    image: "assets/img/slider/image2.png",
+    text: "We work to preserve traditional Chinese martial arts while supporting structured programs for <br> individuals, communities, and institutions across the United Arab Emirates.",
+    image: "/assets/img/slider/image2.png",
   },
 ];
 
@@ -127,12 +125,12 @@ const Slider = () => {
                 <div className="slider_image active_animation position-absolute end-0 bottom-0 text-end">
                   <img src={slide.image} alt="img" />
                   <img
-                    src="assets/img/slider/shape1.png"
+                    src="/assets/img/slider/shape1.png"
                     alt="shape"
                     className="sshape_1 position-absolute"
                   />
                   <img
-                    src="assets/img/slider/shape2.png"
+                    src="/assets/img/slider/shape2.png"
                     alt="shape"
                     className="sshape_2 position-absolute"
                   />
@@ -145,10 +143,10 @@ const Slider = () => {
         {/* Navigation Arrows */}
         <div className="harrows">
           <div ref={prevRef} className="hs_prev_arrow">
-            <img src="assets/img/shapes/left-arrow.svg" alt="prev" />
+            <img src="/assets/img/shapes/left-arrow.svg" alt="prev" />
           </div>
           <div ref={nextRef} className="hs_next_arrow">
-            <img src="assets/img/shapes/right-arrow.svg" alt="next" />
+            <img src="/assets/img/shapes/right-arrow.svg" alt="next" />
           </div>
         </div>
       </Swiper>

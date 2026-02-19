@@ -52,7 +52,7 @@ const plans = [
   },
 ];
 
-const Pricing = ({sectionClass = ""}) => {
+const Pricing = ({ sectionClass = "" }) => {
   return (
     <section className={`pricing ${sectionClass}`}>
       <div className="container">
@@ -69,7 +69,7 @@ const Pricing = ({sectionClass = ""}) => {
             Best Plan for Your <br />
             Martial Arts Programs
           </h2>
-          <img src="assets/img/shapes/title.svg" alt="img" />
+          <img src="/assets/img/shapes/title.svg" alt="img" />
         </motion.div>
 
         <div className="row">
@@ -91,7 +91,10 @@ const Pricing = ({sectionClass = ""}) => {
                   <div className="col-lg-6 align-items-center align-self-center">
                     <ul>
                       {plan.features.map((feature, i) => (
-                        <li key={i} className={feature.disabled ? "opacity-50" : ""}>
+                        <li
+                          key={i}
+                          className={feature.disabled ? "opacity-50" : ""}
+                        >
                           <i className="fa-solid fa-circle-check"></i>{" "}
                           {feature.text ? feature.text : feature}
                         </li>

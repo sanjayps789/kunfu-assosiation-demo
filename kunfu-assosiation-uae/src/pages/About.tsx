@@ -14,7 +14,7 @@ const AboutPage = () => {
       <Header />
       <Breadcrumb
         title="About Us"
-        background="assets/img/about/about-banner.webp"
+        background="/assets/img/about/about-banner.webp"
       />
       <About />
       <Features />

@@ -22,7 +22,17 @@ const CounterItem = memo(({ counter, index, inView }: any) => (
         index === counters.length - 1 ? "border-0" : ""
       }`}
     >
-      <h3>{inView ? <CountUp end={counter.value} duration={2} separator= {counter.isYear ? "" : ","} /> : 0}</h3>
+      <h3>
+        {inView ? (
+          <CountUp
+            end={counter.value}
+            duration={2}
+            separator={counter.isYear ? "" : ","}
+          />
+        ) : (
+          0
+        )}
+      </h3>
       <p>{counter.label}</p>
     </div>
   </motion.div>
@@ -39,12 +49,17 @@ const CounterUp = () => {
       <div className="container position-relative">
         <div className="row g-lg-0 g-4 counterup_inner">
           {counters.map((counter, index) => (
-            <CounterItem key={index} counter={counter} index={index} inView={inView} />
+            <CounterItem
+              key={index}
+              counter={counter}
+              index={index}
+              inView={inView}
+            />
           ))}
         </div>
 
         <img
-          src="assets/img/shapes/dots.svg"
+          src="/assets/img/shapes/dots.svg"
           alt="img"
           className="counter_shape position-absolute"
         />

@@ -16,7 +16,7 @@ const Preloader = () => {
 
   return (
     <div className="preloader_wrap">
-      <img src="assets/img/main_logo.webp" className="pre_logo" alt="Loading..." />
+      <img src="/assets/img/main_logo.webp" className="pre_logo" alt="Loading..." />
       <span className="preloader"></span>
     </div>
   );

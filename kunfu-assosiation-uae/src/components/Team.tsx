@@ -5,7 +5,7 @@ const teamMembers = [
   {
     name: "Sara Lee",
     role: "Sr. Martial Arts",
-    image: "assets/img/team/person-1.webp",
+    image: "/assets/img/team/person-1.webp",
     social: [
       { icon: "fa-facebook-f", link: "#" },
       { icon: "fa-x-twitter", link: "#" },
@@ -15,7 +15,7 @@ const teamMembers = [
   {
     name: "Savanna Hahn",
     role: "Strength Trainers",
-    image: "assets/img/team/person-2.webp",
+    image: "/assets/img/team/person-2.webp",
     social: [
       { icon: "fa-facebook-f", link: "#" },
       { icon: "fa-x-twitter", link: "#" },
@@ -25,7 +25,7 @@ const teamMembers = [
   {
     name: "Mike Johnson",
     role: "Self Defense Expert",
-    image: "assets/img/team/person-3.webp",
+    image: "/assets/img/team/person-3.webp",
     social: [
       { icon: "fa-facebook-f", link: "#" },
       { icon: "fa-x-twitter", link: "#" },
@@ -35,7 +35,7 @@ const teamMembers = [
   {
     name: "Thanveer Rayyan",
     role: "Punching Experts",
-    image: "assets/img/team/person-4.webp",
+    image: "/assets/img/team/person-4.webp",
     social: [
       { icon: "fa-facebook-f", link: "#" },
       { icon: "fa-x-twitter", link: "#" },
@@ -45,7 +45,7 @@ const teamMembers = [
   {
     name: "Sara Lee",
     role: "Sr. Martial Arts",
-    image: "assets/img/team/person-5.webp",
+    image: "/assets/img/team/person-5.webp",
     social: [
       { icon: "fa-facebook-f", link: "#" },
       { icon: "fa-x-twitter", link: "#" },
@@ -55,7 +55,7 @@ const teamMembers = [
   {
     name: "Mohamed Nashat",
     role: "Strength Trainers",
-    image: "assets/img/team/person-6.webp",
+    image: "/assets/img/team/person-6.webp",
     social: [
       { icon: "fa-facebook-f", link: "#" },
       { icon: "fa-x-twitter", link: "#" },
@@ -65,7 +65,7 @@ const teamMembers = [
   {
     name: "Mike Johnson",
     role: "Self Defense Expert",
-    image: "assets/img/team/person-7.webp",
+    image: "/assets/img/team/person-7.webp",
     social: [
       { icon: "fa-facebook-f", link: "#" },
       { icon: "fa-x-twitter", link: "#" },
@@ -91,7 +91,7 @@ const Team = () => {
         >
           <span className="sub_title">Our Team</span>
           <h2>Driven by expert leadership team</h2>
-          <img src="assets/img/shapes/title.svg" alt="img" />
+          <img src="/assets/img/shapes/title.svg" alt="img" />
         </motion.div>
 
         <div className="row g-4">
