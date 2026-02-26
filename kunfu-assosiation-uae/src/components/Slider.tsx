@@ -1,7 +1,7 @@
 // src/components/Slider.jsx
 import { memo, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Autoplay, EffectFade, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import DOMPurify from "dompurify";
@@ -33,7 +33,16 @@ const Slider = () => {
   return (
     <section className="mar_slider_wrap text-left">
       <Swiper
-        modules={[Navigation]}
+        className="mar_slider position-relative"
+        modules={[Navigation, Autoplay, EffectFade]}
+        loop={true}
+        effect="fade"
+        speed={1000}
+        autoplay={{
+          delay: 5000, // 4 seconds
+          disableOnInteraction: false,
+          // pauseOnMouseEnter: true,
+        }}
         navigation={{
           prevEl: prevRef.current,
           nextEl: nextRef.current,
@@ -42,8 +51,6 @@ const Slider = () => {
           swiper.params.navigation.prevEl = prevRef.current;
           swiper.params.navigation.nextEl = nextRef.current;
         }}
-        loop={true}
-        className="mar_slider position-relative"
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
