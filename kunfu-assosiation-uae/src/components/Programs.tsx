@@ -160,7 +160,7 @@ const Programs = ({ limit = programs.length, showViewMore = false }) => {
                     <div className="program_content">
                       <h3>{program.title}</h3>
                       <p>{program.text}</p>
-                      <Link to={`/programs/${program.slug}`}>Learn More</Link>
+                      <Link to={`/initiatives/${program.slug}`}>Learn More</Link>
                     </div>
                   </div>
                 </div>
@@ -172,7 +172,7 @@ const Programs = ({ limit = programs.length, showViewMore = false }) => {
         {/* 🔥 View More Button */}
         {showViewMore && (
           <div className="text-center mt-5">
-            <Link to="/programs" className="main_btn active_animation">
+            <Link to="/initiatives" className="main_btn active_animation">
               <span>
                 View All Programs <i className="ph ph-arrow-right"></i>
               </span>

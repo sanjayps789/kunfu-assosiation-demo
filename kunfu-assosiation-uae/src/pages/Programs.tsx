@@ -11,7 +11,7 @@ const ProgramsPage = () => {
   return (
     <>
     <Header/>
-    <Breadcrumb title="Our Programs" background="/assets/img/programs/programs-banner.webp" />
+    <Breadcrumb title="Our Initiatives" background="/assets/img/programs/programs-banner.webp" />
     <Programs/>
     {/* <Pricing sectionClass="pt100"/> */}
     <CounterUp/>

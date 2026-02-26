@@ -19,14 +19,14 @@ import Gallery from "./pages/Gallery";
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
   { path: "/about", element: <About /> },
-  { path: "/programs", element: <Programs /> },
+  { path: "/initiatives", element: <Programs /> },
   { path: "/events", element: <Events /> },
   { path: "/blog", element: <Blog /> },
   { path: "/membership", element: <Membership /> },
   { path: "/verification", element: <Verification /> },
-  { path: "/gallery", element: <Gallery/> },
+  { path: "/gallery", element: <Gallery /> },
   { path: "/contact", element: <Contact /> },
-  { path: "/programs/:slug", element: <ProgramDetails /> },
+  { path: "/initiatives/:slug", element: <ProgramDetails /> },
   { path: "/blog/:slug", element: <BlogDetails /> },
   { path: "/event-details", element: <EventDetails /> },
   { path: "*", element: <NotFound /> }, // 404 page

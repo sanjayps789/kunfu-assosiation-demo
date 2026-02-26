@@ -38,18 +38,18 @@ const Header = () => {
                 <Link to="/about">About</Link>
               </li>
               <li>
-                <Link to="/programs">Programs</Link>
+                <Link to="/initiatives">Initiatives</Link>
               </li>
               <li>
                 <Link to="/events">Events</Link>
               </li>
-               <li>
+              <li>
                 <Link to="/membership">MemberShip</Link>
               </li>
-               <li>
+              <li>
                 <Link to="/gallery">Gallery</Link>
               </li>
-               <li>
+              <li>
                 <Link to="/verification">Verification</Link>
               </li>
               <li>

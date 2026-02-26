@@ -62,21 +62,21 @@ const EventDetails = () => {
 
           {/* CTA */}
           <div className="text-start mt-4">
-            <a className="main_btn" href="/contact">
+            <Link className="main_btn" to="/contact">
               Contact Us
-            </a>
+            </Link>
           </div>
 
           {/* Previous / Next */}
           <div className="row mt-5">
             <div className="col-6 text-start">
               {prevProgram && (
-                <Link to={`/programs/${prevProgram.slug}`}>← Previous</Link>
+                <Link to={`/initiatives/${prevProgram.slug}`}>← Previous</Link>
               )}
             </div>
             <div className="col-6 text-end">
               {nextProgram && (
-                <Link to={`/programs/${nextProgram.slug}`}>Next →</Link>
+                <Link to={`/initiatives/${nextProgram.slug}`}>Next →</Link>
               )}
             </div>
           </div>
