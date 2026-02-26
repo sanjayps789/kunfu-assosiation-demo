@@ -33,7 +33,7 @@ const MobileOffcanvas = ({ isOpen, toggleOffcanvas }) => {
 
               {/* Mobile Menu */}
               <div className="mobile-menu fix mb-3">
-                <ul>
+                <ul className="d-flex align-items-center mb-0">
                   <li>
                     <Link to="/">Home</Link>
                   </li>
@@ -46,56 +46,38 @@ const MobileOffcanvas = ({ isOpen, toggleOffcanvas }) => {
                   <li>
                     <Link to="/events">Events</Link>
                   </li>
+                  <li>
+                    <Link to="/membership">MemberShip</Link>
+                  </li>
+                  <li>
+                    <Link to="/gallery">Gallery</Link>
+                  </li>
+                  <li>
+                    <Link to="/verification">Verification</Link>
+                  </li>
+                  <li>
+                    <Link to="/blog">Blog</Link>
+                  </li>
+                  <li>
+                    <Link to="/contact">Contact Us</Link>
+                  </li>
 
-                  {/* Dropdown */}
-                  {/* <li className="has-child-items">
-                    <button
-                      type="button"
-                      className="dropdown-toggle-btn"
-                      onClick={() => toggleDropdown("pages")}
-                    >
-                      Pages <i className="fa-solid fa-chevron-down"></i>
-                    </button>
-
-                    <ul
-                      className="sub-menu"
-                      style={{
-                        display: openDropdown === "pages" ? "block" : "none",
-                      }}
-                    >
-                      <li>
-                        <Link to="/about">About</Link>
-                      </li>
-                      <li>
-                        <Link to="/programs">Programs</Link>
-                      </li>
-                      <li>
-                        <Link to="/program-details">Program Details</Link>
-                      </li>
-                      <li>
-                        <Link to="/events">Events</Link>
-                      </li>
-                      <li>
-                        <Link to="/event-details">Event Details</Link>
-                      </li>
-                      <li>
-                        <Link to="/blog">Blog</Link>
-                      </li>
-                      <li>
-                        <Link to="/blog-details">Blog Details</Link>
-                      </li>
-                      <li>
-                        <Link to="/404">404</Link>
-                      </li>
-                    </ul>
-                  </li> */}
-
+                  {/* <li
+                className={`has-child-items ${dropdownOpen ? "open" : ""}`}
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+              >
+                <Link to="#">
+                  Pages <i className="fa-solid fa-chevron-down"></i>
+                </Link>
+                <ul className="sub-menu">
                   <li>
                     <Link to="/blog">Blog</Link>
                   </li>
                   <li>
                     <Link to="/contact">Contact</Link>
                   </li>
+                </ul>
+              </li> */}
                 </ul>
               </div>
               {/* End Mobile Menu */}

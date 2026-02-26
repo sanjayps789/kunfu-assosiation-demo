@@ -4,12 +4,24 @@ import { motion } from "framer-motion";
 import "swiper/css";
 
 const clients = [
-  { img: "/assets/img/clients/1.png", link: "#" },
-  { img: "/assets/img/clients/2.png", link: "#" },
-  { img: "/assets/img/clients/3.png", link: "#" },
-  { img: "/assets/img/clients/4.png", link: "#" },
-  { img: "/assets/img/clients/5.png", link: "#" },
-  { img: "/assets/img/clients/3.png", link: "#" },
+  {
+    img: "assets/img/clients/dubai_police_partner.jpg",
+    link: "https://www.dubaipolice.gov.ae/app/home",
+  },
+  {
+    img: "assets/img/clients/dubai-muncipility.png",
+    link: "https://www.dm.gov.ae/",
+  },
+  { img: "assets/img/clients/icp.png", link: "https://icp.gov.ae/" },
+  {
+    img: "assets/img/clients/fahr.jpg",
+    link: "https://www.fahr.gov.ae/en/home/",
+  },
+  {
+    img: "assets/img/clients/red_cresent.jpg",
+    link: "https://www.emiratesrc.ae/",
+  },
+  { img: "assets/img/clients/tdra.jpg", link: "https://tdra.gov.ae/" },
 ];
 
 interface ClientsProps {
@@ -31,10 +43,22 @@ const Clients: React.FC<ClientsProps> = ({
     >
       <div className="container">
         {/* Divider toggle */}
-        {showDivider && <div className="divider"></div>}
+        {/* {showDivider && <div className="divider"></div>} */}
+        <motion.div
+          className="section-heading text-center"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <span className="sub_title">Our partners</span>
+          <h2>
+            Strategic Partners & Collaborations
+          </h2>
+        </motion.div>
 
         <Swiper
-          slidesPerView={5}
+          slidesPerView={6}
           spaceBetween={30}
           loop={true}
           breakpoints={{
@@ -42,7 +66,7 @@ const Clients: React.FC<ClientsProps> = ({
             576: { slidesPerView: 2 },
             768: { slidesPerView: 3 },
             992: { slidesPerView: 4 },
-            1200: { slidesPerView: 5 },
+            1200: { slidesPerView: 6 }, // changed from 5 to 6
           }}
           className={`client_slider ${sliderClass}`}
         >
@@ -54,8 +78,13 @@ const Clients: React.FC<ClientsProps> = ({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="d-flex align-items-center justify-content-center"
               >
-                <img src={client.img} alt={`Client ${index + 1}`} />
+                <img
+                  style={{ maxWidth: "140px" }}
+                  src={client.img}
+                  alt={`Client ${index + 1}`}
+                />
               </motion.a>
             </SwiperSlide>
           ))}
@@ -65,4 +94,4 @@ const Clients: React.FC<ClientsProps> = ({
   );
 };
 
-export default memo(Clients);
+export default memo(Clients)

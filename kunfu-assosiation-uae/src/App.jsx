@@ -11,6 +11,9 @@ import ProgramDetails from "./pages/ProgramDetails";
 import BlogDetails from "./pages/BlogDetails";
 import EventDetails from "./pages/EventDetails";
 import NotFound from "./pages/NotFound"; // Create this page for 404
+import Membership from "./pages/Membership";
+import Verification from "./pages/Verification";
+import Gallery from "./pages/Gallery";
 
 // Define router
 const router = createBrowserRouter([
@@ -19,6 +22,9 @@ const router = createBrowserRouter([
   { path: "/programs", element: <Programs /> },
   { path: "/events", element: <Events /> },
   { path: "/blog", element: <Blog /> },
+  { path: "/membership", element: <Membership /> },
+  { path: "/verification", element: <Verification /> },
+  { path: "/gallery", element: <Gallery/> },
   { path: "/contact", element: <Contact /> },
   { path: "/programs/:slug", element: <ProgramDetails /> },
   { path: "/blog/:slug", element: <BlogDetails /> },

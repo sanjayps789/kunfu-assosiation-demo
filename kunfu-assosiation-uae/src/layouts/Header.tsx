@@ -22,7 +22,7 @@ const Header = () => {
             <Link to="/">
               <img
                 style={{ maxWidth: "50px" }}
-                src="/assets/img/main_logo.webp"
+                src="assets/img/main_logo.webp"
                 alt="Logo"
               />
             </Link>
@@ -30,7 +30,7 @@ const Header = () => {
 
           {/* DESKTOP MENU (Only xl and above) */}
           <nav className="main-menu d-none d-xl-block">
-            <ul className="d-flex align-items-center gap-4 mb-0">
+            <ul className="d-flex align-items-center mb-0">
               <li>
                 <Link to="/">Home</Link>
               </li>
@@ -42,6 +42,15 @@ const Header = () => {
               </li>
               <li>
                 <Link to="/events">Events</Link>
+              </li>
+               <li>
+                <Link to="/membership">MemberShip</Link>
+              </li>
+               <li>
+                <Link to="/gallery">Gallery</Link>
+              </li>
+               <li>
+                <Link to="/verification">Verification</Link>
               </li>
               <li>
                 <Link to="/blog">Blog</Link>
@@ -76,7 +85,7 @@ const Header = () => {
               <Link to="/">
                 <img
                   style={{ maxWidth: "200px" }}
-                  src="/assets/img/community_logo.svg"
+                  src="assets/img/community_logo.svg"
                   alt="Community Logo"
                 />
               </Link>

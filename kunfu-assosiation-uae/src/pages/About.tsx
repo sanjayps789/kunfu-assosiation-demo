@@ -7,6 +7,7 @@ import Team from "../components/Team";
 import CounterUp from "../components/CounterUp";
 import Footer from "../layouts/Footer";
 import MissionVision from "../components/MissionVision";
+import Clients from "../components/Clients";
 
 const AboutPage = () => {
   return (
@@ -23,7 +24,7 @@ const AboutPage = () => {
       <Team />
       {/* <Testimonials /> */}
       <CounterUp />
-      {/* <Clients showDivider={false} /> */}
+      <Clients showDivider={true} sliderClass="pt50" />
       <Footer />
     </>
   );
