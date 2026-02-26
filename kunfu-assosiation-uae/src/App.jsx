@@ -14,6 +14,8 @@ import NotFound from "./pages/NotFound"; // Create this page for 404
 import Membership from "./pages/Membership";
 import Verification from "./pages/Verification";
 import Gallery from "./pages/Gallery";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndCondition";
 
 // Define router
 const router = createBrowserRouter([
@@ -30,6 +32,8 @@ const router = createBrowserRouter([
   { path: "/blog/:slug", element: <BlogDetails /> },
   { path: "/event-details", element: <EventDetails /> },
   { path: "*", element: <NotFound /> }, // 404 page
+  { path: "/privacy-policy", element: <PrivacyPolicy /> },
+  { path: "/terms-and-conditions", element: <TermsAndConditions/> }, // 404 page
 ]);
 
 const App = () => {
