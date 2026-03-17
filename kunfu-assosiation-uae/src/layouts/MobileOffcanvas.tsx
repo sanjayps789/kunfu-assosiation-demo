@@ -43,9 +43,9 @@ const MobileOffcanvas = ({ isOpen, toggleOffcanvas }) => {
                   <li>
                     <Link to="/initiatives">Initiatives</Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link to="/events">Events</Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link to="/membership">MemberShip</Link>
                   </li>
@@ -56,10 +56,10 @@ const MobileOffcanvas = ({ isOpen, toggleOffcanvas }) => {
                     <Link to="/verification">Verification</Link>
                   </li>
                   <li>
-                    <Link to="/blog">Blog</Link>
+                    <Link to="/contact">Contact Us</Link>
                   </li>
                   <li>
-                    <Link to="/contact">Contact Us</Link>
+                    <Link to="/login">Login</Link>
                   </li>
 
                   {/* <li

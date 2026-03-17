@@ -45,7 +45,7 @@ const CounterUp = () => {
   });
 
   return (
-    <section className="counterup section-padding position-relative" ref={ref}>
+    <section style={{padding:"20px 0"}} className="counterup position-relative" ref={ref}>
       <div className="container position-relative">
         <div className="row g-lg-0 g-4 counterup_inner">
           {counters.map((counter, index) => (

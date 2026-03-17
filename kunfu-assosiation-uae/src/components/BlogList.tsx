@@ -62,7 +62,7 @@ const BlogList = () => {
       date: "18 August, 2025",
       author: "Admin",
       title: "How Martial Arts Support Youth Development in Schools",
-      desc: "Introducing martial arts in schools plays an important role in supporting the physical, mental, and social development of young people.",
+      desc: "Introducing Martial Arts in schools plays an important role in supporting the physical, mental, and social development of young people.",
     },
     {
       id: 2,
@@ -80,7 +80,7 @@ const BlogList = () => {
       date: "18 August, 2025",
       author: "Admin",
       title: " Women in Martial Arts: Empowerment Through Training",
-      desc: "Martial arts training offers powerful opportunities for women to build confidence, strength, and resilience.",
+      desc: "Martial Arts training offers powerful opportunities for women to build confidence, strength, and resilience.",
     },
     {
       id: 4,

@@ -1,69 +1,108 @@
-import { memo, useState, useEffect } from "react";
+import { memo, useState, useRef, useCallback, useMemo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Controller } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const testimonialImages = [
-  "/assets/img/team/person-1.webp",
-  "/assets/img/team/person-2.webp",
-  "/assets/img/team/person-3.webp",
-  "/assets/img/team/person-4.webp",
-  "/assets/img/team/person-5.webp",
-  "/assets/img/team/person-6.webp",
-  "/assets/img/team/person-7.webp",
-];
-
 const testimonials = [
   {
-    name: "Sarah Taylor",
-    role: "Team Member",
-    text: "Sed rutrum leo ante, vel lobortis odio pellentesque...",
+    name: "BASMA MOHAMMAD ABDULLA HANNAWI",
+    role: "Association President",
+    img: "/assets/img/team/person1.webp",
   },
   {
-    name: "Akira Nakamura",
-    role: "Team Member",
-    text: "Sed rutrum leo ante, vel lobortis odio pellentesque...",
+    name: "FRANK RAO",
+    role: "Association Vice President",
+    img: "/assets/img/team/person2.webp",
   },
   {
-    name: "Rina Sato",
-    role: "Team Member",
-    text: "Sed rutrum leo ante, vel lobortis odio pellentesque...",
+    name: "John Duval",
+    role: "Association Director General",
+    img: "/assets/img/team/person3.webp",
   },
   {
-    name: "David Mitchel",
-    role: "Team Member",
-    text: "Sed rutrum leo ante, vel lobortis odio pellentesque...",
+    name: "BASSAM MOHAMMAD ABDULLA SALEH HANNAWI",
+    role: "Events & Competitions Director",
+    img: "/assets/img/team/person4.webp",
   },
   {
-    name: "Thanveer Rayyan",
-    role: "Team Member",
-    text: "Sed rutrum leo ante, vel lobortis odio pellentesque...",
-  },
-  {
-    name: "David Mitchel",
-    role: "Team Member",
-    text: "Sed rutrum leo ante, vel lobortis odio pellentesque...",
+    name: "Zainab Malik",
+    role: "Women Empowerment Director",
+    img: "/assets/img/team/person5.webp",
   },
   {
     name: "Mohamed Nashat",
-    role: "Team Member",
-    text: "Sed rutrum leo ante, vel lobortis odio pellentesque...",
+    role: "Strategic Planning Director",
+    img: "/assets/img/team/person6.webp",
+  },
+  {
+    name: "Micheal Stuwart JUDD",
+    role: "International Relations Director",
+    img: "/assets/img/team/person7.webp",
+  },
+  {
+    name: "SHAIKHA MOHAMMAD OBAID ALTAWILA ALSUWAIDI",
+    role: "Community Development Director",
+    img: "/assets/img/team/person8.webp",
+  },
+  {
+    name: "PAUL ROBERTSON",
+    role: "Education & Certification Director",
+    img: "/assets/img/team/person9.webp",
+  },
+  {
+    name: "BADRIA NOOR ALDIN HASSAN",
+    role: "Media & Communications Director",
+    img: "/assets/img/team/person10.webp",
+  },
+  {
+    name: "Thanveer Thachambath",
+    role: "Community Development Director",
+    img: "/assets/img/team/person11.webp",
   },
 ];
 
+const SLIDE_SPEED = 800; // ms — smooth transition duration for both swipers
+
 const Testimonials = () => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
-  const [textSwiper, setTextSwiper] = useState(null);
+  const thumbsSwiperRef = useRef(null);
+  const textSwiperRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  useEffect(() => {
-    if (thumbsSwiper && textSwiper) {
-      thumbsSwiper.controller.control = textSwiper;
-      textSwiper.controller.control = thumbsSwiper;
+  // ✅ useCallback avoids stale closure on every render
+  const handleSlideChange = useCallback((swiper) => {
+    const realIndex = swiper.realIndex;
+    setActiveIndex(realIndex);
+    if (thumbsSwiperRef.current && !thumbsSwiperRef.current.destroyed) {
+      thumbsSwiperRef.current.slideToLoop(realIndex, SLIDE_SPEED);
     }
-  }, [thumbsSwiper, textSwiper]);
+  }, []);
 
+  const handleThumbClick = useCallback((index) => {
+    if (textSwiperRef.current && !textSwiperRef.current.destroyed) {
+      // Stop autoplay briefly on manual interaction, then resume
+      textSwiperRef.current.autoplay.stop();
+      textSwiperRef.current.slideToLoop(index, SLIDE_SPEED);
+      setTimeout(() => {
+        if (textSwiperRef.current && !textSwiperRef.current.destroyed) {
+          textSwiperRef.current.autoplay.start();
+        }
+      }, SLIDE_SPEED + 100);
+    }
+  }, []);
+
+  const textVariant = useMemo(
+    () => ({
+      hidden: { opacity: 0, y: 30 },
+      visible: (delay = 0) => ({
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.8, delay },
+      }),
+    }),
+    [],
+  );
   return (
     <section
       className="testimonial section-padding"
@@ -78,7 +117,7 @@ const Testimonials = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <span className="sub_title">Our Team</span>
+          <span className="sub_title">Association Founding Members</span>
           <h2 className="text-white">Driven by expert leadership team</h2>
           <img src="/assets/img/shapes/title.svg" alt="img" />
         </motion.div>
@@ -91,25 +130,42 @@ const Testimonials = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <Swiper
-            modules={[Controller]}
-            onSwiper={setThumbsSwiper}
+            modules={[]}
+            onSwiper={(swiper) => (thumbsSwiperRef.current = swiper)}
             slidesPerView={5}
             spaceBetween={30}
             loop={true}
             centeredSlides={true}
-            slideToClickedSlide={true}
+            speed={SLIDE_SPEED} // ✅ smooth slide movement
+            allowTouchMove={false} // thumb swiper is display-only, driven by text swiper
             className="testimonial_images"
             breakpoints={{
-              0: { slidesPerView: 2 },
-              576: { slidesPerView: 3 },
-              768: { slidesPerView: 4 },
-              992: { slidesPerView: 5 },
+              0: { slidesPerView: 1 },
+              576: { slidesPerView: 2 },
+              768: { slidesPerView: 3 },
+              992: { slidesPerView: 4 },
               1200: { slidesPerView: 5 },
             }}
           >
-            {testimonialImages.map((img, index) => (
+            {testimonials.map((item, index) => (
               <SwiperSlide key={index}>
-                <img src={img} alt={`testimonial ${index + 1}`} />
+                <img
+                  src={item.img}
+                  alt={item.name}
+                  className={activeIndex === index ? "active-thumb" : ""}
+                  onClick={() => handleThumbClick(index)}
+                  style={{
+                    cursor: "pointer",
+                    opacity: activeIndex === index ? 1 : 0.45,
+                    transform:
+                      activeIndex === index ? "scale(1.18)" : "scale(1)",
+                    // ✅ CSS transition for the highlight effect itself
+                    transition: "opacity 0.5s ease, transform 0.5s ease",
+                    borderRadius: "50%",
+                    willChange: "transform, opacity", // GPU hint
+                    zIndex: 1,
+                  }}
+                />
               </SwiperSlide>
             ))}
           </Swiper>
@@ -123,25 +179,48 @@ const Testimonials = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <Swiper
-            modules={[Pagination, Controller]}
-            onSwiper={setTextSwiper}
+            modules={[Pagination, Autoplay]}
+            onSwiper={(swiper) => (textSwiperRef.current = swiper)}
             loop={true}
             autoHeight={true}
+            speed={SLIDE_SPEED} // ✅ smooth slide movement
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true, // ✅ pauses on hover for better UX
+            }}
+            onSlideChange={handleSlideChange}
             pagination={{ el: ".testimonial-pagination", clickable: true }}
             className="testimonial_slider"
           >
             {testimonials.map((item, index) => (
               <SwiperSlide key={index} className="testimonial_item text-center">
-                <p>{item.text}</p>
                 <div className="client_info">
-                  <h4 className="text-white">{item.name}</h4>
-                  <span className="text-white">{item.role}</span>
+                  <h4 className="text-white text-uppercase">{item.name}</h4>
+                  <span style={{ color: "#d4af6e" }}>{item.role}</span>
                 </div>
               </SwiperSlide>
             ))}
-
             <div className="testimonial-pagination"></div>
           </Swiper>
+          {/* btns */}
+          <div
+            style={{ marginTop: "20px" }}
+            className="d-flex align-items-center justify-content-center"
+          >
+            <motion.a
+              href="/about/#team_members"
+              className="main_btn"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
+              <span>
+                View All Members <i className="ph ph-arrow-right"></i>
+              </span>
+            </motion.a>
+          </div>
         </motion.div>
       </div>
     </section>

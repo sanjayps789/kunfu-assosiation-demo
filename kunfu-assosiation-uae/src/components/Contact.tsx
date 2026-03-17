@@ -1,5 +1,6 @@
 import { memo, useMemo, useCallback } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 // Memoized contact info array outside component to avoid re-creation
 const contactInfo = [
@@ -8,7 +9,10 @@ const contactInfo = [
     title: "Our Location",
     content: (
       <>
-        KML Business Center, Office 126, Dubai, <br /> United Arab Emirates | Registration #: 1575985 
+       <Link to="https://maps.app.goo.gl/iF5eQqZZmqNFm4HN7" target="_blank" rel="noopener noreferrer" title="address">
+          KML Business Center, Office 126, Dubai, <br /> United Arab Emirates |
+          Registration #: 1575985
+       </Link>
       </>
     ),
   },
@@ -17,7 +21,10 @@ const contactInfo = [
     title: "Email Us",
     content: (
       <>
-        <a href="mailto:info@UAEKungFuAssociation.ae"> info@UAEKungFuAssociation.ae</a>
+        <Link to="mailto:info@UAEKungFuAssociation.ae" target="_blank" rel="noopener noreferrer" title="email" >
+          {" "}
+          info@UAEKungFuAssociation.ae
+        </Link>
         <br />
       </>
     ),
@@ -27,7 +34,7 @@ const contactInfo = [
     title: "Phone Number",
     content: (
       <>
-        <a href="tel:+971525759907"> +971 52 575 9907 </a>
+        <Link to="tel:+971525759907" target="_blank" rel="noopener noreferrer" title="phone"> +971 52 575 9907 </Link>
         <br />
       </>
     ),
@@ -36,7 +43,7 @@ const contactInfo = [
 
 // Memoized child component for contact info item
 const ContactItem = memo(
-  ({ item, index }: { item: typeof contactInfo[0]; index: number }) => (
+  ({ item, index }: { item: (typeof contactInfo)[0]; index: number }) => (
     <motion.div
       className="col-lg-4 col-md-6 col-12"
       key={index}
@@ -53,7 +60,7 @@ const ContactItem = memo(
         </div>
       </div>
     </motion.div>
-  )
+  ),
 );
 
 const Contact = () => {
@@ -89,12 +96,14 @@ const Contact = () => {
           >
             <div className="contact_map">
               <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.9060951981364!2d55.25721457461025!3d25.172648432696043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f699caca15b37%3A0x8834ad188009aab2!2sKML%20Building!5e0!3m2!1sen!2sin!4v1773757321028!5m2!1sen!2sin"
                 title="Google Map"
                 height="500"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50431.01496117057!2d144.9372018671769!3d-37.81441383014957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad646b5d2ba4df7%3A0x4045675218ccd90!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sbd!4v1572172541109!5m2!1sen!2sbd"
+                width="600"
                 style={{ border: 0, width: "100%" }}
                 allowFullScreen
                 loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
           </motion.div>
@@ -116,10 +125,20 @@ const Contact = () => {
               <form onSubmit={handleSubmit}>
                 <ul>
                   <li>
-                    <input type="text" placeholder="Name" name="name" required />
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      name="name"
+                      required
+                    />
                   </li>
                   <li>
-                    <input type="email" placeholder="Email" name="email" required />
+                    <input
+                      type="email"
+                      placeholder="Email"
+                      name="email"
+                      required
+                    />
                   </li>
                   <li>
                     <input type="tel" placeholder="Phone" name="phone" />
@@ -128,7 +147,12 @@ const Contact = () => {
                     <input type="text" placeholder="Address" name="address" />
                   </li>
                   <li>
-                    <textarea placeholder="Message" rows={6} name="message" required></textarea>
+                    <textarea
+                      placeholder="Message"
+                      rows={6}
+                      name="message"
+                      required
+                    ></textarea>
                   </li>
                 </ul>
                 <motion.button

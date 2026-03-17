@@ -16,24 +16,25 @@ import Verification from "./pages/Verification";
 import Gallery from "./pages/Gallery";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndCondition";
+import Auth from "./pages/Auth";
 
 // Define router
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
+  { path: "/login", element: <Auth /> },
   { path: "/about", element: <About /> },
   { path: "/initiatives", element: <Programs /> },
-  { path: "/events", element: <Events /> },
-  { path: "/blog", element: <Blog /> },
   { path: "/membership", element: <Membership /> },
   { path: "/verification", element: <Verification /> },
   { path: "/gallery", element: <Gallery /> },
   { path: "/contact", element: <Contact /> },
-  { path: "/initiatives/:slug", element: <ProgramDetails /> },
-  { path: "/blog/:slug", element: <BlogDetails /> },
-  { path: "/event-details", element: <EventDetails /> },
-  { path: "*", element: <NotFound /> }, // 404 page
   { path: "/privacy-policy", element: <PrivacyPolicy /> },
-  { path: "/terms-and-conditions", element: <TermsAndConditions/> }, // 404 page
+  { path: "/terms-and-conditions", element: <TermsAndConditions /> },
+  { path: "*", element: <NotFound /> }, // 404 page
+  // { path: "/events", element: <Events /> },
+  // { path: "/blog", element: <Blog /> },
+  // { path: "/blog/:slug", element: <BlogDetails /> },
+  // { path: "/event-details", element: <EventDetails /> },
 ]);
 
 const App = () => {

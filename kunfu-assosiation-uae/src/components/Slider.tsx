@@ -9,20 +9,12 @@ import { Link } from "react-router-dom";
 
 const slides = [
   {
-    type: "image",
-    title:
-      "<span>Accreditation of the Emirates</span><br> Kung Fu, Tai Chi and Qigong Association",
-    text: "The Emirates Kung Fu, Tai Chi and Qigong Association is the official body dedicated to promoting authentic Chinese <br> martial arts across the UAE through structured training, cultural heritage, and professional standards.",
-    background: "/assets/img/slider/slider1.png",
-    image: "/assets/img/slider/image1.png",
-  },
-  {
     type: "bg-video",
     video: "/assets/videos/hero-video.mp4",
     title:
-      "<span>Promoting Authentic</span><br> Kung Fu, Tai Chi and Qigong Across the UAE",
-    text: "We work to preserve traditional Chinese martial arts while supporting structured programs for <br> individuals, communities, and institutions across the United Arab Emirates.",
-    image: "/assets/img/slider/image2.png",
+      "<span>Accreditation of the Emirates</span><br> Kung Fu, Tai Chi and Qigong Association",
+    text: "The Emirates Association of Kung Fu, Tai Chi and Qigong is the official body dedicated to promoting authentic Chinese martial arts across the UAE through structured training, cultural heritage, and professional standards.",
+    image: "/assets/img/slider/image1.png",
   },
 ];
 
@@ -39,9 +31,8 @@ const Slider = () => {
         effect="fade"
         speed={1000}
         autoplay={{
-          delay: 5000, // 4 seconds
+          delay: 5000,
           disableOnInteraction: false,
-          // pauseOnMouseEnter: true,
         }}
         navigation={{
           prevEl: prevRef.current,
@@ -54,28 +45,20 @@ const Slider = () => {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div
-              className="slider_item position-relative"
-              style={{
-                backgroundImage:
-                  slide.type === "image" ? `url(${slide.background})` : "none",
-              }}
-            >
-              {/* Background Video ONLY for second slide */}
-              {slide.type === "bg-video" && (
-                <video
-                  className="slider_bg_video"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
-                >
-                  <source src={slide.video} type="video/mp4" />
-                </video>
-              )}
+            <div className="slider_item position-relative">
+              {/* Background Video */}
+              <video
+                className="slider_bg_video"
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
+              >
+                <source src={slide.video} type="video/mp4" />
+              </video>
 
-              {/* Overlay (kept same for both slides) */}
+              {/* Overlay */}
               <div className="slider_overlay"></div>
 
               <div className="container position-relative">
@@ -89,6 +72,7 @@ const Slider = () => {
                     ></h1>
 
                     <p
+                      style={{textAlign:"justify"}}
                       className="active_animation"
                       dangerouslySetInnerHTML={{
                         __html: DOMPurify.sanitize(slide.text),
@@ -101,7 +85,7 @@ const Slider = () => {
                       </span>
                     </Link>
 
-                    <ul className="slider_social active_animation">
+                    {/* <ul className="slider_social active_animation">
                       <li>
                         <a href="#">
                           <i className="fa-brands fa-facebook-f"></i>
@@ -122,12 +106,12 @@ const Slider = () => {
                           <i className="fa-brands fa-youtube"></i>
                         </a>
                       </li>
-                    </ul>
+                    </ul> */}
                   </div>
                 </div>
               </div>
 
-              {/* Right image should show for BOTH slides (image1 + image2) */}
+              {/* Right Side Image */}
               {slide.image && (
                 <div className="slider_image active_animation position-absolute end-0 bottom-0 text-end">
                   <img src={slide.image} alt="img" />

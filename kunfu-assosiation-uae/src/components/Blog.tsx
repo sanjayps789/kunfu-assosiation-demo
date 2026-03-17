@@ -8,7 +8,7 @@ const blogs = [
     date: "18 August, 2025",
     author: "Admin",
     title: "How Martial Arts Support Youth Development in Schools",
-    text: "Introducing martial arts in schools plays an important role in supporting the physical, mental, and social development of young people.",
+    text: "Introducing Martial Arts in schools plays an important role in supporting the physical, mental, and social development of young people.",
   },
   {
     slug: "community-wellness-tai-chi-qigong-uae",
@@ -24,7 +24,7 @@ const blogs = [
     date: "18 August, 2025",
     author: "Admin",
     title: "Women in Martial Arts: Empowerment Through Training",
-    text: "Martial arts training offers powerful opportunities for women to build confidence, strength, and resilience.",
+    text: "Martial Arts training offers powerful opportunities for women to build confidence, strength, and resilience.",
   },
   {
     slug: "building-discipline-mental-strength-martial-arts",
@@ -88,7 +88,7 @@ const Blog = () => {
         >
           <span className="sub_title">Latest News</span>
           <h2>
-            Read our latest news & articles <br /> about martial arts
+            Read our latest news & articles <br /> about Martial Arts
           </h2>
           <img src="/assets/img/shapes/title.svg" alt="img" />
         </motion.div>

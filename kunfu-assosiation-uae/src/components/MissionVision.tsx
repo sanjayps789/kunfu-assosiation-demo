@@ -30,7 +30,7 @@ export default function MissionVision() {
               style={{ fontSize: "17px", lineHeight: "1.8" }}
             >
               The Mission of the UAE Kung Fu Tai Chi Qigong Association is to
-              oversee, regulate, and implement structured Chinese martial arts
+              oversee, regulate, and implement structured Chinese Martial Arts
               programs across schools, communities, and public institutions,
               promoting physical fitness, mental well-being, emotional balance,
               and character development, while embedding values of respect,
@@ -39,7 +39,7 @@ export default function MissionVision() {
               arts education. Through collaboration with educational bodies and
               international partners, the Association ensures high standards of
               training, instructor development, and long-term sustainability of
-              martial arts practice across the nation.
+              Martial Arts practice across the nation.
             </p>
           </div>
         </div>
@@ -58,14 +58,14 @@ export default function MissionVision() {
             >
               The Vision of the UAE Kung Fu Tai Chi Qigong Association is to
               build a stronger, safer, and more resilient generation through
-              Chinese martial arts to cultivate discipline, confidence, physical
+              Chinese Martial Arts to cultivate discipline, confidence, physical
               strength, character development, mental well-being, and emotional
               control, while positioning the UAE as a world-leading hub and
-              benchmark for excellence in martial arts education and
+              benchmark for excellence in Martial Arts education and
               development. By fostering innovation, cultural exchange, and
               international collaboration, the Association aspires to inspire
               lifelong learning and elevate the global recognition of
-              traditional Chinese martial arts from the UAE to the world.
+              traditional Chinese Martial Arts from the UAE to the world.
             </p>
           </div>
 

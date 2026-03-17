@@ -11,11 +11,11 @@ const ProgramsPage = () => {
   return (
     <>
     <Header/>
-    <Breadcrumb title="Our Initiatives" background="/assets/img/programs/programs-banner.webp" />
+    <Breadcrumb title="Our Initiatives" background="/assets/img/initiatives/initiatives_bg.webp" />
     <Programs/>
     {/* <Pricing sectionClass="pt100"/> */}
     <CounterUp/>
-    {/* <Clients showDivider={false} /> */}
+    <Clients showDivider={false} />
     <Footer/>
     </>
   );

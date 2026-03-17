@@ -12,6 +12,7 @@ import CounterUp from "../components/CounterUp";
 import Blog from "../components/Blog";
 import Clients from "../components/Clients";
 import Footer from "../layouts/Footer";
+import Initiatives from "../components/Initiatives";
 
 const Home = () => {
   return (
@@ -20,13 +21,13 @@ const Home = () => {
       <Slider />
       <About />
       <Features />
-      <Programs limit={4} showViewMore={true}/>
+      <CounterUp />
+      <Initiatives/>
       {/* <Pricing sectionClass="section-padding"/> */}
-      <Events />
+      {/* <Events /> */}
       {/* <Team /> */}
       <Testimonials />
-      <CounterUp />
-      <Blog />
+      {/* <Blog /> */}
       <Clients showDivider={true} sliderClass="pt50" />
       <Footer />
     </>

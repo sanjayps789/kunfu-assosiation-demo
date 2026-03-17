@@ -59,24 +59,14 @@ const Footer = () => {
                 <span>Connect with us</span>
                 <ul className="social_link">
                   <li>
-                    <a href="#">
+                    <Link to="https://www.facebook.com/profile.php?id=61584895573742" target="_blank" rel="noreferrer" title="facebook">
                       <i className="fa-brands fa-facebook-f"></i>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#">
-                      <i className="fa-brands fa-x-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
+                    <Link to="#" target="_blank" rel="noreferrer" title="instagram">
                       <i className="fa-brands fa-instagram"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fa-brands fa-youtube"></i>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -95,16 +85,16 @@ const Footer = () => {
                     <Link to="/about">About Us</Link>
                   </li>
                   <li>
-                    <Link to="/privacy-policy">Privacy Policy</Link>
+                    <Link to="/initiatives">Initiatives</Link>
                   </li>
                   <li>
-                    <Link to="/terms-and-conditions">Terms & Conditions</Link>
+                    <Link to="/gallery">Gallery</Link>
                   </li>
                   <li>
-                    <Link to="/support">Support</Link>
+                    <Link to="/memership">Membership</Link>
                   </li>
                   <li>
-                    <Link to="/contact">Contact</Link>
+                    <Link to="/contact">Contact Us</Link>
                   </li>
                 </ul>
               </div>
@@ -185,7 +175,7 @@ const Footer = () => {
               <div className="mar_copyright text-center">
                 <p>
                   Copyright © {new Date().getFullYear()}{" "}
-                  <Link to="/">Kungfu Assosiation UAE.</Link> All Rights
+                  <Link to="/">UAE Kung Fu Tai Chi Qigong Association.</Link> All Rights
                   Reserved.
                 </p>
               </div>

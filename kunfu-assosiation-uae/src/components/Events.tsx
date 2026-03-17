@@ -6,12 +6,26 @@ import "swiper/css/navigation";
 import { Link } from "react-router-dom";
 
 const events = [
-   { title: "Chinese New Year", date: "February 14 2026", time: "12:00 PM", image: "/assets/img/events/chinese-new-year.webp" },
-  { title: "Tai Chi World Day", date: "April 25 2026", time: "12:00 PM", image: "/assets/img/events/tai-chi-world-day.webp" },
-  { title: "International Wushu Championships", date: "July 24 - 27 2026", time: "12:00 PM", image: "/assets/img/events/international-wushu-championships.webp" },
+  {
+    title: "Chinese New Year",
+    date: "February 14 2026",
+    time: "12:00 PM",
+    image: "/assets/img/events/chinese-new-year.webp",
+  },
+  {
+    title: "Tai Chi World Day",
+    date: "April 25 2026",
+    time: "12:00 PM",
+    image: "/assets/img/events/tai-chi-world-day.webp",
+  },
+  {
+    title: "International Wushu Championships",
+    date: "July 24 - 27 2026",
+    time: "12:00 PM",
+    image: "/assets/img/events/international-wushu-championships.webp",
+  },
   // { title: "National Wushu Competition", date: "September 26th & 27th 2026", time: "12:00 PM", image: "/assets/img/events/2.png" },
   //   { title: "DAKAR Youth Olympic Games", date: "31 October to 13 November 2026", time: "12:00 PM", image: "/assets/img/events/2.png" },
-
 ];
 
 const Events = () => {
@@ -29,9 +43,9 @@ const Events = () => {
           >
             <div className="section-heading text-start mb-0">
               <span className="sub_title">Upcoming Events</span>
-              <h2>Learn from the best martial arts instructors around</h2>
+              <h2>Join us in our upcoming events and intiatives</h2>
               <Link to="/events" className="main_btn mt-4">
-               View All <i className="ph ph-arrow-right"></i>
+                View All <i className="ph ph-arrow-right"></i>
               </Link>
             </div>
           </motion.div>
@@ -57,7 +71,10 @@ const Events = () => {
               className="event_slider d-flex align-items-center"
             >
               {events.map((event, index) => (
-                <SwiperSlide key={index} className="event_item d-flex align-items-center justify-content-center">
+                <SwiperSlide
+                  key={index}
+                  className="event_item d-flex align-items-center justify-content-center"
+                >
                   <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}

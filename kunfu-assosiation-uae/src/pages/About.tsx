@@ -1,4 +1,5 @@
-import { memo } from "react";
+import { memo, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Header from "../layouts/Header";
 import Breadcrumb from "../components/Breadcrumb";
 import About from "../components/About";
@@ -10,20 +11,31 @@ import MissionVision from "../components/MissionVision";
 import Clients from "../components/Clients";
 
 const AboutPage = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      setTimeout(() => {
+        const el = document.querySelector(hash);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 300);
+    }
+  }, [hash]);
+
   return (
     <>
       <Header />
       <Breadcrumb
         title="About Us"
-        background="/assets/img/about/about-banner.webp"
+        background="/assets/img/about/about_us.jpeg"
       />
       <About />
       <Features />
-      <MissionVision />
-      {/* <Pricing sectionClass="pb100"/> */}
-      <Team />
-      {/* <Testimonials /> */}
       <CounterUp />
+      <MissionVision />
+      <Team />
       <Clients showDivider={true} sliderClass="pt50" />
       <Footer />
     </>

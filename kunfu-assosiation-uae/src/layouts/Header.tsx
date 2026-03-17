@@ -22,7 +22,7 @@ const Header = () => {
             <Link to="/">
               <img
                 style={{ maxWidth: "50px" }}
-                src="assets/img/main_logo.webp"
+                src="/assets/img/main_logo.webp"
                 alt="Logo"
               />
             </Link>
@@ -40,9 +40,9 @@ const Header = () => {
               <li>
                 <Link to="/initiatives">Initiatives</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/events">Events</Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/membership">MemberShip</Link>
               </li>
@@ -53,10 +53,10 @@ const Header = () => {
                 <Link to="/verification">Verification</Link>
               </li>
               <li>
-                <Link to="/blog">Blog</Link>
+                <Link to="/contact">Contact Us</Link>
               </li>
               <li>
-                <Link to="/contact">Contact Us</Link>
+                <Link to="/login">Login</Link>
               </li>
 
               {/* <li
@@ -85,7 +85,7 @@ const Header = () => {
               <Link to="/">
                 <img
                   style={{ maxWidth: "200px" }}
-                  src="assets/img/community_logo.svg"
+                  src="/assets/img/community_logo.svg"
                   alt="Community Logo"
                 />
               </Link>

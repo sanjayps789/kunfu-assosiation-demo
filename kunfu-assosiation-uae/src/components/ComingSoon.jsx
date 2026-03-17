@@ -10,7 +10,7 @@ const ComingSoon = () => {
       <Header />
       <Breadcrumb
         title="Coming Soon"
-        background="/assets/img/events/events-banner.webp"
+        background="/assets/img/slider/banner_bg.webp"
       />
 
       <section className="page_not_found section-padding">
