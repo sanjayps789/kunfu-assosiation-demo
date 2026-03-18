@@ -26,8 +26,8 @@ export default function MissionVision() {
               Our Mission
             </h3>
             <p
-              className="text-muted"
-              style={{ fontSize: "17px", lineHeight: "1.8" }}
+              className="text-black"
+              style={{ fontSize: "17px", lineHeight: "1.8", textAlign: "justify" }}
             >
               The Mission of the UAE Kung Fu Tai Chi Qigong Association is to
               oversee, regulate, and implement structured Chinese Martial Arts
@@ -35,7 +35,7 @@ export default function MissionVision() {
               promoting physical fitness, mental well-being, emotional balance,
               and character development, while embedding values of respect,
               discipline, responsibility, and national belonging, supporting the
-              UAE’s position as a global benchmark for excellence in martial
+              UAE's position as a global benchmark for excellence in martial
               arts education. Through collaboration with educational bodies and
               international partners, the Association ensures high standards of
               training, instructor development, and long-term sustainability of
@@ -53,8 +53,8 @@ export default function MissionVision() {
               Our Vision
             </h3>
             <p
-              className="text-muted"
-              style={{ fontSize: "17px", lineHeight: "1.8" }}
+              className="text-black"
+              style={{ fontSize: "17px", lineHeight: "1.8", textAlign: "justify" }}
             >
               The Vision of the UAE Kung Fu Tai Chi Qigong Association is to
               build a stronger, safer, and more resilient generation through
