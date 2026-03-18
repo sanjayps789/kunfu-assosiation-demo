@@ -57,7 +57,7 @@ const NotFound = () => {
                   the website administrator.
                 </p>
                 <p className="small text-muted">
-                  © {new Date().getFullYear()}Kunfu Assosiation UAE.
+                  © {new Date().getFullYear()}Kunfu Association UAE.
                   All Rights Reserved.
                 </p>
               </div>

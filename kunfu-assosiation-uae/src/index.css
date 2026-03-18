@@ -1,0 +1,10 @@
+/* Image Protection */
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Testimonials thumb click work cheyyaan */
+.testimonial_images img {
+  pointer-events: auto;
+}

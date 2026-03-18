@@ -59,12 +59,22 @@ const Footer = () => {
                 <span>Connect with us</span>
                 <ul className="social_link">
                   <li>
-                    <Link to="https://www.facebook.com/profile.php?id=61584895573742" target="_blank" rel="noreferrer" title="facebook">
+                    <Link
+                      to="https://www.facebook.com/profile.php?id=61584895573742"
+                      target="_blank"
+                      rel="noreferrer"
+                      title="facebook"
+                    >
                       <i className="fa-brands fa-facebook-f"></i>
                     </Link>
                   </li>
                   <li>
-                    <Link to="#" target="_blank" rel="noreferrer" title="instagram">
+                    <Link
+                      to="https://www.instagram.com/ktqauae?igsh=MXI5YnQweHZqbmt5cg=="
+                      target="_blank"
+                      rel="noreferrer"
+                      title="instagram"
+                    >
                       <i className="fa-brands fa-instagram"></i>
                     </Link>
                   </li>
@@ -89,6 +99,12 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link to="/gallery">Gallery</Link>
+                  </li>
+                  <li>
+                    <Link to="/media">Media</Link>
+                  </li>
+                  <li>
+                    <Link to="/verification">Verification</Link>
                   </li>
                   <li>
                     <Link to="/memership">Membership</Link>
@@ -175,8 +191,8 @@ const Footer = () => {
               <div className="mar_copyright text-center">
                 <p>
                   Copyright © {new Date().getFullYear()}{" "}
-                  <Link to="/">UAE Kung Fu Tai Chi Qigong Association.</Link> All Rights
-                  Reserved.
+                  <Link to="/">UAE Kung Fu Tai Chi Qigong Association.</Link>{" "}
+                  All Rights Reserved.
                 </p>
               </div>
             </div>

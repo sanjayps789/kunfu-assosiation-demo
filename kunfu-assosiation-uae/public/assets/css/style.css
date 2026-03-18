@@ -58,43 +58,6 @@ Main Style
   --Y5: translateY(-5px);
 }
 
-/* older: root */
-/* :root {
-  --fontInter: "Lato", sans-serif;
-  --white: #fff;
-  --title: #222;
-  --body: #444;
-  --rating: #ffc107;
-  --blue: #015FC9;
-  --yellow: #FE9D3D;
-  --ff5: #FF5A24;
-  --2c2b: #2c2b49;
-  --gray: #F2F7FC;
-  --dd: #ddd;
-  --dc: #dcdcdc;
-  --777: #777;
-  --f7: #f7f7f7;
-  --f9: #f9f9f9;
-  --e5: #e5e5e5;
-  --26: #262626;
-  --rating: #FF8A00;
-  --red: #E84946;
-  --orange: #EF3E42;
-  --red2: #ff3333;
-  --blue: #2E80EC;
-  --footer: #042023;
-  --fd: #FDEAFF;
-  --db: #DB3BEB;
-  --ef: #EFFFEC;
-  --4d: #4DA627;
-  --ff: #FFF2EA;
-  --f3: #F38035;
-  --box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.06);
-  --shadow-2: 0 6px 35px rgba(215,216,222,0.3);
-  --shadow-3: 0 10px 50px 0 rgba(26,46,85,.07);
-  --Y5: translateY(-5px);
-} */
-
 body {
   color: var(--body);
   overflow-x: hidden;
@@ -833,7 +796,7 @@ a:focus {
   border-radius: 10px;
 }
 
-/* .abshape_1,
+.abshape_1,
 .abshape_2 {
   width: 48px;
 }
@@ -842,9 +805,9 @@ a:focus {
   top: -21px;
 }
 .abshape_2 {
-  right: -13px;
-  bottom: -28px;
-} */
+  right: -20px;
+  bottom: -21px;
+}
 .about_content .section-heading {
   margin-bottom: 20px;
 }
@@ -2574,7 +2537,7 @@ li.comment {
 
 .initiative_tab {
   width: 90%;
-  background-color: #cc1219;
+  background-color: var(--orange);
   padding: 28px 20px 44px;
   display: flex;
   flex-direction: column;
@@ -2693,7 +2656,7 @@ li.comment {
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #a1a468;
+  color: var(--orange);
   margin-bottom: 10px;
 }
 
@@ -2732,7 +2695,7 @@ li.comment {
 }
 
 .program_focus li i {
-  color: #a1a468;
+  color: var(--orange);
   font-size: 16px;
   margin-top: 2px;
   flex-shrink: 0;

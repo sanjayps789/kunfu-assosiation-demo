@@ -12,7 +12,7 @@ const slides = [
     type: "bg-video",
     video: "/assets/videos/hero-video.mp4",
     title:
-      "<span>Accreditation of the Emirates</span><br> Kung Fu, Tai Chi and Qigong Association",
+      "<span>Emirates Association of</span><br> Kung Fu, Tai Chi ,Qigong.",
     text: "The Emirates Association of Kung Fu, Tai Chi and Qigong is the official body dedicated to promoting authentic Chinese martial arts across the UAE through structured training, cultural heritage, and professional standards.",
     image: "/assets/img/slider/image1.png",
   },

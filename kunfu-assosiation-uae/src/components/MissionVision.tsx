@@ -1,11 +1,22 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function MissionVision() {
   return (
     <section className="py-5 bg-white">
       <div className="container pb-lg-5">
         {/* Section Title */}
-        <h2 className="text-center fw-semibold mb-5">Our Mission & Vision</h2>
+         <motion.div
+          className="section-heading text-center"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          {/* <span className="sub_title">Association Founding Members</span> */}
+          <h2>Our Mission & Vision</h2>
+          <img src="/assets/img/shapes/title.svg" alt="img" />
+        </motion.div>
 
         {/* ================= MISSION ================= */}
         {/* Image LEFT | Content RIGHT */}
@@ -13,7 +24,7 @@ export default function MissionVision() {
           {/* Image */}
           <div className="col-lg-6 mb-4 mb-lg-0">
             <img
-              src="/assets/img/about/about.png"
+              src="/assets/img/slider/1.webp"
               alt="Our Mission"
               className="img-fluid rounded-4 w-100 object-fit-cover"
               style={{ height: "420px" }}
@@ -27,7 +38,11 @@ export default function MissionVision() {
             </h3>
             <p
               className="text-black"
-              style={{ fontSize: "17px", lineHeight: "1.8", textAlign: "justify" }}
+              style={{
+                fontSize: "17px",
+                lineHeight: "1.8",
+                textAlign: "justify",
+              }}
             >
               The Mission of the UAE Kung Fu Tai Chi Qigong Association is to
               oversee, regulate, and implement structured Chinese Martial Arts
@@ -54,7 +69,11 @@ export default function MissionVision() {
             </h3>
             <p
               className="text-black"
-              style={{ fontSize: "17px", lineHeight: "1.8", textAlign: "justify" }}
+              style={{
+                fontSize: "17px",
+                lineHeight: "1.8",
+                textAlign: "justify",
+              }}
             >
               The Vision of the UAE Kung Fu Tai Chi Qigong Association is to
               build a stronger, safer, and more resilient generation through
@@ -72,7 +91,7 @@ export default function MissionVision() {
           {/* Image */}
           <div className="col-lg-6 order-1 order-lg-2">
             <img
-              src="/assets/img/slider/1.webp"
+              src="/assets/img/about/vision.webp"
               alt="Our Vision"
               className="img-fluid rounded-4 w-100 object-fit-cover"
               style={{ height: "420px" }}

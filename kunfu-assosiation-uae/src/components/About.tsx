@@ -27,8 +27,12 @@ const AboutSection = () => {
             viewport={{ once: true }}
           >
             <div className="about_image position-relative">
-              <img src="/assets/img/about/about_us.jpeg" alt="img" className="full_team" />
-              {/* <img
+              <img
+                src="/assets/img/about/about_us.jpeg"
+                alt="img"
+                className="full_team"
+              />
+              <img
                 src="/assets/img/about/shape1.svg"
                 alt="shape1"
                 className="abshape_1 position-absolute"
@@ -37,7 +41,7 @@ const AboutSection = () => {
                 src="/assets/img/about/shape2.svg"
                 alt="shape2"
                 className="abshape_2 position-absolute"
-              /> */}
+              />
             </div>
           </motion.div>
 
@@ -64,7 +68,7 @@ const AboutSection = () => {
                   About Us
                 </motion.span>
                 <motion.h2 variants={textVariant} custom={0.4}>
-                  Emirates Association of Kung Fu,  <br />  Tai Chi, Qigong
+                  Emirates Association of Kung Fu, <br /> Tai Chi, Qigong
                 </motion.h2>
                 <motion.img
                   src="/assets/img/shapes/title.svg"
@@ -74,7 +78,11 @@ const AboutSection = () => {
                 />
               </motion.div>
 
-              <motion.p style={{textAlign:"justify"}} variants={textVariant} custom={0.8}>
+              <motion.p
+                style={{ textAlign: "justify" }}
+                variants={textVariant}
+                custom={0.8}
+              >
                 The Emirates Kung Fu, Tai Chi and Qigong Association serves as
                 the official body dedicated to the development and regulation of
                 traditional Chinese Martial Arts across the United Arab
@@ -83,7 +91,11 @@ const AboutSection = () => {
                 training and cultural exchange
               </motion.p>
 
-              <motion.p style={{textAlign:"justify"}} variants={textVariant} custom={1}>
+              <motion.p
+                style={{ textAlign: "justify" }}
+                variants={textVariant}
+                custom={1}
+              >
                 Through organized programs, community initiatives, and
                 professional standards, the Association promotes physical
                 well-being, discipline, and respect for cultural heritage. Our

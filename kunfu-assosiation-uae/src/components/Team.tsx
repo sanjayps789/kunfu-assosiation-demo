@@ -111,8 +111,8 @@ const Team = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <span className="sub_title">Association Founding Members</span>
-          <h2>Driven by expert leadership team</h2>
+          {/* <span className="sub_title">Association Founding Members</span> */}
+          <h2>Association Founding Members</h2>
           <img src="/assets/img/shapes/title.svg" alt="img" />
         </motion.div>
 

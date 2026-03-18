@@ -1,4 +1,4 @@
-import { memo, useState, useRef, useCallback, useMemo } from "react";
+import { memo, useState, useRef, useCallback, useMemo, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
@@ -63,14 +63,52 @@ const testimonials = [
   },
 ];
 
-const SLIDE_SPEED = 800; // ms — smooth transition duration for both swipers
+const SLIDE_SPEED = 800;
 
 const Testimonials = () => {
   const thumbsSwiperRef = useRef(null);
   const textSwiperRef = useRef(null);
+  const sectionRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // ✅ useCallback avoids stale closure on every render
+  
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Section visible aayaal — index 0-il reset
+            setActiveIndex(0);
+
+            if (textSwiperRef.current && !textSwiperRef.current.destroyed) {
+              textSwiperRef.current.slideToLoop(0, SLIDE_SPEED);
+              textSwiperRef.current.autoplay.start();
+            }
+
+            if (thumbsSwiperRef.current && !thumbsSwiperRef.current.destroyed) {
+              thumbsSwiperRef.current.slideToLoop(0, SLIDE_SPEED);
+            }
+          } else {
+            // Section screen-il ninnuu poyaal — autoplay stop
+            if (textSwiperRef.current && !textSwiperRef.current.destroyed) {
+              textSwiperRef.current.autoplay.stop();
+            }
+          }
+        });
+      },
+      {
+        threshold: 0.2, // 20% visible aayaal trigger aavum
+      }
+    );
+
+    observer.observe(section);
+
+    return () => observer.disconnect();
+  }, []);
+
   const handleSlideChange = useCallback((swiper) => {
     const realIndex = swiper.realIndex;
     setActiveIndex(realIndex);
@@ -81,7 +119,6 @@ const Testimonials = () => {
 
   const handleThumbClick = useCallback((index) => {
     if (textSwiperRef.current && !textSwiperRef.current.destroyed) {
-      // Stop autoplay briefly on manual interaction, then resume
       textSwiperRef.current.autoplay.stop();
       textSwiperRef.current.slideToLoop(index, SLIDE_SPEED);
       setTimeout(() => {
@@ -103,10 +140,12 @@ const Testimonials = () => {
     }),
     [],
   );
+
   return (
     <section
-      className="testimonial section-padding"
-      style={{ backgroundImage: "url(assets/img/home/our_team-bg.png)" }}
+      ref={sectionRef}
+      className="testimonial"
+      style={{ backgroundImage: "url(assets/img/home/our_team-bg.png)", padding: "40px 0" }}
     >
       <div className="container">
         {/* Section Heading */}
@@ -114,7 +153,7 @@ const Testimonials = () => {
           className="section-heading text-center"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <span className="sub_title">Association Founding Members</span>
@@ -126,7 +165,7 @@ const Testimonials = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <Swiper
@@ -136,8 +175,8 @@ const Testimonials = () => {
             spaceBetween={30}
             loop={true}
             centeredSlides={true}
-            speed={SLIDE_SPEED} // ✅ smooth slide movement
-            allowTouchMove={false} // thumb swiper is display-only, driven by text swiper
+            speed={SLIDE_SPEED}
+            allowTouchMove={false}
             className="testimonial_images"
             breakpoints={{
               0: { slidesPerView: 1 },
@@ -157,12 +196,10 @@ const Testimonials = () => {
                   style={{
                     cursor: "pointer",
                     opacity: activeIndex === index ? 1 : 0.45,
-                    transform:
-                      activeIndex === index ? "scale(1.18)" : "scale(1)",
-                    // ✅ CSS transition for the highlight effect itself
+                    transform: activeIndex === index ? "scale(1)" : "scale(1)",
                     transition: "opacity 0.5s ease, transform 0.5s ease",
                     borderRadius: "50%",
-                    willChange: "transform, opacity", // GPU hint
+                    willChange: "transform, opacity",
                     zIndex: 1,
                   }}
                 />
@@ -175,7 +212,7 @@ const Testimonials = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <Swiper
@@ -183,11 +220,11 @@ const Testimonials = () => {
             onSwiper={(swiper) => (textSwiperRef.current = swiper)}
             loop={true}
             autoHeight={true}
-            speed={SLIDE_SPEED} // ✅ smooth slide movement
+            speed={SLIDE_SPEED}
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,
-              pauseOnMouseEnter: true, // ✅ pauses on hover for better UX
+              pauseOnMouseEnter: true,
             }}
             onSlideChange={handleSlideChange}
             pagination={{ el: ".testimonial-pagination", clickable: true }}
@@ -203,7 +240,8 @@ const Testimonials = () => {
             ))}
             <div className="testimonial-pagination"></div>
           </Swiper>
-          {/* btns */}
+
+          {/* Button */}
           <div
             style={{ marginTop: "20px" }}
             className="d-flex align-items-center justify-content-center"
@@ -213,7 +251,7 @@ const Testimonials = () => {
               className="main_btn"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
               <span>

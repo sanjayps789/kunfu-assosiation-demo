@@ -16,12 +16,12 @@ import Verification from "./pages/Verification";
 import Gallery from "./pages/Gallery";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndCondition";
-import Auth from "./pages/Auth";
+import Media from "./pages/Media";
 
 // Define router
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
-  { path: "/login", element: <Auth /> },
+  { path: "/media", element: <Media/> },
   { path: "/about", element: <About /> },
   { path: "/initiatives", element: <Programs /> },
   { path: "/membership", element: <Membership /> },
