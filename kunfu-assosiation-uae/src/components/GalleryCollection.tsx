@@ -1,7 +1,6 @@
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { galleryItems, categories } from "../data/gallery";
-
 const GalleryCollection = () => {
   const [active, setActive] = useState("all");
 

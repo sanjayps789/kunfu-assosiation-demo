@@ -1,0 +1,78 @@
+/* Gallery Section */
+
+/* ── Filter Buttons ── */
+.filter_btns_container {
+  overflow-x: auto;
+  flex-wrap: nowrap !important;
+  -ms-overflow-style: none; /* IE/Edge scrollbar hide */
+  scrollbar-width: none; /* Firefox scrollbar hide */
+}
+
+.filter_btns_container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari scrollbar hide */
+}
+.filter_btn {
+  width: max-content;
+  padding: 8px 20px;
+  border: 1.5px solid var(--orange);
+  background: transparent;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.filter_btn:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.filter_btn.active {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: #fff;
+}
+
+/* ── Gallery Image Card ── */
+.gallery_img_wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery_img {
+  display: block;
+  width: 100%;
+  /* aspect-ratio: 1 / 1/2; */
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+.gallery_img_wrapper:hover .gallery_img {
+  transform: scale(1.06);
+}
+
+/* subtle dark overlay on hover */
+.gallery_img_wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 8px;
+  transition: background 0.35s ease;
+  pointer-events: none;
+}
+
+.gallery_img_wrapper:hover::after {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 767.98px) {
+  .gallery_img {
+    aspect-ratio: 1/1;
+  }
+}

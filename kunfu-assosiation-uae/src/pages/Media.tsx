@@ -2,7 +2,7 @@ import Breadcrumb from "../components/Breadcrumb.js";
 import Header from "../layouts/Header.js";
 import Footer from "../layouts/Footer.js";
 import MediaSection from "../components/MediaSection.js";
-
+import '../../public/assets/css/media.css';
 const Media = () => {
   return (
     <>
