@@ -92,25 +92,28 @@ const Footer = () => {
                 <h3 className="footer-title">Quick Links</h3>
                 <ul>
                   <li>
-                    <Link to="/about">About Us</Link>
+                    <Link to="/" title="home">Home</Link>
                   </li>
                   <li>
-                    <Link to="/initiatives">Initiatives</Link>
+                    <Link to="/about" title="about">About Us</Link>
                   </li>
                   <li>
-                    <Link to="/gallery">Gallery</Link>
+                    <Link to="/initiatives" title="initiatives">Initiatives</Link>
                   </li>
                   <li>
-                    <Link to="/media">Media</Link>
+                    <Link to="/gallery" title="gallery">Gallery</Link>
                   </li>
                   <li>
-                    <Link to="/verification">Verification</Link>
+                    <Link to="/media" title="media">Media</Link>
                   </li>
                   <li>
-                    <Link to="/memership">Membership</Link>
+                    <Link to="/verification" title="verification">Verification</Link>
                   </li>
                   <li>
-                    <Link to="/contact">Contact Us</Link>
+                    <Link to="/memership" title="membership">Membership</Link>
+                  </li>
+                  <li>
+                    <Link to="/contact" title="contact">Contact Us</Link>
                   </li>
                 </ul>
               </div>
