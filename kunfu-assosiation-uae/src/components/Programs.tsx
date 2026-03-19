@@ -41,7 +41,6 @@ const Programs = ({ limit = programs.length }) => {
       viewport={{ once: true, amount: 0.05 }}
     >
       <div className="container">
-
         {/* ── Section Heading ── */}
         <motion.div className="section-heading text-center" variants={fadeUp}>
           <span className="sub_title">Our Initiatives</span>
@@ -70,12 +69,21 @@ const Programs = ({ limit = programs.length }) => {
                   className="program_row_img"
                   variants={isEven ? fadeRight : fadeLeft}
                 >
-                  <div className="program_img_wrap">
+                  <div className="program_img_wrap position-relative">
                     <img
                       src={program.image}
                       alt={program.title}
-                      style={{objectPosition:program?.img_position}}
-                      loading="lazy"
+                      style={{ objectPosition: program?.img_position }}
+                    />
+                    <img
+                      src="/assets/img/about/shape1.svg"
+                      alt="shape1"
+                      className="abshape_1 position-absolute"
+                    />
+                    <img
+                      src="/assets/img/about/shape2.svg"
+                      alt="shape2"
+                      className="abshape_2 position-absolute"
                     />
                   </div>
                 </motion.div>
@@ -112,7 +120,6 @@ const Programs = ({ limit = programs.length }) => {
             );
           })}
         </div>
-
       </div>
     </motion.section>
   );

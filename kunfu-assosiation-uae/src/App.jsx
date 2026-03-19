@@ -16,7 +16,7 @@ import Verification from "./pages/Verification";
 import Gallery from "./pages/Gallery";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndCondition";
-import Media from "./pages/Media";
+import Media from "./pages/Media.tsx";
 
 // Define router
 const router = createBrowserRouter([

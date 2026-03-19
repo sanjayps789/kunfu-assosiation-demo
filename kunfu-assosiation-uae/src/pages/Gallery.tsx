@@ -1,18 +1,16 @@
 import { memo } from "react";
 import Header from "../layouts/Header";
 import Breadcrumb from "../components/Breadcrumb";
-import EventDetails from "../components/EventDetails";
 import Footer from "../layouts/Footer";
-import ComingSoon from "../components/ComingSoon";
+import GalleryCollection from "../components/GalleryCollection";
 
 const Gallery = () => {
   return (
     <>
-      {/* <Header/> */}
-      {/* <Breadcrumb title="Event Details" background="/assets/img/events/events-banner.webp" /> */}
-      {/* <EventDetails/> */}
-      <ComingSoon />
-      {/* <Footer/> */}
+      <Header/>
+      <Breadcrumb title="Gallery" background="/assets/img/gallery/gallery_banner_bg.webp" />
+      <GalleryCollection/>
+      <Footer/>
     </>
   );
 };

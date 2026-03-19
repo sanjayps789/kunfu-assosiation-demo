@@ -145,7 +145,7 @@ const Testimonials = () => {
     <section
       ref={sectionRef}
       className="testimonial"
-      style={{ backgroundImage: "url(assets/img/home/our_team-bg.png)", padding: "40px 0" }}
+      style={{ backgroundImage: "url(assets/img/home/our_team-bg.png)", padding: "50px 0" }}
     >
       <div className="container">
         {/* Section Heading */}
@@ -156,8 +156,8 @@ const Testimonials = () => {
           viewport={{ once: false }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <span className="sub_title">Association Founding Members</span>
-          <h2 className="text-white">Driven by expert leadership team</h2>
+          {/* <span className="sub_title">Association Founding Members</span> */}
+          <h2 className="text-white">Association Founding Members</h2>
           <img src="/assets/img/shapes/title.svg" alt="img" />
         </motion.div>
 

@@ -102,7 +102,7 @@ const Contact = () => {
                 width="600"
                 style={{ border: 0, width: "100%" }}
                 allowFullScreen
-                loading="lazy"
+                // loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>

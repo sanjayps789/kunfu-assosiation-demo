@@ -33,7 +33,7 @@ const MobileOffcanvas = ({ isOpen, toggleOffcanvas }) => {
 
               {/* Mobile Menu */}
               <div className="mobile-menu fix mb-3">
-                <ul className="d-flex align-items-center mb-0">
+                <ul className="mb-0">
                   <li>
                     <Link to="/">Home</Link>
                   </li>
