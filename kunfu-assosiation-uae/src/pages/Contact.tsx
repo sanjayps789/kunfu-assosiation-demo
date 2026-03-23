@@ -11,7 +11,8 @@ const AboutPage = () => {
       <Header />
       <Breadcrumb
         title="Contact Us"
-        background="/assets/img/bg/contact_bg.webp"
+        background="/assets/img/bg/contact-banner.webp"
+        bgPosition="center 30%"
       />
       <Contact />
       <Clients showDivider={true} sliderClass="pt50" />

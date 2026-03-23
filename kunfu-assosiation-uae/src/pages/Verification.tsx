@@ -4,6 +4,12 @@ import Breadcrumb from "../components/Breadcrumb";
 import Footer from "../layouts/Footer";
 
 const Verification = () => {
+  const images = [
+    "/assets/img/verification/img1.webp",
+    "/assets/img/verification/img2.webp",
+    "/assets/img/verification/img3.webp",
+    "/assets/img/verification/img4.webp",
+  ];
   return (
     <>
       <Header />
@@ -45,7 +51,21 @@ const Verification = () => {
           Tai Chi, and Qigong or to establish institutions within the United
           Arab Emirates.
         </p>
+        <div className="row mt-lg-5">
+          {images.map((img, index) => (
+            <div className="col-lg-3 col-md-6 col-12">
+              <div style={{ height: "250px" }} className="mb-3 rounded-3 overflow-hidden">
+                <img
+                  src={img}
+                  alt={`Verification Image ${index + 1}`}
+                  className="img-fluid verification_img w-100 h-100 object-fit-cover"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
+
       <Footer />
     </>
   );

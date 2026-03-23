@@ -4,6 +4,7 @@ export const categories = [
     "taaleem tai chi event",
     "mall of emirates event",
     "festival city dubai games event",
+    "recognition event",
 ];
 
 export const galleryItems = [
@@ -76,6 +77,26 @@ export const galleryItems = [
         id:'14',
         image:"/assets/img/gallery/dubai_games/img1.webp",
         category:"festival city dubai games event"
-    }
+    },
+    {
+        id:'15',
+        image:"/assets/img/verification/img1.webp",
+        category:"recognition event"
+    },
+    {
+        id:'16',
+        image:"/assets/img/verification/img2.webp",
+        category:"recognition event"
+    },
+    {
+        id:'17',
+        image:"/assets/img/verification/img3.webp",
+        category:"recognition event"
+    },
+    {
+        id:'18',
+        image:"/assets/img/verification/img4.webp",
+        category:"recognition event"
+    },
 ]
 
